@@ -157,7 +157,7 @@ if (import.meta) {
     //@ts-expect-error
     "app/components/Footer.jsx"
   );
-  import.meta.hot.lastModified = "1695303507917.41";
+  import.meta.hot.lastModified = "1695382663447.0889";
 }
 function Footer({
   menu
@@ -995,4 +995,4 @@ export {
   links,
   shouldRevalidate
 };
-//# sourceMappingURL=/build/root-FA4E3P3Y.js.map
+//# sourceMappingURL=/build/root-4HOWWTPQ.js.map

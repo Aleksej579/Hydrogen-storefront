@@ -43,7 +43,7 @@ if (import.meta) {
     //@ts-expect-error
     "app/routes/_index.jsx"
   );
-  import.meta.hot.lastModified = "1695303548101.258";
+  import.meta.hot.lastModified = "1695639465991.6985";
 }
 var meta = () => {
   return [{
@@ -176,4 +176,4 @@ export {
   Homepage as default,
   meta
 };
-//# sourceMappingURL=/build/routes/_index-4APFHIJM.js.map
+//# sourceMappingURL=/build/routes/_index-6FFRBS6I.js.map

@@ -9,11 +9,15 @@ export const meta = () => {
 
 export async function loader({context}) {
   const {storefront} = context;
-  const {collections} = await storefront.query(FEATURED_COLLECTION_QUERY);
-  const featuredCollection = collections.nodes[0];
   const recommendedProducts = storefront.query(RECOMMENDED_PRODUCTS_QUERY);
+  const {collections} = await storefront.query(FEATURED_COLLECTION_QUERY);
+  const featuredCollection = collections.nodes[2];
 
-  return defer({featuredCollection, recommendedProducts});
+
+  return defer({
+    featuredCollection, 
+    recommendedProducts
+  });
 }
 
 export default function Homepage() {
@@ -92,13 +96,36 @@ const FEATURED_COLLECTION_QUERY = `#graphql
   }
   query FeaturedCollection($country: CountryCode, $language: LanguageCode)
     @inContext(country: $country, language: $language) {
-    collections(first: 1, sortKey: UPDATED_AT, reverse: true) {
+    collections(first: 5, sortKey: UPDATED_AT, reverse: true) {
       nodes {
         ...FeaturedCollection
       }
     }
   }
 `;
+
+// const FEATURED_COLLECTION_QUERY = `#graphql
+//   fragment FeaturedCollection on Collection {
+//     id
+//     title
+//     image {
+//       id
+//       url
+//       altText
+//       width
+//       height
+//     }
+//     handle
+//   }
+//   query FeaturedCollection($country: CountryCode, $language: LanguageCode)
+//     @inContext(country: $country, language: $language) {
+//     collections(first: 1, sortKey: UPDATED_AT, reverse: true) {
+//       nodes {
+//         ...FeaturedCollection
+//       }
+//     }
+//   }
+// `;
 
 const RECOMMENDED_PRODUCTS_QUERY = `#graphql
   fragment RecommendedProduct on Product {
