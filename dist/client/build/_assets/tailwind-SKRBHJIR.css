@@ -549,6 +549,9 @@ select {
 .block {
   display: block;
 }
+.flex {
+  display: flex;
+}
 .table {
   display: table;
 }
@@ -557,6 +560,9 @@ select {
 }
 .w-full {
   width: 100%;
+}
+.gap-4 {
+  gap: 1rem;
 }
 .rounded {
   border-radius: .25rem;
@@ -580,4 +586,4 @@ select {
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
-/*# sourceMappingURL=/build/_assets/tailwind-NZPXBAAC.css.map */
+/*# sourceMappingURL=/build/_assets/tailwind-WYRZ7ERF.css.map */

@@ -686,7 +686,7 @@ window.$RefreshReg$ = prevRefreshReg;
 window.$RefreshSig$ = prevRefreshSig;
 
 // app/styles/tailwind.css
-var tailwind_default = "/build/_assets/tailwind-MU5SSLKG.css";
+var tailwind_default = "/build/_assets/tailwind-SKRBHJIR.css";
 
 // app/root.jsx
 var import_jsx_dev_runtime5 = __toESM(require_jsx_dev_runtime());
@@ -995,4 +995,4 @@ export {
   links,
   shouldRevalidate
 };
-//# sourceMappingURL=/build/root-FKE66L4G.js.map
+//# sourceMappingURL=/build/root-B4BIVIG6.js.map
