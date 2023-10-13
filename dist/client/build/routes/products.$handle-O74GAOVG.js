@@ -46,7 +46,7 @@ if (import.meta) {
     //@ts-expect-error
     "app/routes/products.$handle.jsx"
   );
-  import.meta.hot.lastModified = "1695303548349.257";
+  import.meta.hot.lastModified = "1695726711241.381";
 }
 var meta = ({
   data
@@ -334,7 +334,7 @@ function AddToCartButton({
       lineNumber: 248,
       columnNumber: 11
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("button", { type: "submit", onClick, disabled: disabled ?? fetcher.state !== "idle", children }, void 0, false, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("button", { type: "submit", onClick, disabled: disabled ?? fetcher.state !== "idle", className: "border border-black rounded-sm w-full px-4 py-2 text-white bg-black uppercase hover:bg-white hover:text-black transition-colors duration-150", children }, void 0, false, {
       fileName: "app/routes/products.$handle.jsx",
       lineNumber: 249,
       columnNumber: 11
@@ -468,4 +468,4 @@ export {
   Product as default,
   meta
 };
-//# sourceMappingURL=/build/routes/products.$handle-V2LHVQRY.js.map
+//# sourceMappingURL=/build/routes/products.$handle-O74GAOVG.js.map

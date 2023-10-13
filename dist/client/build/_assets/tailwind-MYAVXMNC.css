@@ -546,6 +546,10 @@ select {
   --tw-backdrop-saturate: ;
   --tw-backdrop-sepia: ;
 }
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
 .block {
   display: block;
 }
@@ -558,6 +562,9 @@ select {
 .hidden {
   display: none;
 }
+.w-2\/4 {
+  width: 50%;
+}
 .w-full {
   width: 100%;
 }
@@ -567,8 +574,21 @@ select {
 .rounded {
   border-radius: .25rem;
 }
+.rounded-sm {
+  border-radius: .125rem;
+}
 .border {
   border-width: 1px;
+}
+.border-black {
+  --tw-border-opacity: 1;
+  border-color: #000;
+  border-color: rgba(0, 0, 0, var(--tw-border-opacity));
+}
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, var(--tw-bg-opacity));
 }
 .px-4 {
   padding-left: 1rem;
@@ -578,6 +598,14 @@ select {
   padding-top: .5rem;
   padding-bottom: .5rem;
 }
+.uppercase {
+  text-transform: uppercase;
+}
+.text-white {
+  --tw-text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
 .blur {
   --tw-blur: blur(8px);
   filter: blur(8px) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -586,4 +614,31 @@ select {
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
-/*# sourceMappingURL=/build/_assets/tailwind-WYRZ7ERF.css.map */
+.transition-colors {
+  transition-property:
+    color,
+    background-color,
+    border-color,
+    text-decoration-color,
+    fill,
+    stroke;
+  transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+  transition-duration: .15s;
+}
+.duration-150 {
+  transition-duration: .15s;
+}
+.last\:flex-row-reverse:last-child {
+  flex-direction: row-reverse;
+}
+.hover\:bg-white:hover {
+  --tw-bg-opacity: 1;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+}
+.hover\:text-black:hover {
+  --tw-text-opacity: 1;
+  color: #000;
+  color: rgba(0, 0, 0, var(--tw-text-opacity));
+}
+/*# sourceMappingURL=/build/_assets/tailwind-AWMROIPZ.css.map */

@@ -38,8 +38,8 @@ import {
   __toESM
 } from "/build/_shared/chunk-PNG5AS42.js";
 
-// public/favicon.svg
-var favicon_default = "/build/_assets/favicon-5FIZBM2K.svg";
+// public/favicon.ico
+var favicon_default = "/build/_assets/favicon-UY3DMFQ6.ico";
 
 // app/styles/reset.css
 var reset_default = "/build/_assets/reset-C3NFZ242.css";
@@ -686,7 +686,7 @@ window.$RefreshReg$ = prevRefreshReg;
 window.$RefreshSig$ = prevRefreshSig;
 
 // app/styles/tailwind.css
-var tailwind_default = "/build/_assets/tailwind-SKRBHJIR.css";
+var tailwind_default = "/build/_assets/tailwind-MYAVXMNC.css";
 
 // app/root.jsx
 var import_jsx_dev_runtime5 = __toESM(require_jsx_dev_runtime());
@@ -753,62 +753,62 @@ function App() {
     /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("head", { children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("meta", { charSet: "utf-8" }, void 0, false, {
         fileName: "app/root.jsx",
-        lineNumber: 122,
+        lineNumber: 123,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("meta", { name: "viewport", content: "width=device-width,initial-scale=1" }, void 0, false, {
         fileName: "app/root.jsx",
-        lineNumber: 123,
+        lineNumber: 124,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(Meta, {}, void 0, false, {
         fileName: "app/root.jsx",
-        lineNumber: 124,
+        lineNumber: 125,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(Links, {}, void 0, false, {
         fileName: "app/root.jsx",
-        lineNumber: 125,
+        lineNumber: 126,
         columnNumber: 9
       }, this)
     ] }, void 0, true, {
       fileName: "app/root.jsx",
-      lineNumber: 121,
+      lineNumber: 122,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("body", { children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(Layout, { ...data, children: /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(Outlet, {}, void 0, false, {
         fileName: "app/root.jsx",
-        lineNumber: 129,
+        lineNumber: 130,
         columnNumber: 11
       }, this) }, void 0, false, {
         fileName: "app/root.jsx",
-        lineNumber: 128,
+        lineNumber: 129,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(ScrollRestoration, { nonce }, void 0, false, {
         fileName: "app/root.jsx",
-        lineNumber: 131,
+        lineNumber: 132,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(Scripts, { nonce }, void 0, false, {
         fileName: "app/root.jsx",
-        lineNumber: 132,
+        lineNumber: 133,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(LiveReload, { nonce }, void 0, false, {
         fileName: "app/root.jsx",
-        lineNumber: 133,
+        lineNumber: 134,
         columnNumber: 9
       }, this)
     ] }, void 0, true, {
       fileName: "app/root.jsx",
-      lineNumber: 127,
+      lineNumber: 128,
       columnNumber: 7
     }, this)
   ] }, void 0, true, {
     fileName: "app/root.jsx",
-    lineNumber: 120,
+    lineNumber: 121,
     columnNumber: 10
   }, this);
 }
@@ -833,82 +833,82 @@ function ErrorBoundary() {
     /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("head", { children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("meta", { charSet: "utf-8" }, void 0, false, {
         fileName: "app/root.jsx",
-        lineNumber: 156,
+        lineNumber: 157,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("meta", { name: "viewport", content: "width=device-width,initial-scale=1" }, void 0, false, {
         fileName: "app/root.jsx",
-        lineNumber: 157,
+        lineNumber: 158,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(Meta, {}, void 0, false, {
         fileName: "app/root.jsx",
-        lineNumber: 158,
+        lineNumber: 159,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(Links, {}, void 0, false, {
         fileName: "app/root.jsx",
-        lineNumber: 159,
+        lineNumber: 160,
         columnNumber: 9
       }, this)
     ] }, void 0, true, {
       fileName: "app/root.jsx",
-      lineNumber: 155,
+      lineNumber: 156,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("body", { children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(Layout, { ...root.data, children: /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "route-error", children: [
         /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("h1", { children: "Oops" }, void 0, false, {
           fileName: "app/root.jsx",
-          lineNumber: 164,
+          lineNumber: 165,
           columnNumber: 13
         }, this),
         /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("h2", { children: errorStatus }, void 0, false, {
           fileName: "app/root.jsx",
-          lineNumber: 165,
+          lineNumber: 166,
           columnNumber: 13
         }, this),
         errorMessage && /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("fieldset", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("pre", { children: errorMessage }, void 0, false, {
           fileName: "app/root.jsx",
-          lineNumber: 167,
+          lineNumber: 168,
           columnNumber: 17
         }, this) }, void 0, false, {
           fileName: "app/root.jsx",
-          lineNumber: 166,
+          lineNumber: 167,
           columnNumber: 30
         }, this)
       ] }, void 0, true, {
         fileName: "app/root.jsx",
-        lineNumber: 163,
+        lineNumber: 164,
         columnNumber: 11
       }, this) }, void 0, false, {
         fileName: "app/root.jsx",
-        lineNumber: 162,
+        lineNumber: 163,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(ScrollRestoration, { nonce }, void 0, false, {
         fileName: "app/root.jsx",
-        lineNumber: 172,
+        lineNumber: 173,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(Scripts, { nonce }, void 0, false, {
         fileName: "app/root.jsx",
-        lineNumber: 173,
+        lineNumber: 174,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(LiveReload, { nonce }, void 0, false, {
         fileName: "app/root.jsx",
-        lineNumber: 174,
+        lineNumber: 175,
         columnNumber: 9
       }, this)
     ] }, void 0, true, {
       fileName: "app/root.jsx",
-      lineNumber: 161,
+      lineNumber: 162,
       columnNumber: 7
     }, this)
   ] }, void 0, true, {
     fileName: "app/root.jsx",
-    lineNumber: 154,
+    lineNumber: 155,
     columnNumber: 10
   }, this);
 }
@@ -995,4 +995,4 @@ export {
   links,
   shouldRevalidate
 };
-//# sourceMappingURL=/build/root-B4BIVIG6.js.map
+//# sourceMappingURL=/build/root-T6QHQSP6.js.map

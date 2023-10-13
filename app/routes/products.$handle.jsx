@@ -260,6 +260,7 @@ function AddToCartButton({analytics, children, disabled, lines, onClick}) {
             type="submit"
             onClick={onClick}
             disabled={disabled ?? fetcher.state !== 'idle'}
+            className="border border-black rounded-sm w-full px-4 py-2 text-white bg-black uppercase hover:bg-white hover:text-black transition-colors duration-150"
           >
             {children}
           </button>
