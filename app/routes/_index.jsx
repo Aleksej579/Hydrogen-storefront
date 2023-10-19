@@ -37,18 +37,19 @@ export default function Homepage() {
 function AllCollections() {
   const {allCollections} = useLoaderData();
   const allCollectionsArr = allCollections.collections.nodes;
+
   return (
-    <ul class='flex gap-4'>
+    <ul className ='all_collections flex gap-4 mb-8'>
       {allCollectionsArr.map((collection) => (
-        <li>
-          <h1>{collection.title}</h1>
+        <li className='relative border aspect-square h-fit w-1/4 mb-0 group' key={collection.id}>
+          <h1 className='absolute top-1/2 left-1/2 m-0 text-white -translate-y-2/4 -translate-x-2/4 text-base z-[1] group-hover:text-black'>{collection.title}</h1>
           <Link
-            className="featured-collection"
+            className=""
             to={`/collections/${collection.handle}`}
           >
             {collection.image && (
-              <div className="featured-collection-image">
-                <Image data={collection.image} sizes="100vw" />
+              <div className="aspect-square group-hover:opacity-50">
+                <Image data={collection.image} sizes="100vw" className='!aspect-square' />
               </div>
             )}
           </Link>
@@ -70,7 +71,7 @@ function FeaturedCollection({collection}) {
           <Image data={image} sizes="100vw" />
         </div>
       )}
-      <h1>{collection.title}</h1>
+      <h1 className='absolute top-1/2 left-1/2 m-0 text-white -translate-y-2/4 -translate-x-2/4 text-4xl'>{collection.title}</h1>
     </Link>
   );
 }
@@ -111,14 +112,14 @@ function RecommendedProducts({products}) {
 
 function ProductLeftRightImage({products}) {
   return (
-    <div>
+    <div className='mb-12'>
       <Suspense fallback={<div>Loading...</div>}>
         <Await resolve={products}>
           {({products}) => (
             <div>
               {products.nodes.map((product) => (
                 <Link
-                  className='flex w-2/4 mx-auto last:flex-row-reverse'
+                  className='flex w-2/3 mx-auto last:flex-row-reverse border first:mb-8 hover:drop-shadow-xl'
                   key={product.id}
                   to={`/products/${product.handle}`}
                 >
@@ -126,8 +127,9 @@ function ProductLeftRightImage({products}) {
                     data={product.images.nodes[0]}
                     aspectRatio="1/1"
                     sizes="(min-width: 45em) 20vw, 50vw"
+                    className='!w-1/2'
                   />
-                  <h4>{product.description}</h4>
+                  <h4 className='!w-1/2 bg-black text-white flex items-center p-5 m-0'>{product.description}</h4>
                 </Link>
               ))}
             </div>

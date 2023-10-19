@@ -1,6 +1,7 @@
 import {Suspense} from 'react';
 import {defer, redirect} from '@shopify/remix-oxygen';
 import {Await, Link, useLoaderData} from '@remix-run/react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 import {
   Image,
@@ -18,7 +19,6 @@ export const meta = ({data}) => {
 export async function loader({params, request, context}) {
   const {handle} = params;
   const {storefront} = context;
-
   const selectedOptions = getSelectedProductOptions(request).filter(
     (option) =>
       // Filter out Shopify predictive search query params
@@ -30,27 +30,21 @@ export async function loader({params, request, context}) {
       // Filter out third party tracking params
       !option.name.startsWith('fbclid'),
   );
-
   if (!handle) {
     throw new Error('Expected product handle to be defined');
   }
-
-  // await the query for the critical product data
   const {product} = await storefront.query(PRODUCT_QUERY, {
     variables: {handle, selectedOptions},
   });
-
   if (!product?.id) {
     throw new Response(null, {status: 404});
   }
-
   const firstVariant = product.variants.nodes[0];
   const firstVariantIsDefault = Boolean(
     firstVariant.selectedOptions.find(
       (option) => option.name === 'Title' && option.value === 'Default Title',
     ),
   );
-
   if (firstVariantIsDefault) {
     product.selectedVariant = firstVariant;
   } else {
@@ -60,17 +54,12 @@ export async function loader({params, request, context}) {
       return redirectToFirstVariant({product, request});
     }
   }
-
-  // In order to show which variants are available in the UI, we need to query
-  // all of them. But there might be a *lot*, so instead separate the variants
-  // into it's own separate query that is deferred. So there's a brief moment
-  // where variant options might show as available when they're not, but after
-  // this deffered query resolves, the UI will update.
   const variants = storefront.query(VARIANTS_QUERY, {
     variables: {handle},
   });
-
-  return defer({product, variants});
+  const recommendedProducts = storefront.query(RECOMMENDED_PRODUCTS_QUERY);
+  const productImages_ = await storefront.query(PRODUCT_MEDIA_IMAGES, {variables: {handle,},});
+  return defer({product, variants, recommendedProducts, productImages_, handle});
 }
 
 function redirectToFirstVariant({product, request}) {
@@ -92,16 +81,50 @@ function redirectToFirstVariant({product, request}) {
 
 export default function Product() {
   const {product, variants} = useLoaderData();
+  const {handle, productImages_} = useLoaderData();
+  const data = useLoaderData();
   const {selectedVariant} = product;
   return (
-    <div className="product">
-      <ProductImage image={selectedVariant?.image} />
-      <ProductMain
-        selectedVariant={selectedVariant}
-        product={product}
-        variants={variants}
-      />
-    </div>
+    <>
+      <div className="product flex gap-16 mb-8">
+        <div className='w-1/2'>
+          <ProductImage image={selectedVariant?.image} />
+          <ProductImages productImages_={productImages_} handle={handle} />
+        </div>
+        <ProductMain
+          selectedVariant={selectedVariant}
+          product={product}
+          variants={variants}
+        />
+      </div>
+      <RecommendedProducts products={data.recommendedProducts} />
+    </>
+  );
+}
+
+function ProductImages ({productImages_}) {
+  return (
+    <>
+      <Swiper
+        spaceBetween={3}
+        slidesPerView={3}
+        onSlideChange={() => console.log('slide change')}
+        onSwiper={(swiper) => console.log(swiper)}
+      >
+        {productImages_.product.images.nodes.map((img) => {
+          return (
+            <SwiperSlide className='border !w-28 !h-28 aspect-square m-0' key={img.id}>
+              <Image 
+                className={`!w-full !h-full aspect-square object-cover`} 
+                src={img.url}  
+                width="100"
+                height="100"
+                sizes="(min-width: 1024px) 100px, (min-width: 475px) 100px, 100px" />
+            </SwiperSlide>
+            )
+        })}
+      </Swiper>
+    </>
   );
 }
 
@@ -270,6 +293,53 @@ function AddToCartButton({analytics, children, disabled, lines, onClick}) {
   );
 }
 
+function RecommendedProducts({products}) {
+  return (
+    <div className="recommended-products">
+      <h2>You may also like</h2>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Await resolve={products}>
+          {({products}) => (
+            <div className="recommended-products-grid">
+              {products.nodes.map((product) => (
+                <Link
+                  key={product.id}
+                  className="recommended-product"
+                  to={`/products/${product.handle}`}
+                >
+                  <Image
+                    data={product.images.nodes[0]}
+                    aspectRatio="1/1"
+                    sizes="(min-width: 45em) 20vw, 50vw"
+                  />
+                  <h4>{product.title}</h4>
+                  <small>
+                    <Money data={product.priceRange.minVariantPrice} />
+                  </small>
+                </Link>
+              ))}
+            </div>
+          )}
+        </Await>
+      </Suspense>
+      <br />
+    </div>
+  );
+}
+
+const PRODUCT_MEDIA_IMAGES = `#graphql
+  query Product($handle: String!) {
+    product(handle: $handle) {
+      images(first: 20) {
+        nodes {
+          url
+          id
+        }
+      }
+    }
+  }
+`;
+
 const PRODUCT_VARIANT_FRAGMENT = `#graphql
   fragment ProductVariant on ProductVariant {
     availableForSale
@@ -369,6 +439,37 @@ const VARIANTS_QUERY = `#graphql
   ) @inContext(country: $country, language: $language) {
     product(handle: $handle) {
       ...ProductVariants
+    }
+  }
+`;
+
+const RECOMMENDED_PRODUCTS_QUERY = `#graphql
+  fragment RecommendedProduct on Product {
+    id
+    title
+    handle
+    priceRange {
+      minVariantPrice {
+        amount
+        currencyCode
+      }
+    }
+    images(first: 1) {
+      nodes {
+        id
+        url
+        altText
+        width
+        height
+      }
+    }
+  }
+  query RecommendedProducts ($country: CountryCode, $language: LanguageCode)
+    @inContext(country: $country, language: $language) {
+    products(first: 4, sortKey: UPDATED_AT, reverse: true) {
+      nodes {
+        ...RecommendedProduct
+      }
     }
   }
 `;

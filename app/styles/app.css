@@ -311,7 +311,7 @@ aside li {
 .featured-collection-image {
   aspect-ratio: 1 / 1;
   @media (min-width: 45em) {
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 16 / 4;
   }
 }
 
@@ -380,13 +380,13 @@ aside li {
 * routes/products.$handle.tsx
 * --------------------------------------------------
 */
-.product {
+/* .product {
   display: grid;
   @media (min-width: 45em) {
     grid-template-columns: 1fr 1fr;
     grid-gap: 4rem;
   }
-}
+} */
 
 .product h1 {
   margin-top: 0;

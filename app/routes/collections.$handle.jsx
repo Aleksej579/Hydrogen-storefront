@@ -40,8 +40,11 @@ export default function Collection() {
 
   return (
     <div className="collection">
-      <h1>{collection.title}</h1>
-      <p className="collection-description">{collection.description}</p>
+      <h1 className='w-full text-center'>{collection.title}</h1>
+      <div className='flex justify-around items-center mb-6'>
+        <img src={ collection.image.url } alt="collection.image.url" width="500" height="600" />
+        <p className="collection-description">{collection.description}</p>
+      </div>
       <Pagination connection={collection.products}>
         {({nodes, isLoading, PreviousLink, NextLink}) => (
           <>
@@ -155,6 +158,10 @@ const COLLECTION_QUERY = `#graphql
       handle
       title
       description
+      image {
+          id
+          url
+        }
       products(
         first: $first,
         last: $last,

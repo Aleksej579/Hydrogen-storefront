@@ -375,7 +375,7 @@ var require_react_development = __commonJS({
           value: source
         }), Object.freeze && (Object.freeze(element.props), Object.freeze(element)), element;
       };
-      function createElement8(type, config, children) {
+      function createElement9(type, config, children) {
         var propName, props = {}, key = null, ref = null, self = null, source = null;
         if (config != null) {
           hasValidRef(config) && (ref = config.ref, warnIfStringRefCannotBeAutoConverted(config)), hasValidKey(config) && (checkKeyStringCoercion(config.key), key = "" + config.key), self = config.__self === void 0 ? null : config.__self, source = config.__source === void 0 ? null : config.__source;
@@ -533,7 +533,7 @@ var require_react_development = __commonJS({
           throw new Error("React.Children.only expected to receive a single React element child.");
         return children;
       }
-      function createContext5(defaultValue) {
+      function createContext6(defaultValue) {
         var context = {
           $$typeof: REACT_CONTEXT_TYPE,
           // As a workaround to support multiple concurrent renderers, we categorize
@@ -685,7 +685,7 @@ Your code should look like:
         }
         return lazyType;
       }
-      function forwardRef5(render) {
+      function forwardRef6(render) {
         render != null && render.$$typeof === REACT_MEMO_TYPE ? error("forwardRef requires a render function but received a `memo` component. Instead of forwardRef(memo(...)), use memo(forwardRef(...)).") : typeof render != "function" ? error("forwardRef requires a render function but was given %s.", render === null ? "null" : typeof render) : render.length !== 0 && render.length !== 2 && error("forwardRef render functions accept exactly two parameters: props and ref. %s", render.length === 1 ? "Did you forget to use the ref parameter?" : "Any additional parameter will be undefined."), render != null && (render.defaultProps != null || render.propTypes != null) && error("forwardRef render functions do not support propTypes or defaultProps. Did you accidentally pass a React component?");
         var elementType = {
           $$typeof: REACT_FORWARD_REF_TYPE,
@@ -745,7 +745,7 @@ Your code should look like:
 3. You might have more than one copy of React in the same app
 See https://reactjs.org/link/invalid-hook-call for tips about how to debug and fix this problem.`), dispatcher;
       }
-      function useContext7(Context) {
+      function useContext8(Context) {
         var dispatcher = resolveDispatcher();
         if (Context._context !== void 0) {
           var realContext = Context._context;
@@ -753,7 +753,7 @@ See https://reactjs.org/link/invalid-hook-call for tips about how to debug and f
         }
         return dispatcher.useContext(Context);
       }
-      function useState7(initialState) {
+      function useState8(initialState) {
         var dispatcher = resolveDispatcher();
         return dispatcher.useState(initialState);
       }
@@ -761,11 +761,11 @@ See https://reactjs.org/link/invalid-hook-call for tips about how to debug and f
         var dispatcher = resolveDispatcher();
         return dispatcher.useReducer(reducer, initialArg, init);
       }
-      function useRef9(initialValue) {
+      function useRef10(initialValue) {
         var dispatcher = resolveDispatcher();
         return dispatcher.useRef(initialValue);
       }
-      function useEffect9(create, deps) {
+      function useEffect10(create, deps) {
         var dispatcher = resolveDispatcher();
         return dispatcher.useEffect(create, deps);
       }
@@ -773,7 +773,7 @@ See https://reactjs.org/link/invalid-hook-call for tips about how to debug and f
         var dispatcher = resolveDispatcher();
         return dispatcher.useInsertionEffect(create, deps);
       }
-      function useLayoutEffect3(create, deps) {
+      function useLayoutEffect4(create, deps) {
         var dispatcher = resolveDispatcher();
         return dispatcher.useLayoutEffect(create, deps);
       }
@@ -1143,7 +1143,7 @@ Check the top-level render call using <` + parentName + ">.");
           var typeString;
           type === null ? typeString = "null" : isArray(type) ? typeString = "array" : type !== void 0 && type.$$typeof === REACT_ELEMENT_TYPE ? (typeString = "<" + (getComponentNameFromType(type.type) || "Unknown") + " />", info = " Did you accidentally export a JSX literal instead of a component?") : typeString = typeof type, error("React.createElement: type is invalid -- expected a string (for built-in components) or a class/function (for composite components) but got: %s.%s", typeString, info);
         }
-        var element = createElement8.apply(this, arguments);
+        var element = createElement9.apply(this, arguments);
         if (element == null)
           return element;
         if (validType)
@@ -1294,7 +1294,7 @@ Check the top-level render call using <` + parentName + ">.");
         toArray,
         only: onlyChild
       };
-      exports.Children = Children2, exports.Component = Component3, exports.Fragment = REACT_FRAGMENT_TYPE, exports.Profiler = REACT_PROFILER_TYPE, exports.PureComponent = PureComponent, exports.StrictMode = REACT_STRICT_MODE_TYPE, exports.Suspense = REACT_SUSPENSE_TYPE, exports.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = ReactSharedInternals, exports.cloneElement = cloneElement$1, exports.createContext = createContext5, exports.createElement = createElement$1, exports.createFactory = createFactory, exports.createRef = createRef, exports.forwardRef = forwardRef5, exports.isValidElement = isValidElement2, exports.lazy = lazy2, exports.memo = memo, exports.startTransition = startTransition, exports.unstable_act = act, exports.useCallback = useCallback5, exports.useContext = useContext7, exports.useDebugValue = useDebugValue, exports.useDeferredValue = useDeferredValue, exports.useEffect = useEffect9, exports.useId = useId, exports.useImperativeHandle = useImperativeHandle, exports.useInsertionEffect = useInsertionEffect, exports.useLayoutEffect = useLayoutEffect3, exports.useMemo = useMemo11, exports.useReducer = useReducer, exports.useRef = useRef9, exports.useState = useState7, exports.useSyncExternalStore = useSyncExternalStore, exports.useTransition = useTransition2, exports.version = ReactVersion, typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ < "u" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop == "function" && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
+      exports.Children = Children2, exports.Component = Component3, exports.Fragment = REACT_FRAGMENT_TYPE, exports.Profiler = REACT_PROFILER_TYPE, exports.PureComponent = PureComponent, exports.StrictMode = REACT_STRICT_MODE_TYPE, exports.Suspense = REACT_SUSPENSE_TYPE, exports.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = ReactSharedInternals, exports.cloneElement = cloneElement$1, exports.createContext = createContext6, exports.createElement = createElement$1, exports.createFactory = createFactory, exports.createRef = createRef, exports.forwardRef = forwardRef6, exports.isValidElement = isValidElement2, exports.lazy = lazy2, exports.memo = memo, exports.startTransition = startTransition, exports.unstable_act = act, exports.useCallback = useCallback5, exports.useContext = useContext8, exports.useDebugValue = useDebugValue, exports.useDeferredValue = useDeferredValue, exports.useEffect = useEffect10, exports.useId = useId, exports.useImperativeHandle = useImperativeHandle, exports.useInsertionEffect = useInsertionEffect, exports.useLayoutEffect = useLayoutEffect4, exports.useMemo = useMemo11, exports.useReducer = useReducer, exports.useRef = useRef10, exports.useState = useState8, exports.useSyncExternalStore = useSyncExternalStore, exports.useTransition = useTransition2, exports.version = ReactVersion, typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ < "u" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop == "function" && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
     })();
   }
 });
@@ -4006,7 +4006,7 @@ function _renderMatches(matches, parentMatches, dataRouterState) {
   return renderedMatches.reduceRight((outlet, match, index) => {
     let error = match.route.id ? errors == null ? void 0 : errors[match.route.id] : null, errorElement = null;
     dataRouterState && (errorElement = match.route.errorElement || defaultErrorElement);
-    let matches2 = parentMatches.concat(renderedMatches.slice(0, index + 1)), getChildren = () => {
+    let matches2 = parentMatches.concat(renderedMatches.slice(0, index + 1)), getChildren2 = () => {
       let children;
       return error ? children = errorElement : match.route.Component ? children = /* @__PURE__ */ React.createElement(match.route.Component, null) : match.route.element ? children = match.route.element : children = outlet, /* @__PURE__ */ React.createElement(RenderedRoute, {
         match,
@@ -4023,13 +4023,13 @@ function _renderMatches(matches, parentMatches, dataRouterState) {
       revalidation: dataRouterState.revalidation,
       component: errorElement,
       error,
-      children: getChildren(),
+      children: getChildren2(),
       routeContext: {
         outlet: null,
         matches: matches2,
         isDataRoute: !0
       }
-    }) : getChildren();
+    }) : getChildren2();
   }, null);
 }
 function getDataRouterConsoleError(hookName) {
@@ -5114,7 +5114,7 @@ var React2, defaultMethod, defaultEncType, _formDataSupportsSubmitter, supported
     HistoryRouter.displayName = "unstable_HistoryRouter";
     isBrowser = typeof window < "u" && typeof window.document < "u" && typeof window.document.createElement < "u", ABSOLUTE_URL_REGEX2 = /^(?:[a-z][a-z0-9+.-]*:|\/\/)/i, Link = /* @__PURE__ */ React2.forwardRef(function(_ref4, ref) {
       let {
-        onClick,
+        onClick: onClick2,
         relative,
         reloadDocument,
         replace,
@@ -5142,13 +5142,13 @@ var React2, defaultMethod, defaultEncType, _formDataSupportsSubmitter, supported
         relative
       });
       function handleClick(event) {
-        onClick && onClick(event), event.defaultPrevented || internalOnClick(event);
+        onClick2 && onClick2(event), event.defaultPrevented || internalOnClick(event);
       }
       return (
         // eslint-disable-next-line jsx-a11y/anchor-has-content
         /* @__PURE__ */ React2.createElement("a", _extends3({}, rest, {
           href: absoluteHref || href,
-          onClick: isExternal || reloadDocument ? onClick : handleClick,
+          onClick: isExternal || reloadDocument ? onClick2 : handleClick,
           ref,
           target
         }))
@@ -5250,7 +5250,7 @@ var require_server = __commonJS({
   "node_modules/react-router-dom/server.js"(exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: !0 });
-    var React9 = require_react(), router = (init_router(), __toCommonJS(router_exports)), reactRouter = (init_dist(), __toCommonJS(dist_exports)), reactRouterDom = (init_dist2(), __toCommonJS(dist_exports2));
+    var React10 = require_react(), router = (init_router(), __toCommonJS(router_exports)), reactRouter = (init_dist(), __toCommonJS(dist_exports)), reactRouterDom = (init_dist2(), __toCommonJS(dist_exports2));
     function _interopNamespace(e) {
       if (e && e.__esModule)
         return e;
@@ -5267,7 +5267,7 @@ var require_server = __commonJS({
         }
       }), n.default = e, Object.freeze(n);
     }
-    var React__namespace = /* @__PURE__ */ _interopNamespace(React9);
+    var React__namespace = /* @__PURE__ */ _interopNamespace(React10);
     function StaticRouter({
       basename,
       children,
@@ -5496,7 +5496,7 @@ var require_react_dom_server_legacy_browser_development = __commonJS({
     "use strict";
     (function() {
       "use strict";
-      var React9 = require_react(), ReactVersion = "18.2.0", ReactSharedInternals = React9.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+      var React10 = require_react(), ReactVersion = "18.2.0", ReactSharedInternals = React10.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
       function warn(format) {
         {
           for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++)
@@ -6990,7 +6990,7 @@ var require_react_dom_server_legacy_browser_development = __commonJS({
       }
       function flattenOptionChildren(children) {
         var content = "";
-        return React9.Children.forEach(children, function(child) {
+        return React10.Children.forEach(children, function(child) {
           child != null && (content += child, !didWarnInvalidOptionChildren && typeof child != "string" && typeof child != "number" && (didWarnInvalidOptionChildren = !0, error("Cannot infer the option value of complex children. Pass a `value` prop or use a plain string as children to <option>.")));
         }), content;
       }
@@ -8132,13 +8132,13 @@ Incoming: %s`, currentHookNameInDev, "[" + nextDeps.join(", ") + "]", "[" + prev
       function readContext$1(context) {
         return isInHookUserCodeInDev && error("Context can only be read while React is rendering. In classes, you can read it in the render method or getDerivedStateFromProps. In function components, you can read it directly in the function body, but not inside Hooks like useReducer() or useMemo()."), readContext(context);
       }
-      function useContext7(context) {
+      function useContext8(context) {
         return currentHookNameInDev = "useContext", resolveCurrentlyRenderingComponent(), readContext(context);
       }
       function basicStateReducer(state, action11) {
         return typeof action11 == "function" ? action11(state) : action11;
       }
-      function useState7(initialState) {
+      function useState8(initialState) {
         return currentHookNameInDev = "useState", useReducer(
           basicStateReducer,
           // useReducer has a special case to support lazy useState initializers
@@ -8152,11 +8152,11 @@ Incoming: %s`, currentHookNameInDev, "[" + nextDeps.join(", ") + "]", "[" + prev
             var firstRenderPhaseUpdate = renderPhaseUpdates.get(queue);
             if (firstRenderPhaseUpdate !== void 0) {
               renderPhaseUpdates.delete(queue);
-              var newState = workInProgressHook.memoizedState, update = firstRenderPhaseUpdate;
+              var newState = workInProgressHook.memoizedState, update2 = firstRenderPhaseUpdate;
               do {
-                var action11 = update.action;
-                isInHookUserCodeInDev = !0, newState = reducer(newState, action11), isInHookUserCodeInDev = !1, update = update.next;
-              } while (update !== null);
+                var action11 = update2.action;
+                isInHookUserCodeInDev = !0, newState = reducer(newState, action11), isInHookUserCodeInDev = !1, update2 = update2.next;
+              } while (update2 !== null);
               return workInProgressHook.memoizedState = newState, [newState, dispatch];
             }
           }
@@ -8187,7 +8187,7 @@ Incoming: %s`, currentHookNameInDev, "[" + nextDeps.join(", ") + "]", "[" + prev
         var nextValue = nextCreate();
         return isInHookUserCodeInDev = !1, workInProgressHook.memoizedState = [nextValue, nextDeps], nextValue;
       }
-      function useRef9(initialValue) {
+      function useRef10(initialValue) {
         currentlyRenderingComponent = resolveCurrentlyRenderingComponent(), workInProgressHook = createWorkInProgressHook();
         var previousRef = workInProgressHook.memoizedState;
         if (previousRef === null) {
@@ -8198,7 +8198,7 @@ Incoming: %s`, currentHookNameInDev, "[" + nextDeps.join(", ") + "]", "[" + prev
         } else
           return previousRef;
       }
-      function useLayoutEffect3(create, inputs) {
+      function useLayoutEffect4(create, inputs) {
         currentHookNameInDev = "useLayoutEffect", error("useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.");
       }
       function dispatchAction(componentIdentity, queue, action11) {
@@ -8206,18 +8206,18 @@ Incoming: %s`, currentHookNameInDev, "[" + nextDeps.join(", ") + "]", "[" + prev
           throw new Error("Too many re-renders. React limits the number of renders to prevent an infinite loop.");
         if (componentIdentity === currentlyRenderingComponent) {
           didScheduleRenderPhaseUpdate = !0;
-          var update = {
+          var update2 = {
             action: action11,
             next: null
           };
           renderPhaseUpdates === null && (renderPhaseUpdates = /* @__PURE__ */ new Map());
           var firstRenderPhaseUpdate = renderPhaseUpdates.get(queue);
           if (firstRenderPhaseUpdate === void 0)
-            renderPhaseUpdates.set(queue, update);
+            renderPhaseUpdates.set(queue, update2);
           else {
             for (var lastRenderPhaseUpdate = firstRenderPhaseUpdate; lastRenderPhaseUpdate.next !== null; )
               lastRenderPhaseUpdate = lastRenderPhaseUpdate.next;
-            lastRenderPhaseUpdate.next = update;
+            lastRenderPhaseUpdate.next = update2;
           }
         }
       }
@@ -8254,13 +8254,13 @@ Incoming: %s`, currentHookNameInDev, "[" + nextDeps.join(", ") + "]", "[" + prev
       }
       var Dispatcher = {
         readContext: readContext$1,
-        useContext: useContext7,
+        useContext: useContext8,
         useMemo: useMemo11,
         useReducer,
-        useRef: useRef9,
-        useState: useState7,
+        useRef: useRef10,
+        useState: useState8,
         useInsertionEffect: noop,
-        useLayoutEffect: useLayoutEffect3,
+        useLayoutEffect: useLayoutEffect4,
         useCallback: useCallback5,
         // useImperativeHandle is not run in the server environment
         useImperativeHandle: noop,
@@ -9077,7 +9077,7 @@ var require_react_dom_server_browser_development = __commonJS({
     "use strict";
     (function() {
       "use strict";
-      var React9 = require_react(), ReactVersion = "18.2.0", ReactSharedInternals = React9.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+      var React10 = require_react(), ReactVersion = "18.2.0", ReactSharedInternals = React10.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
       function warn(format) {
         {
           for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++)
@@ -10586,7 +10586,7 @@ var require_react_dom_server_browser_development = __commonJS({
       }
       function flattenOptionChildren(children) {
         var content = "";
-        return React9.Children.forEach(children, function(child) {
+        return React10.Children.forEach(children, function(child) {
           child != null && (content += child, !didWarnInvalidOptionChildren && typeof child != "string" && typeof child != "number" && (didWarnInvalidOptionChildren = !0, error("Cannot infer the option value of complex children. Pass a `value` prop or use a plain string as children to <option>.")));
         }), content;
       }
@@ -11684,13 +11684,13 @@ Incoming: %s`, currentHookNameInDev, "[" + nextDeps.join(", ") + "]", "[" + prev
       function readContext$1(context) {
         return isInHookUserCodeInDev && error("Context can only be read while React is rendering. In classes, you can read it in the render method or getDerivedStateFromProps. In function components, you can read it directly in the function body, but not inside Hooks like useReducer() or useMemo()."), readContext(context);
       }
-      function useContext7(context) {
+      function useContext8(context) {
         return currentHookNameInDev = "useContext", resolveCurrentlyRenderingComponent(), readContext(context);
       }
       function basicStateReducer(state, action11) {
         return typeof action11 == "function" ? action11(state) : action11;
       }
-      function useState7(initialState) {
+      function useState8(initialState) {
         return currentHookNameInDev = "useState", useReducer(
           basicStateReducer,
           // useReducer has a special case to support lazy useState initializers
@@ -11704,11 +11704,11 @@ Incoming: %s`, currentHookNameInDev, "[" + nextDeps.join(", ") + "]", "[" + prev
             var firstRenderPhaseUpdate = renderPhaseUpdates.get(queue);
             if (firstRenderPhaseUpdate !== void 0) {
               renderPhaseUpdates.delete(queue);
-              var newState = workInProgressHook.memoizedState, update = firstRenderPhaseUpdate;
+              var newState = workInProgressHook.memoizedState, update2 = firstRenderPhaseUpdate;
               do {
-                var action11 = update.action;
-                isInHookUserCodeInDev = !0, newState = reducer(newState, action11), isInHookUserCodeInDev = !1, update = update.next;
-              } while (update !== null);
+                var action11 = update2.action;
+                isInHookUserCodeInDev = !0, newState = reducer(newState, action11), isInHookUserCodeInDev = !1, update2 = update2.next;
+              } while (update2 !== null);
               return workInProgressHook.memoizedState = newState, [newState, dispatch];
             }
           }
@@ -11739,7 +11739,7 @@ Incoming: %s`, currentHookNameInDev, "[" + nextDeps.join(", ") + "]", "[" + prev
         var nextValue = nextCreate();
         return isInHookUserCodeInDev = !1, workInProgressHook.memoizedState = [nextValue, nextDeps], nextValue;
       }
-      function useRef9(initialValue) {
+      function useRef10(initialValue) {
         currentlyRenderingComponent = resolveCurrentlyRenderingComponent(), workInProgressHook = createWorkInProgressHook();
         var previousRef = workInProgressHook.memoizedState;
         if (previousRef === null) {
@@ -11750,7 +11750,7 @@ Incoming: %s`, currentHookNameInDev, "[" + nextDeps.join(", ") + "]", "[" + prev
         } else
           return previousRef;
       }
-      function useLayoutEffect3(create, inputs) {
+      function useLayoutEffect4(create, inputs) {
         currentHookNameInDev = "useLayoutEffect", error("useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.");
       }
       function dispatchAction(componentIdentity, queue, action11) {
@@ -11758,18 +11758,18 @@ Incoming: %s`, currentHookNameInDev, "[" + nextDeps.join(", ") + "]", "[" + prev
           throw new Error("Too many re-renders. React limits the number of renders to prevent an infinite loop.");
         if (componentIdentity === currentlyRenderingComponent) {
           didScheduleRenderPhaseUpdate = !0;
-          var update = {
+          var update2 = {
             action: action11,
             next: null
           };
           renderPhaseUpdates === null && (renderPhaseUpdates = /* @__PURE__ */ new Map());
           var firstRenderPhaseUpdate = renderPhaseUpdates.get(queue);
           if (firstRenderPhaseUpdate === void 0)
-            renderPhaseUpdates.set(queue, update);
+            renderPhaseUpdates.set(queue, update2);
           else {
             for (var lastRenderPhaseUpdate = firstRenderPhaseUpdate; lastRenderPhaseUpdate.next !== null; )
               lastRenderPhaseUpdate = lastRenderPhaseUpdate.next;
-            lastRenderPhaseUpdate.next = update;
+            lastRenderPhaseUpdate.next = update2;
           }
         }
       }
@@ -11806,13 +11806,13 @@ Incoming: %s`, currentHookNameInDev, "[" + nextDeps.join(", ") + "]", "[" + prev
       }
       var Dispatcher = {
         readContext: readContext$1,
-        useContext: useContext7,
+        useContext: useContext8,
         useMemo: useMemo11,
         useReducer,
-        useRef: useRef9,
-        useState: useState7,
+        useRef: useRef10,
+        useState: useState8,
         useInsertionEffect: noop,
-        useLayoutEffect: useLayoutEffect3,
+        useLayoutEffect: useLayoutEffect4,
         useCallback: useCallback5,
         // useImperativeHandle is not run in the server environment
         useImperativeHandle: noop,
@@ -12649,14 +12649,14 @@ var require_react_jsx_runtime_development = __commonJS({
     "use strict";
     (function() {
       "use strict";
-      var React9 = require_react(), REACT_ELEMENT_TYPE = Symbol.for("react.element"), REACT_PORTAL_TYPE = Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = Symbol.for("react.profiler"), REACT_PROVIDER_TYPE = Symbol.for("react.provider"), REACT_CONTEXT_TYPE = Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = Symbol.for("react.memo"), REACT_LAZY_TYPE = Symbol.for("react.lazy"), REACT_OFFSCREEN_TYPE = Symbol.for("react.offscreen"), MAYBE_ITERATOR_SYMBOL = Symbol.iterator, FAUX_ITERATOR_SYMBOL = "@@iterator";
+      var React10 = require_react(), REACT_ELEMENT_TYPE = Symbol.for("react.element"), REACT_PORTAL_TYPE = Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = Symbol.for("react.profiler"), REACT_PROVIDER_TYPE = Symbol.for("react.provider"), REACT_CONTEXT_TYPE = Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = Symbol.for("react.memo"), REACT_LAZY_TYPE = Symbol.for("react.lazy"), REACT_OFFSCREEN_TYPE = Symbol.for("react.offscreen"), MAYBE_ITERATOR_SYMBOL = Symbol.iterator, FAUX_ITERATOR_SYMBOL = "@@iterator";
       function getIteratorFn(maybeIterable) {
         if (maybeIterable === null || typeof maybeIterable != "object")
           return null;
         var maybeIterator = MAYBE_ITERATOR_SYMBOL && maybeIterable[MAYBE_ITERATOR_SYMBOL] || maybeIterable[FAUX_ITERATOR_SYMBOL];
         return typeof maybeIterator == "function" ? maybeIterator : null;
       }
-      var ReactSharedInternals = React9.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+      var ReactSharedInternals = React10.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
       function error(format) {
         {
           for (var _len2 = arguments.length, args = new Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++)
@@ -13509,14 +13509,14 @@ var require_react_jsx_dev_runtime_development = __commonJS({
     "use strict";
     (function() {
       "use strict";
-      var React9 = require_react(), REACT_ELEMENT_TYPE = Symbol.for("react.element"), REACT_PORTAL_TYPE = Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = Symbol.for("react.profiler"), REACT_PROVIDER_TYPE = Symbol.for("react.provider"), REACT_CONTEXT_TYPE = Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = Symbol.for("react.memo"), REACT_LAZY_TYPE = Symbol.for("react.lazy"), REACT_OFFSCREEN_TYPE = Symbol.for("react.offscreen"), MAYBE_ITERATOR_SYMBOL = Symbol.iterator, FAUX_ITERATOR_SYMBOL = "@@iterator";
+      var React10 = require_react(), REACT_ELEMENT_TYPE = Symbol.for("react.element"), REACT_PORTAL_TYPE = Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = Symbol.for("react.profiler"), REACT_PROVIDER_TYPE = Symbol.for("react.provider"), REACT_CONTEXT_TYPE = Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = Symbol.for("react.memo"), REACT_LAZY_TYPE = Symbol.for("react.lazy"), REACT_OFFSCREEN_TYPE = Symbol.for("react.offscreen"), MAYBE_ITERATOR_SYMBOL = Symbol.iterator, FAUX_ITERATOR_SYMBOL = "@@iterator";
       function getIteratorFn(maybeIterable) {
         if (maybeIterable === null || typeof maybeIterable != "object")
           return null;
         var maybeIterator = MAYBE_ITERATOR_SYMBOL && maybeIterable[MAYBE_ITERATOR_SYMBOL] || maybeIterable[FAUX_ITERATOR_SYMBOL];
         return typeof maybeIterator == "function" ? maybeIterator : null;
       }
-      var ReactSharedInternals = React9.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+      var ReactSharedInternals = React10.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
       function error(format) {
         {
           for (var _len2 = arguments.length, args = new Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++)
@@ -14502,7 +14502,7 @@ function usePrefetchBehavior(prefetch, theirElementProps) {
     onBlur,
     onMouseEnter,
     onMouseLeave,
-    onTouchStart
+    onTouchStart: onTouchStart2
   } = theirElementProps, ref = React3.useRef(null);
   React3.useEffect(() => {
     if (prefetch === "render" && setShouldPrefetch(!0), prefetch === "viewport") {
@@ -14537,7 +14537,7 @@ function usePrefetchBehavior(prefetch, theirElementProps) {
     onBlur: composeEventHandlers(onBlur, cancelIntent),
     onMouseEnter: composeEventHandlers(onMouseEnter, setIntent),
     onMouseLeave: composeEventHandlers(onMouseLeave, cancelIntent),
-    onTouchStart: composeEventHandlers(onTouchStart, setIntent)
+    onTouchStart: composeEventHandlers(onTouchStart2, setIntent)
   }];
 }
 var ABSOLUTE_URL_REGEX3 = /^(?:[a-z][a-z0-9+.-]*:|\/\/)/i, NavLink2 = /* @__PURE__ */ React3.forwardRef(({
@@ -18715,7 +18715,7 @@ var favicon_default = "/build/_assets/favicon-UY3DMFQ6.ico";
 var reset_default = "/build/_assets/reset-C3NFZ242.css";
 
 // app/styles/app.css
-var app_default = "/build/_assets/app-D2V65VEB.css";
+var app_default = "/build/_assets/app-APMP2AWK.css";
 
 // app/components/Layout.jsx
 var import_react16 = __toESM(require_react());
@@ -18801,14 +18801,14 @@ function Footer({ menu }) {
 function FooterMenu({ menu }) {
   var _a2;
   let [root] = useMatches2(), publicStoreDomain = (_a2 = root == null ? void 0 : root.data) == null ? void 0 : _a2.publicStoreDomain;
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("nav", { className: "footer-menu", role: "navigation", children: (menu || FALLBACK_FOOTER_MENU).items.map((item) => {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_jsx_dev_runtime3.Fragment, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("nav", { className: "footer-menu", role: "navigation", children: (menu || FALLBACK_FOOTER_MENU).items.map((item) => {
     if (!item.url)
       return null;
     let url = item.url.includes("myshopify.com") || item.url.includes(publicStoreDomain) ? new URL(item.url).pathname : item.url;
     return !url.startsWith("/") ? /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("a", { href: url, rel: "noopener noreferrer", target: "_blank", children: item.title }, item.id, !1, {
       fileName: "app/components/Footer.jsx",
-      lineNumber: 26,
-      columnNumber: 11
+      lineNumber: 27,
+      columnNumber: 13
     }, this) : /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
       NavLink2,
       {
@@ -18822,12 +18822,16 @@ function FooterMenu({ menu }) {
       !1,
       {
         fileName: "app/components/Footer.jsx",
-        lineNumber: 30,
-        columnNumber: 11
+        lineNumber: 31,
+        columnNumber: 13
       },
       this
     );
   }) }, void 0, !1, {
+    fileName: "app/components/Footer.jsx",
+    lineNumber: 16,
+    columnNumber: 7
+  }, this) }, void 0, !1, {
     fileName: "app/components/Footer.jsx",
     lineNumber: 15,
     columnNumber: 5
@@ -20229,7 +20233,7 @@ function MobileMenuAside({ menu }) {
 }
 
 // app/styles/tailwind.css
-var tailwind_default = "/build/_assets/tailwind-MYAVXMNC.css";
+var tailwind_default = "/build/_assets/tailwind-HE4JZLBQ.css";
 
 // app/root.jsx
 var import_jsx_dev_runtime8 = __toESM(require_jsx_dev_runtime()), shouldRevalidate = ({ formMethod, currentUrl, nextUrl }) => !!(formMethod && formMethod !== "GET" || currentUrl.toString() === nextUrl.toString());
@@ -21682,12 +21686,23 @@ async function loader6({ request, params, context }) {
 function Collection() {
   let { collection } = useLoaderData2();
   return /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("div", { className: "collection", children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("h1", { children: collection.title }, void 0, !1, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("h1", { className: "w-full text-center", children: collection.title }, void 0, !1, {
       fileName: "app/routes/collections.$handle.jsx",
       lineNumber: 43,
       columnNumber: 7
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("p", { className: "collection-description", children: collection.description }, void 0, !1, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("div", { className: "flex justify-around items-center mb-6", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("img", { src: collection.image.url, alt: "collection.image.url", width: "500", height: "600" }, void 0, !1, {
+        fileName: "app/routes/collections.$handle.jsx",
+        lineNumber: 45,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("p", { className: "collection-description", children: collection.description }, void 0, !1, {
+        fileName: "app/routes/collections.$handle.jsx",
+        lineNumber: 46,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, !0, {
       fileName: "app/routes/collections.$handle.jsx",
       lineNumber: 44,
       columnNumber: 7
@@ -21695,39 +21710,39 @@ function Collection() {
     /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(Pagination, { connection: collection.products, children: ({ nodes, isLoading, PreviousLink, NextLink }) => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(import_jsx_dev_runtime14.Fragment, { children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(PreviousLink, { children: isLoading ? "Loading..." : /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("span", { children: "\u2191 Load previous" }, void 0, !1, {
         fileName: "app/routes/collections.$handle.jsx",
-        lineNumber: 49,
+        lineNumber: 52,
         columnNumber: 43
       }, this) }, void 0, !1, {
-        fileName: "app/routes/collections.$handle.jsx",
-        lineNumber: 48,
-        columnNumber: 13
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(ProductsGrid, { products: nodes }, void 0, !1, {
         fileName: "app/routes/collections.$handle.jsx",
         lineNumber: 51,
         columnNumber: 13
       }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(ProductsGrid, { products: nodes }, void 0, !1, {
+        fileName: "app/routes/collections.$handle.jsx",
+        lineNumber: 54,
+        columnNumber: 13
+      }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("br", {}, void 0, !1, {
         fileName: "app/routes/collections.$handle.jsx",
-        lineNumber: 52,
+        lineNumber: 55,
         columnNumber: 13
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(NextLink, { children: isLoading ? "Loading..." : /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("span", { children: "Load more \u2193" }, void 0, !1, {
         fileName: "app/routes/collections.$handle.jsx",
-        lineNumber: 54,
+        lineNumber: 57,
         columnNumber: 43
       }, this) }, void 0, !1, {
         fileName: "app/routes/collections.$handle.jsx",
-        lineNumber: 53,
+        lineNumber: 56,
         columnNumber: 13
       }, this)
     ] }, void 0, !0, {
       fileName: "app/routes/collections.$handle.jsx",
-      lineNumber: 47,
+      lineNumber: 50,
       columnNumber: 11
     }, this) }, void 0, !1, {
       fileName: "app/routes/collections.$handle.jsx",
-      lineNumber: 45,
+      lineNumber: 48,
       columnNumber: 7
     }, this)
   ] }, void 0, !0, {
@@ -21747,13 +21762,13 @@ function ProductsGrid({ products }) {
     !1,
     {
       fileName: "app/routes/collections.$handle.jsx",
-      lineNumber: 68,
+      lineNumber: 71,
       columnNumber: 11
     },
     this
   )) }, void 0, !1, {
     fileName: "app/routes/collections.$handle.jsx",
-    lineNumber: 65,
+    lineNumber: 68,
     columnNumber: 5
   }, this);
 }
@@ -21779,23 +21794,23 @@ function ProductItem({ product, loading }) {
           !1,
           {
             fileName: "app/routes/collections.$handle.jsx",
-            lineNumber: 90,
+            lineNumber: 93,
             columnNumber: 9
           },
           this
         ),
         /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("h4", { children: product.title }, void 0, !1, {
           fileName: "app/routes/collections.$handle.jsx",
-          lineNumber: 98,
+          lineNumber: 101,
           columnNumber: 7
         }, this),
         /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("small", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(Money, { data: product.priceRange.minVariantPrice }, void 0, !1, {
           fileName: "app/routes/collections.$handle.jsx",
-          lineNumber: 100,
+          lineNumber: 103,
           columnNumber: 9
         }, this) }, void 0, !1, {
           fileName: "app/routes/collections.$handle.jsx",
-          lineNumber: 99,
+          lineNumber: 102,
           columnNumber: 7
         }, this)
       ]
@@ -21804,7 +21819,7 @@ function ProductItem({ product, loading }) {
     !0,
     {
       fileName: "app/routes/collections.$handle.jsx",
-      lineNumber: 83,
+      lineNumber: 86,
       columnNumber: 5
     },
     this
@@ -21859,6 +21874,10 @@ var PRODUCT_ITEM_FRAGMENT = `#graphql
       handle
       title
       description
+      image {
+          id
+          url
+        }
       products(
         first: $first,
         last: $last,
@@ -23809,7 +23828,2588 @@ __export(products_handle_exports, {
   loader: () => loader13,
   meta: () => meta10
 });
-var import_react30 = __toESM(require_react());
+var import_react31 = __toESM(require_react());
+
+// node_modules/swiper/swiper-react.mjs
+var import_react30 = __toESM(require_react(), 1);
+
+// node_modules/swiper/shared/ssr-window.esm.mjs
+function isObject(obj) {
+  return obj !== null && typeof obj == "object" && "constructor" in obj && obj.constructor === Object;
+}
+function extend(target, src) {
+  target === void 0 && (target = {}), src === void 0 && (src = {}), Object.keys(src).forEach((key) => {
+    typeof target[key] > "u" ? target[key] = src[key] : isObject(src[key]) && isObject(target[key]) && Object.keys(src[key]).length > 0 && extend(target[key], src[key]);
+  });
+}
+var ssrDocument = {
+  body: {},
+  addEventListener() {
+  },
+  removeEventListener() {
+  },
+  activeElement: {
+    blur() {
+    },
+    nodeName: ""
+  },
+  querySelector() {
+    return null;
+  },
+  querySelectorAll() {
+    return [];
+  },
+  getElementById() {
+    return null;
+  },
+  createEvent() {
+    return {
+      initEvent() {
+      }
+    };
+  },
+  createElement() {
+    return {
+      children: [],
+      childNodes: [],
+      style: {},
+      setAttribute() {
+      },
+      getElementsByTagName() {
+        return [];
+      }
+    };
+  },
+  createElementNS() {
+    return {};
+  },
+  importNode() {
+    return null;
+  },
+  location: {
+    hash: "",
+    host: "",
+    hostname: "",
+    href: "",
+    origin: "",
+    pathname: "",
+    protocol: "",
+    search: ""
+  }
+};
+function getDocument() {
+  let doc = typeof document < "u" ? document : {};
+  return extend(doc, ssrDocument), doc;
+}
+var ssrWindow = {
+  document: ssrDocument,
+  navigator: {
+    userAgent: ""
+  },
+  location: {
+    hash: "",
+    host: "",
+    hostname: "",
+    href: "",
+    origin: "",
+    pathname: "",
+    protocol: "",
+    search: ""
+  },
+  history: {
+    replaceState() {
+    },
+    pushState() {
+    },
+    go() {
+    },
+    back() {
+    }
+  },
+  CustomEvent: function() {
+    return this;
+  },
+  addEventListener() {
+  },
+  removeEventListener() {
+  },
+  getComputedStyle() {
+    return {
+      getPropertyValue() {
+        return "";
+      }
+    };
+  },
+  Image() {
+  },
+  Date() {
+  },
+  screen: {},
+  setTimeout() {
+  },
+  clearTimeout() {
+  },
+  matchMedia() {
+    return {};
+  },
+  requestAnimationFrame(callback) {
+    return typeof setTimeout > "u" ? (callback(), null) : setTimeout(callback, 0);
+  },
+  cancelAnimationFrame(id) {
+    typeof setTimeout > "u" || clearTimeout(id);
+  }
+};
+function getWindow() {
+  let win = typeof window < "u" ? window : {};
+  return extend(win, ssrWindow), win;
+}
+
+// node_modules/swiper/shared/utils.mjs
+function deleteProps(obj) {
+  let object = obj;
+  Object.keys(object).forEach((key) => {
+    try {
+      object[key] = null;
+    } catch {
+    }
+    try {
+      delete object[key];
+    } catch {
+    }
+  });
+}
+function nextTick(callback, delay) {
+  return delay === void 0 && (delay = 0), setTimeout(callback, delay);
+}
+function now() {
+  return Date.now();
+}
+function getComputedStyle2(el) {
+  let window2 = getWindow(), style;
+  return window2.getComputedStyle && (style = window2.getComputedStyle(el, null)), !style && el.currentStyle && (style = el.currentStyle), style || (style = el.style), style;
+}
+function getTranslate(el, axis) {
+  axis === void 0 && (axis = "x");
+  let window2 = getWindow(), matrix, curTransform, transformMatrix, curStyle = getComputedStyle2(el);
+  return window2.WebKitCSSMatrix ? (curTransform = curStyle.transform || curStyle.webkitTransform, curTransform.split(",").length > 6 && (curTransform = curTransform.split(", ").map((a) => a.replace(",", ".")).join(", ")), transformMatrix = new window2.WebKitCSSMatrix(curTransform === "none" ? "" : curTransform)) : (transformMatrix = curStyle.MozTransform || curStyle.OTransform || curStyle.MsTransform || curStyle.msTransform || curStyle.transform || curStyle.getPropertyValue("transform").replace("translate(", "matrix(1, 0, 0, 1,"), matrix = transformMatrix.toString().split(",")), axis === "x" && (window2.WebKitCSSMatrix ? curTransform = transformMatrix.m41 : matrix.length === 16 ? curTransform = parseFloat(matrix[12]) : curTransform = parseFloat(matrix[4])), axis === "y" && (window2.WebKitCSSMatrix ? curTransform = transformMatrix.m42 : matrix.length === 16 ? curTransform = parseFloat(matrix[13]) : curTransform = parseFloat(matrix[5])), curTransform || 0;
+}
+function isObject2(o) {
+  return typeof o == "object" && o !== null && o.constructor && Object.prototype.toString.call(o).slice(8, -1) === "Object";
+}
+function isNode(node) {
+  return typeof window < "u" && typeof window.HTMLElement < "u" ? node instanceof HTMLElement : node && (node.nodeType === 1 || node.nodeType === 11);
+}
+function extend2() {
+  let to = Object(arguments.length <= 0 ? void 0 : arguments[0]), noExtend = ["__proto__", "constructor", "prototype"];
+  for (let i = 1; i < arguments.length; i += 1) {
+    let nextSource = i < 0 || arguments.length <= i ? void 0 : arguments[i];
+    if (nextSource != null && !isNode(nextSource)) {
+      let keysArray = Object.keys(Object(nextSource)).filter((key) => noExtend.indexOf(key) < 0);
+      for (let nextIndex = 0, len = keysArray.length; nextIndex < len; nextIndex += 1) {
+        let nextKey = keysArray[nextIndex], desc = Object.getOwnPropertyDescriptor(nextSource, nextKey);
+        desc !== void 0 && desc.enumerable && (isObject2(to[nextKey]) && isObject2(nextSource[nextKey]) ? nextSource[nextKey].__swiper__ ? to[nextKey] = nextSource[nextKey] : extend2(to[nextKey], nextSource[nextKey]) : !isObject2(to[nextKey]) && isObject2(nextSource[nextKey]) ? (to[nextKey] = {}, nextSource[nextKey].__swiper__ ? to[nextKey] = nextSource[nextKey] : extend2(to[nextKey], nextSource[nextKey])) : to[nextKey] = nextSource[nextKey]);
+      }
+    }
+  }
+  return to;
+}
+function setCSSProperty(el, varName, varValue) {
+  el.style.setProperty(varName, varValue);
+}
+function animateCSSModeScroll(_ref) {
+  let {
+    swiper,
+    targetPosition,
+    side
+  } = _ref, window2 = getWindow(), startPosition = -swiper.translate, startTime = null, time, duration = swiper.params.speed;
+  swiper.wrapperEl.style.scrollSnapType = "none", window2.cancelAnimationFrame(swiper.cssModeFrameID);
+  let dir = targetPosition > startPosition ? "next" : "prev", isOutOfBound = (current, target) => dir === "next" && current >= target || dir === "prev" && current <= target, animate = () => {
+    time = (/* @__PURE__ */ new Date()).getTime(), startTime === null && (startTime = time);
+    let progress = Math.max(Math.min((time - startTime) / duration, 1), 0), easeProgress = 0.5 - Math.cos(progress * Math.PI) / 2, currentPosition = startPosition + easeProgress * (targetPosition - startPosition);
+    if (isOutOfBound(currentPosition, targetPosition) && (currentPosition = targetPosition), swiper.wrapperEl.scrollTo({
+      [side]: currentPosition
+    }), isOutOfBound(currentPosition, targetPosition)) {
+      swiper.wrapperEl.style.overflow = "hidden", swiper.wrapperEl.style.scrollSnapType = "", setTimeout(() => {
+        swiper.wrapperEl.style.overflow = "", swiper.wrapperEl.scrollTo({
+          [side]: currentPosition
+        });
+      }), window2.cancelAnimationFrame(swiper.cssModeFrameID);
+      return;
+    }
+    swiper.cssModeFrameID = window2.requestAnimationFrame(animate);
+  };
+  animate();
+}
+function elementChildren(element, selector) {
+  return selector === void 0 && (selector = ""), [...element.children].filter((el) => el.matches(selector));
+}
+function createElement8(tag, classes2) {
+  classes2 === void 0 && (classes2 = []);
+  let el = document.createElement(tag);
+  return el.classList.add(...Array.isArray(classes2) ? classes2 : [classes2]), el;
+}
+function elementPrevAll(el, selector) {
+  let prevEls = [];
+  for (; el.previousElementSibling; ) {
+    let prev = el.previousElementSibling;
+    selector ? prev.matches(selector) && prevEls.push(prev) : prevEls.push(prev), el = prev;
+  }
+  return prevEls;
+}
+function elementNextAll(el, selector) {
+  let nextEls = [];
+  for (; el.nextElementSibling; ) {
+    let next = el.nextElementSibling;
+    selector ? next.matches(selector) && nextEls.push(next) : nextEls.push(next), el = next;
+  }
+  return nextEls;
+}
+function elementStyle(el, prop) {
+  return getWindow().getComputedStyle(el, null).getPropertyValue(prop);
+}
+function elementIndex(el) {
+  let child = el, i;
+  if (child) {
+    for (i = 0; (child = child.previousSibling) !== null; )
+      child.nodeType === 1 && (i += 1);
+    return i;
+  }
+}
+function elementParents(el, selector) {
+  let parents = [], parent = el.parentElement;
+  for (; parent; )
+    selector ? parent.matches(selector) && parents.push(parent) : parents.push(parent), parent = parent.parentElement;
+  return parents;
+}
+function elementOuterSize(el, size, includeMargins) {
+  let window2 = getWindow();
+  return includeMargins ? el[size === "width" ? "offsetWidth" : "offsetHeight"] + parseFloat(window2.getComputedStyle(el, null).getPropertyValue(size === "width" ? "margin-right" : "margin-top")) + parseFloat(window2.getComputedStyle(el, null).getPropertyValue(size === "width" ? "margin-left" : "margin-bottom")) : el.offsetWidth;
+}
+
+// node_modules/swiper/shared/swiper-core.mjs
+var support;
+function calcSupport() {
+  let window2 = getWindow(), document2 = getDocument();
+  return {
+    smoothScroll: document2.documentElement && document2.documentElement.style && "scrollBehavior" in document2.documentElement.style,
+    touch: !!("ontouchstart" in window2 || window2.DocumentTouch && document2 instanceof window2.DocumentTouch)
+  };
+}
+function getSupport() {
+  return support || (support = calcSupport()), support;
+}
+var deviceCached;
+function calcDevice(_temp) {
+  let {
+    userAgent
+  } = _temp === void 0 ? {} : _temp, support2 = getSupport(), window2 = getWindow(), platform = window2.navigator.platform, ua = userAgent || window2.navigator.userAgent, device = {
+    ios: !1,
+    android: !1
+  }, screenWidth = window2.screen.width, screenHeight = window2.screen.height, android = ua.match(/(Android);?[\s\/]+([\d.]+)?/), ipad = ua.match(/(iPad).*OS\s([\d_]+)/), ipod = ua.match(/(iPod)(.*OS\s([\d_]+))?/), iphone = !ipad && ua.match(/(iPhone\sOS|iOS)\s([\d_]+)/), windows = platform === "Win32", macos = platform === "MacIntel", iPadScreens = ["1024x1366", "1366x1024", "834x1194", "1194x834", "834x1112", "1112x834", "768x1024", "1024x768", "820x1180", "1180x820", "810x1080", "1080x810"];
+  return !ipad && macos && support2.touch && iPadScreens.indexOf(`${screenWidth}x${screenHeight}`) >= 0 && (ipad = ua.match(/(Version)\/([\d.]+)/), ipad || (ipad = [0, 1, "13_0_0"]), macos = !1), android && !windows && (device.os = "android", device.android = !0), (ipad || iphone || ipod) && (device.os = "ios", device.ios = !0), device;
+}
+function getDevice(overrides) {
+  return overrides === void 0 && (overrides = {}), deviceCached || (deviceCached = calcDevice(overrides)), deviceCached;
+}
+var browser;
+function calcBrowser() {
+  let window2 = getWindow(), needPerspectiveFix = !1;
+  function isSafari() {
+    let ua = window2.navigator.userAgent.toLowerCase();
+    return ua.indexOf("safari") >= 0 && ua.indexOf("chrome") < 0 && ua.indexOf("android") < 0;
+  }
+  if (isSafari()) {
+    let ua = String(window2.navigator.userAgent);
+    if (ua.includes("Version/")) {
+      let [major, minor] = ua.split("Version/")[1].split(" ")[0].split(".").map((num) => Number(num));
+      needPerspectiveFix = major < 16 || major === 16 && minor < 2;
+    }
+  }
+  return {
+    isSafari: needPerspectiveFix || isSafari(),
+    needPerspectiveFix,
+    isWebView: /(iPhone|iPod|iPad).*AppleWebKit(?!.*Safari)/i.test(window2.navigator.userAgent)
+  };
+}
+function getBrowser() {
+  return browser || (browser = calcBrowser()), browser;
+}
+function Resize(_ref) {
+  let {
+    swiper,
+    on,
+    emit
+  } = _ref, window2 = getWindow(), observer = null, animationFrame = null, resizeHandler = () => {
+    !swiper || swiper.destroyed || !swiper.initialized || (emit("beforeResize"), emit("resize"));
+  }, createObserver = () => {
+    !swiper || swiper.destroyed || !swiper.initialized || (observer = new ResizeObserver((entries) => {
+      animationFrame = window2.requestAnimationFrame(() => {
+        let {
+          width,
+          height
+        } = swiper, newWidth = width, newHeight = height;
+        entries.forEach((_ref2) => {
+          let {
+            contentBoxSize,
+            contentRect,
+            target
+          } = _ref2;
+          target && target !== swiper.el || (newWidth = contentRect ? contentRect.width : (contentBoxSize[0] || contentBoxSize).inlineSize, newHeight = contentRect ? contentRect.height : (contentBoxSize[0] || contentBoxSize).blockSize);
+        }), (newWidth !== width || newHeight !== height) && resizeHandler();
+      });
+    }), observer.observe(swiper.el));
+  }, removeObserver = () => {
+    animationFrame && window2.cancelAnimationFrame(animationFrame), observer && observer.unobserve && swiper.el && (observer.unobserve(swiper.el), observer = null);
+  }, orientationChangeHandler = () => {
+    !swiper || swiper.destroyed || !swiper.initialized || emit("orientationchange");
+  };
+  on("init", () => {
+    if (swiper.params.resizeObserver && typeof window2.ResizeObserver < "u") {
+      createObserver();
+      return;
+    }
+    window2.addEventListener("resize", resizeHandler), window2.addEventListener("orientationchange", orientationChangeHandler);
+  }), on("destroy", () => {
+    removeObserver(), window2.removeEventListener("resize", resizeHandler), window2.removeEventListener("orientationchange", orientationChangeHandler);
+  });
+}
+function Observer(_ref) {
+  let {
+    swiper,
+    extendParams,
+    on,
+    emit
+  } = _ref, observers = [], window2 = getWindow(), attach = function(target, options) {
+    options === void 0 && (options = {});
+    let ObserverFunc = window2.MutationObserver || window2.WebkitMutationObserver, observer = new ObserverFunc((mutations) => {
+      if (swiper.__preventObserver__)
+        return;
+      if (mutations.length === 1) {
+        emit("observerUpdate", mutations[0]);
+        return;
+      }
+      let observerUpdate = function() {
+        emit("observerUpdate", mutations[0]);
+      };
+      window2.requestAnimationFrame ? window2.requestAnimationFrame(observerUpdate) : window2.setTimeout(observerUpdate, 0);
+    });
+    observer.observe(target, {
+      attributes: typeof options.attributes > "u" ? !0 : options.attributes,
+      childList: typeof options.childList > "u" ? !0 : options.childList,
+      characterData: typeof options.characterData > "u" ? !0 : options.characterData
+    }), observers.push(observer);
+  }, init = () => {
+    if (swiper.params.observer) {
+      if (swiper.params.observeParents) {
+        let containerParents = elementParents(swiper.hostEl);
+        for (let i = 0; i < containerParents.length; i += 1)
+          attach(containerParents[i]);
+      }
+      attach(swiper.hostEl, {
+        childList: swiper.params.observeSlideChildren
+      }), attach(swiper.wrapperEl, {
+        attributes: !1
+      });
+    }
+  }, destroy = () => {
+    observers.forEach((observer) => {
+      observer.disconnect();
+    }), observers.splice(0, observers.length);
+  };
+  extendParams({
+    observer: !1,
+    observeParents: !1,
+    observeSlideChildren: !1
+  }), on("init", init), on("destroy", destroy);
+}
+var eventsEmitter = {
+  on(events2, handler, priority) {
+    let self = this;
+    if (!self.eventsListeners || self.destroyed || typeof handler != "function")
+      return self;
+    let method = priority ? "unshift" : "push";
+    return events2.split(" ").forEach((event) => {
+      self.eventsListeners[event] || (self.eventsListeners[event] = []), self.eventsListeners[event][method](handler);
+    }), self;
+  },
+  once(events2, handler, priority) {
+    let self = this;
+    if (!self.eventsListeners || self.destroyed || typeof handler != "function")
+      return self;
+    function onceHandler() {
+      self.off(events2, onceHandler), onceHandler.__emitterProxy && delete onceHandler.__emitterProxy;
+      for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++)
+        args[_key] = arguments[_key];
+      handler.apply(self, args);
+    }
+    return onceHandler.__emitterProxy = handler, self.on(events2, onceHandler, priority);
+  },
+  onAny(handler, priority) {
+    let self = this;
+    if (!self.eventsListeners || self.destroyed || typeof handler != "function")
+      return self;
+    let method = priority ? "unshift" : "push";
+    return self.eventsAnyListeners.indexOf(handler) < 0 && self.eventsAnyListeners[method](handler), self;
+  },
+  offAny(handler) {
+    let self = this;
+    if (!self.eventsListeners || self.destroyed || !self.eventsAnyListeners)
+      return self;
+    let index = self.eventsAnyListeners.indexOf(handler);
+    return index >= 0 && self.eventsAnyListeners.splice(index, 1), self;
+  },
+  off(events2, handler) {
+    let self = this;
+    return !self.eventsListeners || self.destroyed || !self.eventsListeners || events2.split(" ").forEach((event) => {
+      typeof handler > "u" ? self.eventsListeners[event] = [] : self.eventsListeners[event] && self.eventsListeners[event].forEach((eventHandler, index) => {
+        (eventHandler === handler || eventHandler.__emitterProxy && eventHandler.__emitterProxy === handler) && self.eventsListeners[event].splice(index, 1);
+      });
+    }), self;
+  },
+  emit() {
+    let self = this;
+    if (!self.eventsListeners || self.destroyed || !self.eventsListeners)
+      return self;
+    let events2, data, context;
+    for (var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++)
+      args[_key2] = arguments[_key2];
+    return typeof args[0] == "string" || Array.isArray(args[0]) ? (events2 = args[0], data = args.slice(1, args.length), context = self) : (events2 = args[0].events, data = args[0].data, context = args[0].context || self), data.unshift(context), (Array.isArray(events2) ? events2 : events2.split(" ")).forEach((event) => {
+      self.eventsAnyListeners && self.eventsAnyListeners.length && self.eventsAnyListeners.forEach((eventHandler) => {
+        eventHandler.apply(context, [event, ...data]);
+      }), self.eventsListeners && self.eventsListeners[event] && self.eventsListeners[event].forEach((eventHandler) => {
+        eventHandler.apply(context, data);
+      });
+    }), self;
+  }
+};
+function updateSize() {
+  let swiper = this, width, height, el = swiper.el;
+  typeof swiper.params.width < "u" && swiper.params.width !== null ? width = swiper.params.width : width = el.clientWidth, typeof swiper.params.height < "u" && swiper.params.height !== null ? height = swiper.params.height : height = el.clientHeight, !(width === 0 && swiper.isHorizontal() || height === 0 && swiper.isVertical()) && (width = width - parseInt(elementStyle(el, "padding-left") || 0, 10) - parseInt(elementStyle(el, "padding-right") || 0, 10), height = height - parseInt(elementStyle(el, "padding-top") || 0, 10) - parseInt(elementStyle(el, "padding-bottom") || 0, 10), Number.isNaN(width) && (width = 0), Number.isNaN(height) && (height = 0), Object.assign(swiper, {
+    width,
+    height,
+    size: swiper.isHorizontal() ? width : height
+  }));
+}
+function updateSlides() {
+  let swiper = this;
+  function getDirectionLabel(property) {
+    return swiper.isHorizontal() ? property : {
+      width: "height",
+      "margin-top": "margin-left",
+      "margin-bottom ": "margin-right",
+      "margin-left": "margin-top",
+      "margin-right": "margin-bottom",
+      "padding-left": "padding-top",
+      "padding-right": "padding-bottom",
+      marginRight: "marginBottom"
+    }[property];
+  }
+  function getDirectionPropertyValue(node, label) {
+    return parseFloat(node.getPropertyValue(getDirectionLabel(label)) || 0);
+  }
+  let params = swiper.params, {
+    wrapperEl,
+    slidesEl,
+    size: swiperSize,
+    rtlTranslate: rtl,
+    wrongRTL
+  } = swiper, isVirtual = swiper.virtual && params.virtual.enabled, previousSlidesLength = isVirtual ? swiper.virtual.slides.length : swiper.slides.length, slides = elementChildren(slidesEl, `.${swiper.params.slideClass}, swiper-slide`), slidesLength = isVirtual ? swiper.virtual.slides.length : slides.length, snapGrid = [], slidesGrid = [], slidesSizesGrid = [], offsetBefore = params.slidesOffsetBefore;
+  typeof offsetBefore == "function" && (offsetBefore = params.slidesOffsetBefore.call(swiper));
+  let offsetAfter = params.slidesOffsetAfter;
+  typeof offsetAfter == "function" && (offsetAfter = params.slidesOffsetAfter.call(swiper));
+  let previousSnapGridLength = swiper.snapGrid.length, previousSlidesGridLength = swiper.slidesGrid.length, spaceBetween = params.spaceBetween, slidePosition = -offsetBefore, prevSlideSize = 0, index = 0;
+  if (typeof swiperSize > "u")
+    return;
+  typeof spaceBetween == "string" && spaceBetween.indexOf("%") >= 0 ? spaceBetween = parseFloat(spaceBetween.replace("%", "")) / 100 * swiperSize : typeof spaceBetween == "string" && (spaceBetween = parseFloat(spaceBetween)), swiper.virtualSize = -spaceBetween, slides.forEach((slideEl) => {
+    rtl ? slideEl.style.marginLeft = "" : slideEl.style.marginRight = "", slideEl.style.marginBottom = "", slideEl.style.marginTop = "";
+  }), params.centeredSlides && params.cssMode && (setCSSProperty(wrapperEl, "--swiper-centered-offset-before", ""), setCSSProperty(wrapperEl, "--swiper-centered-offset-after", ""));
+  let gridEnabled = params.grid && params.grid.rows > 1 && swiper.grid;
+  gridEnabled && swiper.grid.initSlides(slidesLength);
+  let slideSize, shouldResetSlideSize = params.slidesPerView === "auto" && params.breakpoints && Object.keys(params.breakpoints).filter((key) => typeof params.breakpoints[key].slidesPerView < "u").length > 0;
+  for (let i = 0; i < slidesLength; i += 1) {
+    slideSize = 0;
+    let slide2;
+    if (slides[i] && (slide2 = slides[i]), gridEnabled && swiper.grid.updateSlide(i, slide2, slidesLength, getDirectionLabel), !(slides[i] && elementStyle(slide2, "display") === "none")) {
+      if (params.slidesPerView === "auto") {
+        shouldResetSlideSize && (slides[i].style[getDirectionLabel("width")] = "");
+        let slideStyles = getComputedStyle(slide2), currentTransform = slide2.style.transform, currentWebKitTransform = slide2.style.webkitTransform;
+        if (currentTransform && (slide2.style.transform = "none"), currentWebKitTransform && (slide2.style.webkitTransform = "none"), params.roundLengths)
+          slideSize = swiper.isHorizontal() ? elementOuterSize(slide2, "width", !0) : elementOuterSize(slide2, "height", !0);
+        else {
+          let width = getDirectionPropertyValue(slideStyles, "width"), paddingLeft = getDirectionPropertyValue(slideStyles, "padding-left"), paddingRight = getDirectionPropertyValue(slideStyles, "padding-right"), marginLeft = getDirectionPropertyValue(slideStyles, "margin-left"), marginRight = getDirectionPropertyValue(slideStyles, "margin-right"), boxSizing = slideStyles.getPropertyValue("box-sizing");
+          if (boxSizing && boxSizing === "border-box")
+            slideSize = width + marginLeft + marginRight;
+          else {
+            let {
+              clientWidth,
+              offsetWidth
+            } = slide2;
+            slideSize = width + paddingLeft + paddingRight + marginLeft + marginRight + (offsetWidth - clientWidth);
+          }
+        }
+        currentTransform && (slide2.style.transform = currentTransform), currentWebKitTransform && (slide2.style.webkitTransform = currentWebKitTransform), params.roundLengths && (slideSize = Math.floor(slideSize));
+      } else
+        slideSize = (swiperSize - (params.slidesPerView - 1) * spaceBetween) / params.slidesPerView, params.roundLengths && (slideSize = Math.floor(slideSize)), slides[i] && (slides[i].style[getDirectionLabel("width")] = `${slideSize}px`);
+      slides[i] && (slides[i].swiperSlideSize = slideSize), slidesSizesGrid.push(slideSize), params.centeredSlides ? (slidePosition = slidePosition + slideSize / 2 + prevSlideSize / 2 + spaceBetween, prevSlideSize === 0 && i !== 0 && (slidePosition = slidePosition - swiperSize / 2 - spaceBetween), i === 0 && (slidePosition = slidePosition - swiperSize / 2 - spaceBetween), Math.abs(slidePosition) < 1 / 1e3 && (slidePosition = 0), params.roundLengths && (slidePosition = Math.floor(slidePosition)), index % params.slidesPerGroup === 0 && snapGrid.push(slidePosition), slidesGrid.push(slidePosition)) : (params.roundLengths && (slidePosition = Math.floor(slidePosition)), (index - Math.min(swiper.params.slidesPerGroupSkip, index)) % swiper.params.slidesPerGroup === 0 && snapGrid.push(slidePosition), slidesGrid.push(slidePosition), slidePosition = slidePosition + slideSize + spaceBetween), swiper.virtualSize += slideSize + spaceBetween, prevSlideSize = slideSize, index += 1;
+    }
+  }
+  if (swiper.virtualSize = Math.max(swiper.virtualSize, swiperSize) + offsetAfter, rtl && wrongRTL && (params.effect === "slide" || params.effect === "coverflow") && (wrapperEl.style.width = `${swiper.virtualSize + spaceBetween}px`), params.setWrapperSize && (wrapperEl.style[getDirectionLabel("width")] = `${swiper.virtualSize + spaceBetween}px`), gridEnabled && swiper.grid.updateWrapperSize(slideSize, snapGrid, getDirectionLabel), !params.centeredSlides) {
+    let newSlidesGrid = [];
+    for (let i = 0; i < snapGrid.length; i += 1) {
+      let slidesGridItem = snapGrid[i];
+      params.roundLengths && (slidesGridItem = Math.floor(slidesGridItem)), snapGrid[i] <= swiper.virtualSize - swiperSize && newSlidesGrid.push(slidesGridItem);
+    }
+    snapGrid = newSlidesGrid, Math.floor(swiper.virtualSize - swiperSize) - Math.floor(snapGrid[snapGrid.length - 1]) > 1 && snapGrid.push(swiper.virtualSize - swiperSize);
+  }
+  if (isVirtual && params.loop) {
+    let size = slidesSizesGrid[0] + spaceBetween;
+    if (params.slidesPerGroup > 1) {
+      let groups = Math.ceil((swiper.virtual.slidesBefore + swiper.virtual.slidesAfter) / params.slidesPerGroup), groupSize = size * params.slidesPerGroup;
+      for (let i = 0; i < groups; i += 1)
+        snapGrid.push(snapGrid[snapGrid.length - 1] + groupSize);
+    }
+    for (let i = 0; i < swiper.virtual.slidesBefore + swiper.virtual.slidesAfter; i += 1)
+      params.slidesPerGroup === 1 && snapGrid.push(snapGrid[snapGrid.length - 1] + size), slidesGrid.push(slidesGrid[slidesGrid.length - 1] + size), swiper.virtualSize += size;
+  }
+  if (snapGrid.length === 0 && (snapGrid = [0]), spaceBetween !== 0) {
+    let key = swiper.isHorizontal() && rtl ? "marginLeft" : getDirectionLabel("marginRight");
+    slides.filter((_, slideIndex) => !params.cssMode || params.loop ? !0 : slideIndex !== slides.length - 1).forEach((slideEl) => {
+      slideEl.style[key] = `${spaceBetween}px`;
+    });
+  }
+  if (params.centeredSlides && params.centeredSlidesBounds) {
+    let allSlidesSize = 0;
+    slidesSizesGrid.forEach((slideSizeValue) => {
+      allSlidesSize += slideSizeValue + (spaceBetween || 0);
+    }), allSlidesSize -= spaceBetween;
+    let maxSnap = allSlidesSize - swiperSize;
+    snapGrid = snapGrid.map((snap) => snap <= 0 ? -offsetBefore : snap > maxSnap ? maxSnap + offsetAfter : snap);
+  }
+  if (params.centerInsufficientSlides) {
+    let allSlidesSize = 0;
+    if (slidesSizesGrid.forEach((slideSizeValue) => {
+      allSlidesSize += slideSizeValue + (spaceBetween || 0);
+    }), allSlidesSize -= spaceBetween, allSlidesSize < swiperSize) {
+      let allSlidesOffset = (swiperSize - allSlidesSize) / 2;
+      snapGrid.forEach((snap, snapIndex) => {
+        snapGrid[snapIndex] = snap - allSlidesOffset;
+      }), slidesGrid.forEach((snap, snapIndex) => {
+        slidesGrid[snapIndex] = snap + allSlidesOffset;
+      });
+    }
+  }
+  if (Object.assign(swiper, {
+    slides,
+    snapGrid,
+    slidesGrid,
+    slidesSizesGrid
+  }), params.centeredSlides && params.cssMode && !params.centeredSlidesBounds) {
+    setCSSProperty(wrapperEl, "--swiper-centered-offset-before", `${-snapGrid[0]}px`), setCSSProperty(wrapperEl, "--swiper-centered-offset-after", `${swiper.size / 2 - slidesSizesGrid[slidesSizesGrid.length - 1] / 2}px`);
+    let addToSnapGrid = -swiper.snapGrid[0], addToSlidesGrid = -swiper.slidesGrid[0];
+    swiper.snapGrid = swiper.snapGrid.map((v) => v + addToSnapGrid), swiper.slidesGrid = swiper.slidesGrid.map((v) => v + addToSlidesGrid);
+  }
+  if (slidesLength !== previousSlidesLength && swiper.emit("slidesLengthChange"), snapGrid.length !== previousSnapGridLength && (swiper.params.watchOverflow && swiper.checkOverflow(), swiper.emit("snapGridLengthChange")), slidesGrid.length !== previousSlidesGridLength && swiper.emit("slidesGridLengthChange"), params.watchSlidesProgress && swiper.updateSlidesOffset(), !isVirtual && !params.cssMode && (params.effect === "slide" || params.effect === "fade")) {
+    let backFaceHiddenClass = `${params.containerModifierClass}backface-hidden`, hasClassBackfaceClassAdded = swiper.el.classList.contains(backFaceHiddenClass);
+    slidesLength <= params.maxBackfaceHiddenSlides ? hasClassBackfaceClassAdded || swiper.el.classList.add(backFaceHiddenClass) : hasClassBackfaceClassAdded && swiper.el.classList.remove(backFaceHiddenClass);
+  }
+}
+function updateAutoHeight(speed) {
+  let swiper = this, activeSlides = [], isVirtual = swiper.virtual && swiper.params.virtual.enabled, newHeight = 0, i;
+  typeof speed == "number" ? swiper.setTransition(speed) : speed === !0 && swiper.setTransition(swiper.params.speed);
+  let getSlideByIndex = (index) => isVirtual ? swiper.slides[swiper.getSlideIndexByData(index)] : swiper.slides[index];
+  if (swiper.params.slidesPerView !== "auto" && swiper.params.slidesPerView > 1)
+    if (swiper.params.centeredSlides)
+      (swiper.visibleSlides || []).forEach((slide2) => {
+        activeSlides.push(slide2);
+      });
+    else
+      for (i = 0; i < Math.ceil(swiper.params.slidesPerView); i += 1) {
+        let index = swiper.activeIndex + i;
+        if (index > swiper.slides.length && !isVirtual)
+          break;
+        activeSlides.push(getSlideByIndex(index));
+      }
+  else
+    activeSlides.push(getSlideByIndex(swiper.activeIndex));
+  for (i = 0; i < activeSlides.length; i += 1)
+    if (typeof activeSlides[i] < "u") {
+      let height = activeSlides[i].offsetHeight;
+      newHeight = height > newHeight ? height : newHeight;
+    }
+  (newHeight || newHeight === 0) && (swiper.wrapperEl.style.height = `${newHeight}px`);
+}
+function updateSlidesOffset() {
+  let swiper = this, slides = swiper.slides, minusOffset = swiper.isElement ? swiper.isHorizontal() ? swiper.wrapperEl.offsetLeft : swiper.wrapperEl.offsetTop : 0;
+  for (let i = 0; i < slides.length; i += 1)
+    slides[i].swiperSlideOffset = (swiper.isHorizontal() ? slides[i].offsetLeft : slides[i].offsetTop) - minusOffset - swiper.cssOverflowAdjustment();
+}
+function updateSlidesProgress(translate2) {
+  translate2 === void 0 && (translate2 = this && this.translate || 0);
+  let swiper = this, params = swiper.params, {
+    slides,
+    rtlTranslate: rtl,
+    snapGrid
+  } = swiper;
+  if (slides.length === 0)
+    return;
+  typeof slides[0].swiperSlideOffset > "u" && swiper.updateSlidesOffset();
+  let offsetCenter = -translate2;
+  rtl && (offsetCenter = translate2), slides.forEach((slideEl) => {
+    slideEl.classList.remove(params.slideVisibleClass);
+  }), swiper.visibleSlidesIndexes = [], swiper.visibleSlides = [];
+  let spaceBetween = params.spaceBetween;
+  typeof spaceBetween == "string" && spaceBetween.indexOf("%") >= 0 ? spaceBetween = parseFloat(spaceBetween.replace("%", "")) / 100 * swiper.size : typeof spaceBetween == "string" && (spaceBetween = parseFloat(spaceBetween));
+  for (let i = 0; i < slides.length; i += 1) {
+    let slide2 = slides[i], slideOffset = slide2.swiperSlideOffset;
+    params.cssMode && params.centeredSlides && (slideOffset -= slides[0].swiperSlideOffset);
+    let slideProgress = (offsetCenter + (params.centeredSlides ? swiper.minTranslate() : 0) - slideOffset) / (slide2.swiperSlideSize + spaceBetween), originalSlideProgress = (offsetCenter - snapGrid[0] + (params.centeredSlides ? swiper.minTranslate() : 0) - slideOffset) / (slide2.swiperSlideSize + spaceBetween), slideBefore = -(offsetCenter - slideOffset), slideAfter = slideBefore + swiper.slidesSizesGrid[i];
+    (slideBefore >= 0 && slideBefore < swiper.size - 1 || slideAfter > 1 && slideAfter <= swiper.size || slideBefore <= 0 && slideAfter >= swiper.size) && (swiper.visibleSlides.push(slide2), swiper.visibleSlidesIndexes.push(i), slides[i].classList.add(params.slideVisibleClass)), slide2.progress = rtl ? -slideProgress : slideProgress, slide2.originalProgress = rtl ? -originalSlideProgress : originalSlideProgress;
+  }
+}
+function updateProgress(translate2) {
+  let swiper = this;
+  if (typeof translate2 > "u") {
+    let multiplier = swiper.rtlTranslate ? -1 : 1;
+    translate2 = swiper && swiper.translate && swiper.translate * multiplier || 0;
+  }
+  let params = swiper.params, translatesDiff = swiper.maxTranslate() - swiper.minTranslate(), {
+    progress,
+    isBeginning,
+    isEnd,
+    progressLoop
+  } = swiper, wasBeginning = isBeginning, wasEnd = isEnd;
+  if (translatesDiff === 0)
+    progress = 0, isBeginning = !0, isEnd = !0;
+  else {
+    progress = (translate2 - swiper.minTranslate()) / translatesDiff;
+    let isBeginningRounded = Math.abs(translate2 - swiper.minTranslate()) < 1, isEndRounded = Math.abs(translate2 - swiper.maxTranslate()) < 1;
+    isBeginning = isBeginningRounded || progress <= 0, isEnd = isEndRounded || progress >= 1, isBeginningRounded && (progress = 0), isEndRounded && (progress = 1);
+  }
+  if (params.loop) {
+    let firstSlideIndex = swiper.getSlideIndexByData(0), lastSlideIndex = swiper.getSlideIndexByData(swiper.slides.length - 1), firstSlideTranslate = swiper.slidesGrid[firstSlideIndex], lastSlideTranslate = swiper.slidesGrid[lastSlideIndex], translateMax = swiper.slidesGrid[swiper.slidesGrid.length - 1], translateAbs = Math.abs(translate2);
+    translateAbs >= firstSlideTranslate ? progressLoop = (translateAbs - firstSlideTranslate) / translateMax : progressLoop = (translateAbs + translateMax - lastSlideTranslate) / translateMax, progressLoop > 1 && (progressLoop -= 1);
+  }
+  Object.assign(swiper, {
+    progress,
+    progressLoop,
+    isBeginning,
+    isEnd
+  }), (params.watchSlidesProgress || params.centeredSlides && params.autoHeight) && swiper.updateSlidesProgress(translate2), isBeginning && !wasBeginning && swiper.emit("reachBeginning toEdge"), isEnd && !wasEnd && swiper.emit("reachEnd toEdge"), (wasBeginning && !isBeginning || wasEnd && !isEnd) && swiper.emit("fromEdge"), swiper.emit("progress", progress);
+}
+function updateSlidesClasses() {
+  let swiper = this, {
+    slides,
+    params,
+    slidesEl,
+    activeIndex
+  } = swiper, isVirtual = swiper.virtual && params.virtual.enabled, getFilteredSlide = (selector) => elementChildren(slidesEl, `.${params.slideClass}${selector}, swiper-slide${selector}`)[0];
+  slides.forEach((slideEl) => {
+    slideEl.classList.remove(params.slideActiveClass, params.slideNextClass, params.slidePrevClass);
+  });
+  let activeSlide;
+  if (isVirtual)
+    if (params.loop) {
+      let slideIndex = activeIndex - swiper.virtual.slidesBefore;
+      slideIndex < 0 && (slideIndex = swiper.virtual.slides.length + slideIndex), slideIndex >= swiper.virtual.slides.length && (slideIndex -= swiper.virtual.slides.length), activeSlide = getFilteredSlide(`[data-swiper-slide-index="${slideIndex}"]`);
+    } else
+      activeSlide = getFilteredSlide(`[data-swiper-slide-index="${activeIndex}"]`);
+  else
+    activeSlide = slides[activeIndex];
+  if (activeSlide) {
+    activeSlide.classList.add(params.slideActiveClass);
+    let nextSlide = elementNextAll(activeSlide, `.${params.slideClass}, swiper-slide`)[0];
+    params.loop && !nextSlide && (nextSlide = slides[0]), nextSlide && nextSlide.classList.add(params.slideNextClass);
+    let prevSlide = elementPrevAll(activeSlide, `.${params.slideClass}, swiper-slide`)[0];
+    params.loop && !prevSlide === 0 && (prevSlide = slides[slides.length - 1]), prevSlide && prevSlide.classList.add(params.slidePrevClass);
+  }
+  swiper.emitSlidesClasses();
+}
+var processLazyPreloader = (swiper, imageEl) => {
+  if (!swiper || swiper.destroyed || !swiper.params)
+    return;
+  let slideSelector = () => swiper.isElement ? "swiper-slide" : `.${swiper.params.slideClass}`, slideEl = imageEl.closest(slideSelector());
+  if (slideEl) {
+    let lazyEl = slideEl.querySelector(`.${swiper.params.lazyPreloaderClass}`);
+    !lazyEl && swiper.isElement && (slideEl.shadowRoot ? lazyEl = slideEl.shadowRoot.querySelector(`.${swiper.params.lazyPreloaderClass}`) : requestAnimationFrame(() => {
+      slideEl.shadowRoot && (lazyEl = slideEl.shadowRoot.querySelector(`.${swiper.params.lazyPreloaderClass}`), lazyEl && lazyEl.remove());
+    })), lazyEl && lazyEl.remove();
+  }
+}, unlazy = (swiper, index) => {
+  if (!swiper.slides[index])
+    return;
+  let imageEl = swiper.slides[index].querySelector('[loading="lazy"]');
+  imageEl && imageEl.removeAttribute("loading");
+}, preload = (swiper) => {
+  if (!swiper || swiper.destroyed || !swiper.params)
+    return;
+  let amount = swiper.params.lazyPreloadPrevNext, len = swiper.slides.length;
+  if (!len || !amount || amount < 0)
+    return;
+  amount = Math.min(amount, len);
+  let slidesPerView = swiper.params.slidesPerView === "auto" ? swiper.slidesPerViewDynamic() : Math.ceil(swiper.params.slidesPerView), activeIndex = swiper.activeIndex;
+  if (swiper.params.grid && swiper.params.grid.rows > 1) {
+    let activeColumn = activeIndex, preloadColumns = [activeColumn - amount];
+    preloadColumns.push(...Array.from({
+      length: amount
+    }).map((_, i) => activeColumn + slidesPerView + i)), swiper.slides.forEach((slideEl, i) => {
+      preloadColumns.includes(slideEl.column) && unlazy(swiper, i);
+    });
+    return;
+  }
+  let slideIndexLastInView = activeIndex + slidesPerView - 1;
+  if (swiper.params.rewind || swiper.params.loop)
+    for (let i = activeIndex - amount; i <= slideIndexLastInView + amount; i += 1) {
+      let realIndex = (i % len + len) % len;
+      (realIndex < activeIndex || realIndex > slideIndexLastInView) && unlazy(swiper, realIndex);
+    }
+  else
+    for (let i = Math.max(activeIndex - amount, 0); i <= Math.min(slideIndexLastInView + amount, len - 1); i += 1)
+      i !== activeIndex && (i > slideIndexLastInView || i < activeIndex) && unlazy(swiper, i);
+};
+function getActiveIndexByTranslate(swiper) {
+  let {
+    slidesGrid,
+    params
+  } = swiper, translate2 = swiper.rtlTranslate ? swiper.translate : -swiper.translate, activeIndex;
+  for (let i = 0; i < slidesGrid.length; i += 1)
+    typeof slidesGrid[i + 1] < "u" ? translate2 >= slidesGrid[i] && translate2 < slidesGrid[i + 1] - (slidesGrid[i + 1] - slidesGrid[i]) / 2 ? activeIndex = i : translate2 >= slidesGrid[i] && translate2 < slidesGrid[i + 1] && (activeIndex = i + 1) : translate2 >= slidesGrid[i] && (activeIndex = i);
+  return params.normalizeSlideIndex && (activeIndex < 0 || typeof activeIndex > "u") && (activeIndex = 0), activeIndex;
+}
+function updateActiveIndex(newActiveIndex) {
+  let swiper = this, translate2 = swiper.rtlTranslate ? swiper.translate : -swiper.translate, {
+    snapGrid,
+    params,
+    activeIndex: previousIndex,
+    realIndex: previousRealIndex,
+    snapIndex: previousSnapIndex
+  } = swiper, activeIndex = newActiveIndex, snapIndex, getVirtualRealIndex = (aIndex) => {
+    let realIndex2 = aIndex - swiper.virtual.slidesBefore;
+    return realIndex2 < 0 && (realIndex2 = swiper.virtual.slides.length + realIndex2), realIndex2 >= swiper.virtual.slides.length && (realIndex2 -= swiper.virtual.slides.length), realIndex2;
+  };
+  if (typeof activeIndex > "u" && (activeIndex = getActiveIndexByTranslate(swiper)), snapGrid.indexOf(translate2) >= 0)
+    snapIndex = snapGrid.indexOf(translate2);
+  else {
+    let skip = Math.min(params.slidesPerGroupSkip, activeIndex);
+    snapIndex = skip + Math.floor((activeIndex - skip) / params.slidesPerGroup);
+  }
+  if (snapIndex >= snapGrid.length && (snapIndex = snapGrid.length - 1), activeIndex === previousIndex) {
+    snapIndex !== previousSnapIndex && (swiper.snapIndex = snapIndex, swiper.emit("snapIndexChange")), swiper.params.loop && swiper.virtual && swiper.params.virtual.enabled && (swiper.realIndex = getVirtualRealIndex(activeIndex));
+    return;
+  }
+  let realIndex;
+  swiper.virtual && params.virtual.enabled && params.loop ? realIndex = getVirtualRealIndex(activeIndex) : swiper.slides[activeIndex] ? realIndex = parseInt(swiper.slides[activeIndex].getAttribute("data-swiper-slide-index") || activeIndex, 10) : realIndex = activeIndex, Object.assign(swiper, {
+    previousSnapIndex,
+    snapIndex,
+    previousRealIndex,
+    realIndex,
+    previousIndex,
+    activeIndex
+  }), swiper.initialized && preload(swiper), swiper.emit("activeIndexChange"), swiper.emit("snapIndexChange"), (swiper.initialized || swiper.params.runCallbacksOnInit) && (previousRealIndex !== realIndex && swiper.emit("realIndexChange"), swiper.emit("slideChange"));
+}
+function updateClickedSlide(el, path) {
+  let swiper = this, params = swiper.params, slide2 = el.closest(`.${params.slideClass}, swiper-slide`);
+  !slide2 && swiper.isElement && path && path.length > 1 && path.includes(el) && [...path.slice(path.indexOf(el) + 1, path.length)].forEach((pathEl) => {
+    !slide2 && pathEl.matches && pathEl.matches(`.${params.slideClass}, swiper-slide`) && (slide2 = pathEl);
+  });
+  let slideFound = !1, slideIndex;
+  if (slide2) {
+    for (let i = 0; i < swiper.slides.length; i += 1)
+      if (swiper.slides[i] === slide2) {
+        slideFound = !0, slideIndex = i;
+        break;
+      }
+  }
+  if (slide2 && slideFound)
+    swiper.clickedSlide = slide2, swiper.virtual && swiper.params.virtual.enabled ? swiper.clickedIndex = parseInt(slide2.getAttribute("data-swiper-slide-index"), 10) : swiper.clickedIndex = slideIndex;
+  else {
+    swiper.clickedSlide = void 0, swiper.clickedIndex = void 0;
+    return;
+  }
+  params.slideToClickedSlide && swiper.clickedIndex !== void 0 && swiper.clickedIndex !== swiper.activeIndex && swiper.slideToClickedSlide();
+}
+var update = {
+  updateSize,
+  updateSlides,
+  updateAutoHeight,
+  updateSlidesOffset,
+  updateSlidesProgress,
+  updateProgress,
+  updateSlidesClasses,
+  updateActiveIndex,
+  updateClickedSlide
+};
+function getSwiperTranslate(axis) {
+  axis === void 0 && (axis = this.isHorizontal() ? "x" : "y");
+  let swiper = this, {
+    params,
+    rtlTranslate: rtl,
+    translate: translate2,
+    wrapperEl
+  } = swiper;
+  if (params.virtualTranslate)
+    return rtl ? -translate2 : translate2;
+  if (params.cssMode)
+    return translate2;
+  let currentTranslate = getTranslate(wrapperEl, axis);
+  return currentTranslate += swiper.cssOverflowAdjustment(), rtl && (currentTranslate = -currentTranslate), currentTranslate || 0;
+}
+function setTranslate(translate2, byController) {
+  let swiper = this, {
+    rtlTranslate: rtl,
+    params,
+    wrapperEl,
+    progress
+  } = swiper, x = 0, y = 0, z = 0;
+  swiper.isHorizontal() ? x = rtl ? -translate2 : translate2 : y = translate2, params.roundLengths && (x = Math.floor(x), y = Math.floor(y)), swiper.previousTranslate = swiper.translate, swiper.translate = swiper.isHorizontal() ? x : y, params.cssMode ? wrapperEl[swiper.isHorizontal() ? "scrollLeft" : "scrollTop"] = swiper.isHorizontal() ? -x : -y : params.virtualTranslate || (swiper.isHorizontal() ? x -= swiper.cssOverflowAdjustment() : y -= swiper.cssOverflowAdjustment(), wrapperEl.style.transform = `translate3d(${x}px, ${y}px, ${z}px)`);
+  let newProgress, translatesDiff = swiper.maxTranslate() - swiper.minTranslate();
+  translatesDiff === 0 ? newProgress = 0 : newProgress = (translate2 - swiper.minTranslate()) / translatesDiff, newProgress !== progress && swiper.updateProgress(translate2), swiper.emit("setTranslate", swiper.translate, byController);
+}
+function minTranslate() {
+  return -this.snapGrid[0];
+}
+function maxTranslate() {
+  return -this.snapGrid[this.snapGrid.length - 1];
+}
+function translateTo(translate2, speed, runCallbacks, translateBounds, internal) {
+  translate2 === void 0 && (translate2 = 0), speed === void 0 && (speed = this.params.speed), runCallbacks === void 0 && (runCallbacks = !0), translateBounds === void 0 && (translateBounds = !0);
+  let swiper = this, {
+    params,
+    wrapperEl
+  } = swiper;
+  if (swiper.animating && params.preventInteractionOnTransition)
+    return !1;
+  let minTranslate2 = swiper.minTranslate(), maxTranslate2 = swiper.maxTranslate(), newTranslate;
+  if (translateBounds && translate2 > minTranslate2 ? newTranslate = minTranslate2 : translateBounds && translate2 < maxTranslate2 ? newTranslate = maxTranslate2 : newTranslate = translate2, swiper.updateProgress(newTranslate), params.cssMode) {
+    let isH = swiper.isHorizontal();
+    if (speed === 0)
+      wrapperEl[isH ? "scrollLeft" : "scrollTop"] = -newTranslate;
+    else {
+      if (!swiper.support.smoothScroll)
+        return animateCSSModeScroll({
+          swiper,
+          targetPosition: -newTranslate,
+          side: isH ? "left" : "top"
+        }), !0;
+      wrapperEl.scrollTo({
+        [isH ? "left" : "top"]: -newTranslate,
+        behavior: "smooth"
+      });
+    }
+    return !0;
+  }
+  return speed === 0 ? (swiper.setTransition(0), swiper.setTranslate(newTranslate), runCallbacks && (swiper.emit("beforeTransitionStart", speed, internal), swiper.emit("transitionEnd"))) : (swiper.setTransition(speed), swiper.setTranslate(newTranslate), runCallbacks && (swiper.emit("beforeTransitionStart", speed, internal), swiper.emit("transitionStart")), swiper.animating || (swiper.animating = !0, swiper.onTranslateToWrapperTransitionEnd || (swiper.onTranslateToWrapperTransitionEnd = function(e) {
+    !swiper || swiper.destroyed || e.target === this && (swiper.wrapperEl.removeEventListener("transitionend", swiper.onTranslateToWrapperTransitionEnd), swiper.onTranslateToWrapperTransitionEnd = null, delete swiper.onTranslateToWrapperTransitionEnd, runCallbacks && swiper.emit("transitionEnd"));
+  }), swiper.wrapperEl.addEventListener("transitionend", swiper.onTranslateToWrapperTransitionEnd))), !0;
+}
+var translate = {
+  getTranslate: getSwiperTranslate,
+  setTranslate,
+  minTranslate,
+  maxTranslate,
+  translateTo
+};
+function setTransition(duration, byController) {
+  let swiper = this;
+  swiper.params.cssMode || (swiper.wrapperEl.style.transitionDuration = `${duration}ms`, swiper.wrapperEl.style.transitionDelay = duration === 0 ? "0ms" : ""), swiper.emit("setTransition", duration, byController);
+}
+function transitionEmit(_ref) {
+  let {
+    swiper,
+    runCallbacks,
+    direction,
+    step
+  } = _ref, {
+    activeIndex,
+    previousIndex
+  } = swiper, dir = direction;
+  if (dir || (activeIndex > previousIndex ? dir = "next" : activeIndex < previousIndex ? dir = "prev" : dir = "reset"), swiper.emit(`transition${step}`), runCallbacks && activeIndex !== previousIndex) {
+    if (dir === "reset") {
+      swiper.emit(`slideResetTransition${step}`);
+      return;
+    }
+    swiper.emit(`slideChangeTransition${step}`), dir === "next" ? swiper.emit(`slideNextTransition${step}`) : swiper.emit(`slidePrevTransition${step}`);
+  }
+}
+function transitionStart(runCallbacks, direction) {
+  runCallbacks === void 0 && (runCallbacks = !0);
+  let swiper = this, {
+    params
+  } = swiper;
+  params.cssMode || (params.autoHeight && swiper.updateAutoHeight(), transitionEmit({
+    swiper,
+    runCallbacks,
+    direction,
+    step: "Start"
+  }));
+}
+function transitionEnd(runCallbacks, direction) {
+  runCallbacks === void 0 && (runCallbacks = !0);
+  let swiper = this, {
+    params
+  } = swiper;
+  swiper.animating = !1, !params.cssMode && (swiper.setTransition(0), transitionEmit({
+    swiper,
+    runCallbacks,
+    direction,
+    step: "End"
+  }));
+}
+var transition = {
+  setTransition,
+  transitionStart,
+  transitionEnd
+};
+function slideTo(index, speed, runCallbacks, internal, initial) {
+  index === void 0 && (index = 0), speed === void 0 && (speed = this.params.speed), runCallbacks === void 0 && (runCallbacks = !0), typeof index == "string" && (index = parseInt(index, 10));
+  let swiper = this, slideIndex = index;
+  slideIndex < 0 && (slideIndex = 0);
+  let {
+    params,
+    snapGrid,
+    slidesGrid,
+    previousIndex,
+    activeIndex,
+    rtlTranslate: rtl,
+    wrapperEl,
+    enabled
+  } = swiper;
+  if (swiper.animating && params.preventInteractionOnTransition || !enabled && !internal && !initial)
+    return !1;
+  let skip = Math.min(swiper.params.slidesPerGroupSkip, slideIndex), snapIndex = skip + Math.floor((slideIndex - skip) / swiper.params.slidesPerGroup);
+  snapIndex >= snapGrid.length && (snapIndex = snapGrid.length - 1);
+  let translate2 = -snapGrid[snapIndex];
+  if (params.normalizeSlideIndex)
+    for (let i = 0; i < slidesGrid.length; i += 1) {
+      let normalizedTranslate = -Math.floor(translate2 * 100), normalizedGrid = Math.floor(slidesGrid[i] * 100), normalizedGridNext = Math.floor(slidesGrid[i + 1] * 100);
+      typeof slidesGrid[i + 1] < "u" ? normalizedTranslate >= normalizedGrid && normalizedTranslate < normalizedGridNext - (normalizedGridNext - normalizedGrid) / 2 ? slideIndex = i : normalizedTranslate >= normalizedGrid && normalizedTranslate < normalizedGridNext && (slideIndex = i + 1) : normalizedTranslate >= normalizedGrid && (slideIndex = i);
+    }
+  if (swiper.initialized && slideIndex !== activeIndex && (!swiper.allowSlideNext && (rtl ? translate2 > swiper.translate && translate2 > swiper.minTranslate() : translate2 < swiper.translate && translate2 < swiper.minTranslate()) || !swiper.allowSlidePrev && translate2 > swiper.translate && translate2 > swiper.maxTranslate() && (activeIndex || 0) !== slideIndex))
+    return !1;
+  slideIndex !== (previousIndex || 0) && runCallbacks && swiper.emit("beforeSlideChangeStart"), swiper.updateProgress(translate2);
+  let direction;
+  if (slideIndex > activeIndex ? direction = "next" : slideIndex < activeIndex ? direction = "prev" : direction = "reset", rtl && -translate2 === swiper.translate || !rtl && translate2 === swiper.translate)
+    return swiper.updateActiveIndex(slideIndex), params.autoHeight && swiper.updateAutoHeight(), swiper.updateSlidesClasses(), params.effect !== "slide" && swiper.setTranslate(translate2), direction !== "reset" && (swiper.transitionStart(runCallbacks, direction), swiper.transitionEnd(runCallbacks, direction)), !1;
+  if (params.cssMode) {
+    let isH = swiper.isHorizontal(), t = rtl ? translate2 : -translate2;
+    if (speed === 0) {
+      let isVirtual = swiper.virtual && swiper.params.virtual.enabled;
+      isVirtual && (swiper.wrapperEl.style.scrollSnapType = "none", swiper._immediateVirtual = !0), isVirtual && !swiper._cssModeVirtualInitialSet && swiper.params.initialSlide > 0 ? (swiper._cssModeVirtualInitialSet = !0, requestAnimationFrame(() => {
+        wrapperEl[isH ? "scrollLeft" : "scrollTop"] = t;
+      })) : wrapperEl[isH ? "scrollLeft" : "scrollTop"] = t, isVirtual && requestAnimationFrame(() => {
+        swiper.wrapperEl.style.scrollSnapType = "", swiper._immediateVirtual = !1;
+      });
+    } else {
+      if (!swiper.support.smoothScroll)
+        return animateCSSModeScroll({
+          swiper,
+          targetPosition: t,
+          side: isH ? "left" : "top"
+        }), !0;
+      wrapperEl.scrollTo({
+        [isH ? "left" : "top"]: t,
+        behavior: "smooth"
+      });
+    }
+    return !0;
+  }
+  return swiper.setTransition(speed), swiper.setTranslate(translate2), swiper.updateActiveIndex(slideIndex), swiper.updateSlidesClasses(), swiper.emit("beforeTransitionStart", speed, internal), swiper.transitionStart(runCallbacks, direction), speed === 0 ? swiper.transitionEnd(runCallbacks, direction) : swiper.animating || (swiper.animating = !0, swiper.onSlideToWrapperTransitionEnd || (swiper.onSlideToWrapperTransitionEnd = function(e) {
+    !swiper || swiper.destroyed || e.target === this && (swiper.wrapperEl.removeEventListener("transitionend", swiper.onSlideToWrapperTransitionEnd), swiper.onSlideToWrapperTransitionEnd = null, delete swiper.onSlideToWrapperTransitionEnd, swiper.transitionEnd(runCallbacks, direction));
+  }), swiper.wrapperEl.addEventListener("transitionend", swiper.onSlideToWrapperTransitionEnd)), !0;
+}
+function slideToLoop(index, speed, runCallbacks, internal) {
+  index === void 0 && (index = 0), speed === void 0 && (speed = this.params.speed), runCallbacks === void 0 && (runCallbacks = !0), typeof index == "string" && (index = parseInt(index, 10));
+  let swiper = this, newIndex = index;
+  return swiper.params.loop && (swiper.virtual && swiper.params.virtual.enabled ? newIndex = newIndex + swiper.virtual.slidesBefore : newIndex = swiper.getSlideIndexByData(newIndex)), swiper.slideTo(newIndex, speed, runCallbacks, internal);
+}
+function slideNext(speed, runCallbacks, internal) {
+  speed === void 0 && (speed = this.params.speed), runCallbacks === void 0 && (runCallbacks = !0);
+  let swiper = this, {
+    enabled,
+    params,
+    animating
+  } = swiper;
+  if (!enabled)
+    return swiper;
+  let perGroup = params.slidesPerGroup;
+  params.slidesPerView === "auto" && params.slidesPerGroup === 1 && params.slidesPerGroupAuto && (perGroup = Math.max(swiper.slidesPerViewDynamic("current", !0), 1));
+  let increment = swiper.activeIndex < params.slidesPerGroupSkip ? 1 : perGroup, isVirtual = swiper.virtual && params.virtual.enabled;
+  if (params.loop) {
+    if (animating && !isVirtual && params.loopPreventsSliding)
+      return !1;
+    if (swiper.loopFix({
+      direction: "next"
+    }), swiper._clientLeft = swiper.wrapperEl.clientLeft, swiper.activeIndex === swiper.slides.length - 1 && params.cssMode)
+      return requestAnimationFrame(() => {
+        swiper.slideTo(swiper.activeIndex + increment, speed, runCallbacks, internal);
+      }), !0;
+  }
+  return params.rewind && swiper.isEnd ? swiper.slideTo(0, speed, runCallbacks, internal) : swiper.slideTo(swiper.activeIndex + increment, speed, runCallbacks, internal);
+}
+function slidePrev(speed, runCallbacks, internal) {
+  speed === void 0 && (speed = this.params.speed), runCallbacks === void 0 && (runCallbacks = !0);
+  let swiper = this, {
+    params,
+    snapGrid,
+    slidesGrid,
+    rtlTranslate,
+    enabled,
+    animating
+  } = swiper;
+  if (!enabled)
+    return swiper;
+  let isVirtual = swiper.virtual && params.virtual.enabled;
+  if (params.loop) {
+    if (animating && !isVirtual && params.loopPreventsSliding)
+      return !1;
+    swiper.loopFix({
+      direction: "prev"
+    }), swiper._clientLeft = swiper.wrapperEl.clientLeft;
+  }
+  let translate2 = rtlTranslate ? swiper.translate : -swiper.translate;
+  function normalize(val) {
+    return val < 0 ? -Math.floor(Math.abs(val)) : Math.floor(val);
+  }
+  let normalizedTranslate = normalize(translate2), normalizedSnapGrid = snapGrid.map((val) => normalize(val)), prevSnap = snapGrid[normalizedSnapGrid.indexOf(normalizedTranslate) - 1];
+  if (typeof prevSnap > "u" && params.cssMode) {
+    let prevSnapIndex;
+    snapGrid.forEach((snap, snapIndex) => {
+      normalizedTranslate >= snap && (prevSnapIndex = snapIndex);
+    }), typeof prevSnapIndex < "u" && (prevSnap = snapGrid[prevSnapIndex > 0 ? prevSnapIndex - 1 : prevSnapIndex]);
+  }
+  let prevIndex = 0;
+  if (typeof prevSnap < "u" && (prevIndex = slidesGrid.indexOf(prevSnap), prevIndex < 0 && (prevIndex = swiper.activeIndex - 1), params.slidesPerView === "auto" && params.slidesPerGroup === 1 && params.slidesPerGroupAuto && (prevIndex = prevIndex - swiper.slidesPerViewDynamic("previous", !0) + 1, prevIndex = Math.max(prevIndex, 0))), params.rewind && swiper.isBeginning) {
+    let lastIndex = swiper.params.virtual && swiper.params.virtual.enabled && swiper.virtual ? swiper.virtual.slides.length - 1 : swiper.slides.length - 1;
+    return swiper.slideTo(lastIndex, speed, runCallbacks, internal);
+  } else if (params.loop && swiper.activeIndex === 0 && params.cssMode)
+    return requestAnimationFrame(() => {
+      swiper.slideTo(prevIndex, speed, runCallbacks, internal);
+    }), !0;
+  return swiper.slideTo(prevIndex, speed, runCallbacks, internal);
+}
+function slideReset(speed, runCallbacks, internal) {
+  speed === void 0 && (speed = this.params.speed), runCallbacks === void 0 && (runCallbacks = !0);
+  let swiper = this;
+  return swiper.slideTo(swiper.activeIndex, speed, runCallbacks, internal);
+}
+function slideToClosest(speed, runCallbacks, internal, threshold) {
+  speed === void 0 && (speed = this.params.speed), runCallbacks === void 0 && (runCallbacks = !0), threshold === void 0 && (threshold = 0.5);
+  let swiper = this, index = swiper.activeIndex, skip = Math.min(swiper.params.slidesPerGroupSkip, index), snapIndex = skip + Math.floor((index - skip) / swiper.params.slidesPerGroup), translate2 = swiper.rtlTranslate ? swiper.translate : -swiper.translate;
+  if (translate2 >= swiper.snapGrid[snapIndex]) {
+    let currentSnap = swiper.snapGrid[snapIndex], nextSnap = swiper.snapGrid[snapIndex + 1];
+    translate2 - currentSnap > (nextSnap - currentSnap) * threshold && (index += swiper.params.slidesPerGroup);
+  } else {
+    let prevSnap = swiper.snapGrid[snapIndex - 1], currentSnap = swiper.snapGrid[snapIndex];
+    translate2 - prevSnap <= (currentSnap - prevSnap) * threshold && (index -= swiper.params.slidesPerGroup);
+  }
+  return index = Math.max(index, 0), index = Math.min(index, swiper.slidesGrid.length - 1), swiper.slideTo(index, speed, runCallbacks, internal);
+}
+function slideToClickedSlide() {
+  let swiper = this, {
+    params,
+    slidesEl
+  } = swiper, slidesPerView = params.slidesPerView === "auto" ? swiper.slidesPerViewDynamic() : params.slidesPerView, slideToIndex = swiper.clickedIndex, realIndex, slideSelector = swiper.isElement ? "swiper-slide" : `.${params.slideClass}`;
+  if (params.loop) {
+    if (swiper.animating)
+      return;
+    realIndex = parseInt(swiper.clickedSlide.getAttribute("data-swiper-slide-index"), 10), params.centeredSlides ? slideToIndex < swiper.loopedSlides - slidesPerView / 2 || slideToIndex > swiper.slides.length - swiper.loopedSlides + slidesPerView / 2 ? (swiper.loopFix(), slideToIndex = swiper.getSlideIndex(elementChildren(slidesEl, `${slideSelector}[data-swiper-slide-index="${realIndex}"]`)[0]), nextTick(() => {
+      swiper.slideTo(slideToIndex);
+    })) : swiper.slideTo(slideToIndex) : slideToIndex > swiper.slides.length - slidesPerView ? (swiper.loopFix(), slideToIndex = swiper.getSlideIndex(elementChildren(slidesEl, `${slideSelector}[data-swiper-slide-index="${realIndex}"]`)[0]), nextTick(() => {
+      swiper.slideTo(slideToIndex);
+    })) : swiper.slideTo(slideToIndex);
+  } else
+    swiper.slideTo(slideToIndex);
+}
+var slide = {
+  slideTo,
+  slideToLoop,
+  slideNext,
+  slidePrev,
+  slideReset,
+  slideToClosest,
+  slideToClickedSlide
+};
+function loopCreate(slideRealIndex) {
+  let swiper = this, {
+    params,
+    slidesEl
+  } = swiper;
+  if (!params.loop || swiper.virtual && swiper.params.virtual.enabled)
+    return;
+  elementChildren(slidesEl, `.${params.slideClass}, swiper-slide`).forEach((el, index) => {
+    el.setAttribute("data-swiper-slide-index", index);
+  }), swiper.loopFix({
+    slideRealIndex,
+    direction: params.centeredSlides ? void 0 : "next"
+  });
+}
+function loopFix(_temp) {
+  let {
+    slideRealIndex,
+    slideTo: slideTo2 = !0,
+    direction,
+    setTranslate: setTranslate2,
+    activeSlideIndex,
+    byController,
+    byMousewheel
+  } = _temp === void 0 ? {} : _temp, swiper = this;
+  if (!swiper.params.loop)
+    return;
+  swiper.emit("beforeLoopFix");
+  let {
+    slides,
+    allowSlidePrev,
+    allowSlideNext,
+    slidesEl,
+    params
+  } = swiper;
+  if (swiper.allowSlidePrev = !0, swiper.allowSlideNext = !0, swiper.virtual && params.virtual.enabled) {
+    slideTo2 && (!params.centeredSlides && swiper.snapIndex === 0 ? swiper.slideTo(swiper.virtual.slides.length, 0, !1, !0) : params.centeredSlides && swiper.snapIndex < params.slidesPerView ? swiper.slideTo(swiper.virtual.slides.length + swiper.snapIndex, 0, !1, !0) : swiper.snapIndex === swiper.snapGrid.length - 1 && swiper.slideTo(swiper.virtual.slidesBefore, 0, !1, !0)), swiper.allowSlidePrev = allowSlidePrev, swiper.allowSlideNext = allowSlideNext, swiper.emit("loopFix");
+    return;
+  }
+  let slidesPerView = params.slidesPerView === "auto" ? swiper.slidesPerViewDynamic() : Math.ceil(parseFloat(params.slidesPerView, 10)), loopedSlides = params.loopedSlides || slidesPerView;
+  loopedSlides % params.slidesPerGroup !== 0 && (loopedSlides += params.slidesPerGroup - loopedSlides % params.slidesPerGroup), swiper.loopedSlides = loopedSlides;
+  let prependSlidesIndexes = [], appendSlidesIndexes = [], activeIndex = swiper.activeIndex;
+  typeof activeSlideIndex > "u" ? activeSlideIndex = swiper.getSlideIndex(swiper.slides.filter((el) => el.classList.contains(params.slideActiveClass))[0]) : activeIndex = activeSlideIndex;
+  let isNext = direction === "next" || !direction, isPrev = direction === "prev" || !direction, slidesPrepended = 0, slidesAppended = 0;
+  if (activeSlideIndex < loopedSlides) {
+    slidesPrepended = Math.max(loopedSlides - activeSlideIndex, params.slidesPerGroup);
+    for (let i = 0; i < loopedSlides - activeSlideIndex; i += 1) {
+      let index = i - Math.floor(i / slides.length) * slides.length;
+      prependSlidesIndexes.push(slides.length - index - 1);
+    }
+  } else if (activeSlideIndex > swiper.slides.length - loopedSlides * 2) {
+    slidesAppended = Math.max(activeSlideIndex - (swiper.slides.length - loopedSlides * 2), params.slidesPerGroup);
+    for (let i = 0; i < slidesAppended; i += 1) {
+      let index = i - Math.floor(i / slides.length) * slides.length;
+      appendSlidesIndexes.push(index);
+    }
+  }
+  if (isPrev && prependSlidesIndexes.forEach((index) => {
+    swiper.slides[index].swiperLoopMoveDOM = !0, slidesEl.prepend(swiper.slides[index]), swiper.slides[index].swiperLoopMoveDOM = !1;
+  }), isNext && appendSlidesIndexes.forEach((index) => {
+    swiper.slides[index].swiperLoopMoveDOM = !0, slidesEl.append(swiper.slides[index]), swiper.slides[index].swiperLoopMoveDOM = !1;
+  }), swiper.recalcSlides(), params.slidesPerView === "auto" && swiper.updateSlides(), params.watchSlidesProgress && swiper.updateSlidesOffset(), slideTo2) {
+    if (prependSlidesIndexes.length > 0 && isPrev)
+      if (typeof slideRealIndex > "u") {
+        let currentSlideTranslate = swiper.slidesGrid[activeIndex], diff = swiper.slidesGrid[activeIndex + slidesPrepended] - currentSlideTranslate;
+        byMousewheel ? swiper.setTranslate(swiper.translate - diff) : (swiper.slideTo(activeIndex + slidesPrepended, 0, !1, !0), setTranslate2 && (swiper.touches[swiper.isHorizontal() ? "startX" : "startY"] += diff, swiper.touchEventsData.currentTranslate = swiper.translate));
+      } else
+        setTranslate2 && (swiper.slideToLoop(slideRealIndex, 0, !1, !0), swiper.touchEventsData.currentTranslate = swiper.translate);
+    else if (appendSlidesIndexes.length > 0 && isNext)
+      if (typeof slideRealIndex > "u") {
+        let currentSlideTranslate = swiper.slidesGrid[activeIndex], diff = swiper.slidesGrid[activeIndex - slidesAppended] - currentSlideTranslate;
+        byMousewheel ? swiper.setTranslate(swiper.translate - diff) : (swiper.slideTo(activeIndex - slidesAppended, 0, !1, !0), setTranslate2 && (swiper.touches[swiper.isHorizontal() ? "startX" : "startY"] += diff, swiper.touchEventsData.currentTranslate = swiper.translate));
+      } else
+        swiper.slideToLoop(slideRealIndex, 0, !1, !0);
+  }
+  if (swiper.allowSlidePrev = allowSlidePrev, swiper.allowSlideNext = allowSlideNext, swiper.controller && swiper.controller.control && !byController) {
+    let loopParams = {
+      slideRealIndex,
+      direction,
+      setTranslate: setTranslate2,
+      activeSlideIndex,
+      byController: !0
+    };
+    Array.isArray(swiper.controller.control) ? swiper.controller.control.forEach((c) => {
+      !c.destroyed && c.params.loop && c.loopFix({
+        ...loopParams,
+        slideTo: c.params.slidesPerView === params.slidesPerView ? slideTo2 : !1
+      });
+    }) : swiper.controller.control instanceof swiper.constructor && swiper.controller.control.params.loop && swiper.controller.control.loopFix({
+      ...loopParams,
+      slideTo: swiper.controller.control.params.slidesPerView === params.slidesPerView ? slideTo2 : !1
+    });
+  }
+  swiper.emit("loopFix");
+}
+function loopDestroy() {
+  let swiper = this, {
+    params,
+    slidesEl
+  } = swiper;
+  if (!params.loop || swiper.virtual && swiper.params.virtual.enabled)
+    return;
+  swiper.recalcSlides();
+  let newSlidesOrder = [];
+  swiper.slides.forEach((slideEl) => {
+    let index = typeof slideEl.swiperSlideIndex > "u" ? slideEl.getAttribute("data-swiper-slide-index") * 1 : slideEl.swiperSlideIndex;
+    newSlidesOrder[index] = slideEl;
+  }), swiper.slides.forEach((slideEl) => {
+    slideEl.removeAttribute("data-swiper-slide-index");
+  }), newSlidesOrder.forEach((slideEl) => {
+    slidesEl.append(slideEl);
+  }), swiper.recalcSlides(), swiper.slideTo(swiper.realIndex, 0);
+}
+var loop = {
+  loopCreate,
+  loopFix,
+  loopDestroy
+};
+function setGrabCursor(moving) {
+  let swiper = this;
+  if (!swiper.params.simulateTouch || swiper.params.watchOverflow && swiper.isLocked || swiper.params.cssMode)
+    return;
+  let el = swiper.params.touchEventsTarget === "container" ? swiper.el : swiper.wrapperEl;
+  swiper.isElement && (swiper.__preventObserver__ = !0), el.style.cursor = "move", el.style.cursor = moving ? "grabbing" : "grab", swiper.isElement && requestAnimationFrame(() => {
+    swiper.__preventObserver__ = !1;
+  });
+}
+function unsetGrabCursor() {
+  let swiper = this;
+  swiper.params.watchOverflow && swiper.isLocked || swiper.params.cssMode || (swiper.isElement && (swiper.__preventObserver__ = !0), swiper[swiper.params.touchEventsTarget === "container" ? "el" : "wrapperEl"].style.cursor = "", swiper.isElement && requestAnimationFrame(() => {
+    swiper.__preventObserver__ = !1;
+  }));
+}
+var grabCursor = {
+  setGrabCursor,
+  unsetGrabCursor
+};
+function closestElement(selector, base) {
+  base === void 0 && (base = this);
+  function __closestFrom(el) {
+    if (!el || el === getDocument() || el === getWindow())
+      return null;
+    el.assignedSlot && (el = el.assignedSlot);
+    let found = el.closest(selector);
+    return !found && !el.getRootNode ? null : found || __closestFrom(el.getRootNode().host);
+  }
+  return __closestFrom(base);
+}
+function onTouchStart(event) {
+  let swiper = this, document2 = getDocument(), window2 = getWindow(), data = swiper.touchEventsData;
+  data.evCache.push(event);
+  let {
+    params,
+    touches,
+    enabled
+  } = swiper;
+  if (!enabled || !params.simulateTouch && event.pointerType === "mouse" || swiper.animating && params.preventInteractionOnTransition)
+    return;
+  !swiper.animating && params.cssMode && params.loop && swiper.loopFix();
+  let e = event;
+  e.originalEvent && (e = e.originalEvent);
+  let targetEl = e.target;
+  if (params.touchEventsTarget === "wrapper" && !swiper.wrapperEl.contains(targetEl) || "which" in e && e.which === 3 || "button" in e && e.button > 0 || data.isTouched && data.isMoved)
+    return;
+  let swipingClassHasValue = !!params.noSwipingClass && params.noSwipingClass !== "", eventPath = event.composedPath ? event.composedPath() : event.path;
+  swipingClassHasValue && e.target && e.target.shadowRoot && eventPath && (targetEl = eventPath[0]);
+  let noSwipingSelector = params.noSwipingSelector ? params.noSwipingSelector : `.${params.noSwipingClass}`, isTargetShadow = !!(e.target && e.target.shadowRoot);
+  if (params.noSwiping && (isTargetShadow ? closestElement(noSwipingSelector, targetEl) : targetEl.closest(noSwipingSelector))) {
+    swiper.allowClick = !0;
+    return;
+  }
+  if (params.swipeHandler && !targetEl.closest(params.swipeHandler))
+    return;
+  touches.currentX = e.pageX, touches.currentY = e.pageY;
+  let startX = touches.currentX, startY = touches.currentY, edgeSwipeDetection = params.edgeSwipeDetection || params.iOSEdgeSwipeDetection, edgeSwipeThreshold = params.edgeSwipeThreshold || params.iOSEdgeSwipeThreshold;
+  if (edgeSwipeDetection && (startX <= edgeSwipeThreshold || startX >= window2.innerWidth - edgeSwipeThreshold))
+    if (edgeSwipeDetection === "prevent")
+      event.preventDefault();
+    else
+      return;
+  Object.assign(data, {
+    isTouched: !0,
+    isMoved: !1,
+    allowTouchCallbacks: !0,
+    isScrolling: void 0,
+    startMoving: void 0
+  }), touches.startX = startX, touches.startY = startY, data.touchStartTime = now(), swiper.allowClick = !0, swiper.updateSize(), swiper.swipeDirection = void 0, params.threshold > 0 && (data.allowThresholdMove = !1);
+  let preventDefault = !0;
+  targetEl.matches(data.focusableElements) && (preventDefault = !1, targetEl.nodeName === "SELECT" && (data.isTouched = !1)), document2.activeElement && document2.activeElement.matches(data.focusableElements) && document2.activeElement !== targetEl && document2.activeElement.blur();
+  let shouldPreventDefault = preventDefault && swiper.allowTouchMove && params.touchStartPreventDefault;
+  (params.touchStartForcePreventDefault || shouldPreventDefault) && !targetEl.isContentEditable && e.preventDefault(), params.freeMode && params.freeMode.enabled && swiper.freeMode && swiper.animating && !params.cssMode && swiper.freeMode.onTouchStart(), swiper.emit("touchStart", e);
+}
+function onTouchMove(event) {
+  let document2 = getDocument(), swiper = this, data = swiper.touchEventsData, {
+    params,
+    touches,
+    rtlTranslate: rtl,
+    enabled
+  } = swiper;
+  if (!enabled || !params.simulateTouch && event.pointerType === "mouse")
+    return;
+  let e = event;
+  if (e.originalEvent && (e = e.originalEvent), !data.isTouched) {
+    data.startMoving && data.isScrolling && swiper.emit("touchMoveOpposite", e);
+    return;
+  }
+  let pointerIndex = data.evCache.findIndex((cachedEv) => cachedEv.pointerId === e.pointerId);
+  pointerIndex >= 0 && (data.evCache[pointerIndex] = e);
+  let targetTouch = data.evCache.length > 1 ? data.evCache[0] : e, pageX = targetTouch.pageX, pageY = targetTouch.pageY;
+  if (e.preventedByNestedSwiper) {
+    touches.startX = pageX, touches.startY = pageY;
+    return;
+  }
+  if (!swiper.allowTouchMove) {
+    e.target.matches(data.focusableElements) || (swiper.allowClick = !1), data.isTouched && (Object.assign(touches, {
+      startX: pageX,
+      startY: pageY,
+      prevX: swiper.touches.currentX,
+      prevY: swiper.touches.currentY,
+      currentX: pageX,
+      currentY: pageY
+    }), data.touchStartTime = now());
+    return;
+  }
+  if (params.touchReleaseOnEdges && !params.loop) {
+    if (swiper.isVertical()) {
+      if (pageY < touches.startY && swiper.translate <= swiper.maxTranslate() || pageY > touches.startY && swiper.translate >= swiper.minTranslate()) {
+        data.isTouched = !1, data.isMoved = !1;
+        return;
+      }
+    } else if (pageX < touches.startX && swiper.translate <= swiper.maxTranslate() || pageX > touches.startX && swiper.translate >= swiper.minTranslate())
+      return;
+  }
+  if (document2.activeElement && e.target === document2.activeElement && e.target.matches(data.focusableElements)) {
+    data.isMoved = !0, swiper.allowClick = !1;
+    return;
+  }
+  if (data.allowTouchCallbacks && swiper.emit("touchMove", e), e.targetTouches && e.targetTouches.length > 1)
+    return;
+  touches.currentX = pageX, touches.currentY = pageY;
+  let diffX = touches.currentX - touches.startX, diffY = touches.currentY - touches.startY;
+  if (swiper.params.threshold && Math.sqrt(diffX ** 2 + diffY ** 2) < swiper.params.threshold)
+    return;
+  if (typeof data.isScrolling > "u") {
+    let touchAngle;
+    swiper.isHorizontal() && touches.currentY === touches.startY || swiper.isVertical() && touches.currentX === touches.startX ? data.isScrolling = !1 : diffX * diffX + diffY * diffY >= 25 && (touchAngle = Math.atan2(Math.abs(diffY), Math.abs(diffX)) * 180 / Math.PI, data.isScrolling = swiper.isHorizontal() ? touchAngle > params.touchAngle : 90 - touchAngle > params.touchAngle);
+  }
+  if (data.isScrolling && swiper.emit("touchMoveOpposite", e), typeof data.startMoving > "u" && (touches.currentX !== touches.startX || touches.currentY !== touches.startY) && (data.startMoving = !0), data.isScrolling || swiper.zoom && swiper.params.zoom && swiper.params.zoom.enabled && data.evCache.length > 1) {
+    data.isTouched = !1;
+    return;
+  }
+  if (!data.startMoving)
+    return;
+  swiper.allowClick = !1, !params.cssMode && e.cancelable && e.preventDefault(), params.touchMoveStopPropagation && !params.nested && e.stopPropagation();
+  let diff = swiper.isHorizontal() ? diffX : diffY, touchesDiff = swiper.isHorizontal() ? touches.currentX - touches.previousX : touches.currentY - touches.previousY;
+  params.oneWayMovement && (diff = Math.abs(diff) * (rtl ? 1 : -1), touchesDiff = Math.abs(touchesDiff) * (rtl ? 1 : -1)), touches.diff = diff, diff *= params.touchRatio, rtl && (diff = -diff, touchesDiff = -touchesDiff);
+  let prevTouchesDirection = swiper.touchesDirection;
+  swiper.swipeDirection = diff > 0 ? "prev" : "next", swiper.touchesDirection = touchesDiff > 0 ? "prev" : "next";
+  let isLoop = swiper.params.loop && !params.cssMode, allowLoopFix = swiper.swipeDirection === "next" && swiper.allowSlideNext || swiper.swipeDirection === "prev" && swiper.allowSlidePrev;
+  if (!data.isMoved) {
+    if (isLoop && allowLoopFix && swiper.loopFix({
+      direction: swiper.swipeDirection
+    }), data.startTranslate = swiper.getTranslate(), swiper.setTransition(0), swiper.animating) {
+      let evt = new window.CustomEvent("transitionend", {
+        bubbles: !0,
+        cancelable: !0
+      });
+      swiper.wrapperEl.dispatchEvent(evt);
+    }
+    data.allowMomentumBounce = !1, params.grabCursor && (swiper.allowSlideNext === !0 || swiper.allowSlidePrev === !0) && swiper.setGrabCursor(!0), swiper.emit("sliderFirstMove", e);
+  }
+  let loopFixed;
+  data.isMoved && prevTouchesDirection !== swiper.touchesDirection && isLoop && allowLoopFix && Math.abs(diff) >= 1 && (swiper.loopFix({
+    direction: swiper.swipeDirection,
+    setTranslate: !0
+  }), loopFixed = !0), swiper.emit("sliderMove", e), data.isMoved = !0, data.currentTranslate = diff + data.startTranslate;
+  let disableParentSwiper = !0, resistanceRatio = params.resistanceRatio;
+  if (params.touchReleaseOnEdges && (resistanceRatio = 0), diff > 0 ? (isLoop && allowLoopFix && !loopFixed && data.currentTranslate > (params.centeredSlides ? swiper.minTranslate() - swiper.size / 2 : swiper.minTranslate()) && swiper.loopFix({
+    direction: "prev",
+    setTranslate: !0,
+    activeSlideIndex: 0
+  }), data.currentTranslate > swiper.minTranslate() && (disableParentSwiper = !1, params.resistance && (data.currentTranslate = swiper.minTranslate() - 1 + (-swiper.minTranslate() + data.startTranslate + diff) ** resistanceRatio))) : diff < 0 && (isLoop && allowLoopFix && !loopFixed && data.currentTranslate < (params.centeredSlides ? swiper.maxTranslate() + swiper.size / 2 : swiper.maxTranslate()) && swiper.loopFix({
+    direction: "next",
+    setTranslate: !0,
+    activeSlideIndex: swiper.slides.length - (params.slidesPerView === "auto" ? swiper.slidesPerViewDynamic() : Math.ceil(parseFloat(params.slidesPerView, 10)))
+  }), data.currentTranslate < swiper.maxTranslate() && (disableParentSwiper = !1, params.resistance && (data.currentTranslate = swiper.maxTranslate() + 1 - (swiper.maxTranslate() - data.startTranslate - diff) ** resistanceRatio))), disableParentSwiper && (e.preventedByNestedSwiper = !0), !swiper.allowSlideNext && swiper.swipeDirection === "next" && data.currentTranslate < data.startTranslate && (data.currentTranslate = data.startTranslate), !swiper.allowSlidePrev && swiper.swipeDirection === "prev" && data.currentTranslate > data.startTranslate && (data.currentTranslate = data.startTranslate), !swiper.allowSlidePrev && !swiper.allowSlideNext && (data.currentTranslate = data.startTranslate), params.threshold > 0)
+    if (Math.abs(diff) > params.threshold || data.allowThresholdMove) {
+      if (!data.allowThresholdMove) {
+        data.allowThresholdMove = !0, touches.startX = touches.currentX, touches.startY = touches.currentY, data.currentTranslate = data.startTranslate, touches.diff = swiper.isHorizontal() ? touches.currentX - touches.startX : touches.currentY - touches.startY;
+        return;
+      }
+    } else {
+      data.currentTranslate = data.startTranslate;
+      return;
+    }
+  !params.followFinger || params.cssMode || ((params.freeMode && params.freeMode.enabled && swiper.freeMode || params.watchSlidesProgress) && (swiper.updateActiveIndex(), swiper.updateSlidesClasses()), params.freeMode && params.freeMode.enabled && swiper.freeMode && swiper.freeMode.onTouchMove(), swiper.updateProgress(data.currentTranslate), swiper.setTranslate(data.currentTranslate));
+}
+function onTouchEnd(event) {
+  let swiper = this, data = swiper.touchEventsData, pointerIndex = data.evCache.findIndex((cachedEv) => cachedEv.pointerId === event.pointerId);
+  if (pointerIndex >= 0 && data.evCache.splice(pointerIndex, 1), ["pointercancel", "pointerout", "pointerleave", "contextmenu"].includes(event.type) && !(["pointercancel", "contextmenu"].includes(event.type) && (swiper.browser.isSafari || swiper.browser.isWebView)))
+    return;
+  let {
+    params,
+    touches,
+    rtlTranslate: rtl,
+    slidesGrid,
+    enabled
+  } = swiper;
+  if (!enabled || !params.simulateTouch && event.pointerType === "mouse")
+    return;
+  let e = event;
+  if (e.originalEvent && (e = e.originalEvent), data.allowTouchCallbacks && swiper.emit("touchEnd", e), data.allowTouchCallbacks = !1, !data.isTouched) {
+    data.isMoved && params.grabCursor && swiper.setGrabCursor(!1), data.isMoved = !1, data.startMoving = !1;
+    return;
+  }
+  params.grabCursor && data.isMoved && data.isTouched && (swiper.allowSlideNext === !0 || swiper.allowSlidePrev === !0) && swiper.setGrabCursor(!1);
+  let touchEndTime = now(), timeDiff = touchEndTime - data.touchStartTime;
+  if (swiper.allowClick) {
+    let pathTree = e.path || e.composedPath && e.composedPath();
+    swiper.updateClickedSlide(pathTree && pathTree[0] || e.target, pathTree), swiper.emit("tap click", e), timeDiff < 300 && touchEndTime - data.lastClickTime < 300 && swiper.emit("doubleTap doubleClick", e);
+  }
+  if (data.lastClickTime = now(), nextTick(() => {
+    swiper.destroyed || (swiper.allowClick = !0);
+  }), !data.isTouched || !data.isMoved || !swiper.swipeDirection || touches.diff === 0 || data.currentTranslate === data.startTranslate) {
+    data.isTouched = !1, data.isMoved = !1, data.startMoving = !1;
+    return;
+  }
+  data.isTouched = !1, data.isMoved = !1, data.startMoving = !1;
+  let currentPos;
+  if (params.followFinger ? currentPos = rtl ? swiper.translate : -swiper.translate : currentPos = -data.currentTranslate, params.cssMode)
+    return;
+  if (params.freeMode && params.freeMode.enabled) {
+    swiper.freeMode.onTouchEnd({
+      currentPos
+    });
+    return;
+  }
+  let stopIndex = 0, groupSize = swiper.slidesSizesGrid[0];
+  for (let i = 0; i < slidesGrid.length; i += i < params.slidesPerGroupSkip ? 1 : params.slidesPerGroup) {
+    let increment2 = i < params.slidesPerGroupSkip - 1 ? 1 : params.slidesPerGroup;
+    typeof slidesGrid[i + increment2] < "u" ? currentPos >= slidesGrid[i] && currentPos < slidesGrid[i + increment2] && (stopIndex = i, groupSize = slidesGrid[i + increment2] - slidesGrid[i]) : currentPos >= slidesGrid[i] && (stopIndex = i, groupSize = slidesGrid[slidesGrid.length - 1] - slidesGrid[slidesGrid.length - 2]);
+  }
+  let rewindFirstIndex = null, rewindLastIndex = null;
+  params.rewind && (swiper.isBeginning ? rewindLastIndex = params.virtual && params.virtual.enabled && swiper.virtual ? swiper.virtual.slides.length - 1 : swiper.slides.length - 1 : swiper.isEnd && (rewindFirstIndex = 0));
+  let ratio = (currentPos - slidesGrid[stopIndex]) / groupSize, increment = stopIndex < params.slidesPerGroupSkip - 1 ? 1 : params.slidesPerGroup;
+  if (timeDiff > params.longSwipesMs) {
+    if (!params.longSwipes) {
+      swiper.slideTo(swiper.activeIndex);
+      return;
+    }
+    swiper.swipeDirection === "next" && (ratio >= params.longSwipesRatio ? swiper.slideTo(params.rewind && swiper.isEnd ? rewindFirstIndex : stopIndex + increment) : swiper.slideTo(stopIndex)), swiper.swipeDirection === "prev" && (ratio > 1 - params.longSwipesRatio ? swiper.slideTo(stopIndex + increment) : rewindLastIndex !== null && ratio < 0 && Math.abs(ratio) > params.longSwipesRatio ? swiper.slideTo(rewindLastIndex) : swiper.slideTo(stopIndex));
+  } else {
+    if (!params.shortSwipes) {
+      swiper.slideTo(swiper.activeIndex);
+      return;
+    }
+    swiper.navigation && (e.target === swiper.navigation.nextEl || e.target === swiper.navigation.prevEl) ? e.target === swiper.navigation.nextEl ? swiper.slideTo(stopIndex + increment) : swiper.slideTo(stopIndex) : (swiper.swipeDirection === "next" && swiper.slideTo(rewindFirstIndex !== null ? rewindFirstIndex : stopIndex + increment), swiper.swipeDirection === "prev" && swiper.slideTo(rewindLastIndex !== null ? rewindLastIndex : stopIndex));
+  }
+}
+function onResize() {
+  let swiper = this, {
+    params,
+    el
+  } = swiper;
+  if (el && el.offsetWidth === 0)
+    return;
+  params.breakpoints && swiper.setBreakpoint();
+  let {
+    allowSlideNext,
+    allowSlidePrev,
+    snapGrid
+  } = swiper, isVirtual = swiper.virtual && swiper.params.virtual.enabled;
+  swiper.allowSlideNext = !0, swiper.allowSlidePrev = !0, swiper.updateSize(), swiper.updateSlides(), swiper.updateSlidesClasses();
+  let isVirtualLoop = isVirtual && params.loop;
+  (params.slidesPerView === "auto" || params.slidesPerView > 1) && swiper.isEnd && !swiper.isBeginning && !swiper.params.centeredSlides && !isVirtualLoop ? swiper.slideTo(swiper.slides.length - 1, 0, !1, !0) : swiper.params.loop && !isVirtual ? swiper.slideToLoop(swiper.realIndex, 0, !1, !0) : swiper.slideTo(swiper.activeIndex, 0, !1, !0), swiper.autoplay && swiper.autoplay.running && swiper.autoplay.paused && (clearTimeout(swiper.autoplay.resizeTimeout), swiper.autoplay.resizeTimeout = setTimeout(() => {
+    swiper.autoplay && swiper.autoplay.running && swiper.autoplay.paused && swiper.autoplay.resume();
+  }, 500)), swiper.allowSlidePrev = allowSlidePrev, swiper.allowSlideNext = allowSlideNext, swiper.params.watchOverflow && snapGrid !== swiper.snapGrid && swiper.checkOverflow();
+}
+function onClick(e) {
+  let swiper = this;
+  swiper.enabled && (swiper.allowClick || (swiper.params.preventClicks && e.preventDefault(), swiper.params.preventClicksPropagation && swiper.animating && (e.stopPropagation(), e.stopImmediatePropagation())));
+}
+function onScroll() {
+  let swiper = this, {
+    wrapperEl,
+    rtlTranslate,
+    enabled
+  } = swiper;
+  if (!enabled)
+    return;
+  swiper.previousTranslate = swiper.translate, swiper.isHorizontal() ? swiper.translate = -wrapperEl.scrollLeft : swiper.translate = -wrapperEl.scrollTop, swiper.translate === 0 && (swiper.translate = 0), swiper.updateActiveIndex(), swiper.updateSlidesClasses();
+  let newProgress, translatesDiff = swiper.maxTranslate() - swiper.minTranslate();
+  translatesDiff === 0 ? newProgress = 0 : newProgress = (swiper.translate - swiper.minTranslate()) / translatesDiff, newProgress !== swiper.progress && swiper.updateProgress(rtlTranslate ? -swiper.translate : swiper.translate), swiper.emit("setTranslate", swiper.translate, !1);
+}
+function onLoad(e) {
+  let swiper = this;
+  processLazyPreloader(swiper, e.target), !(swiper.params.cssMode || swiper.params.slidesPerView !== "auto" && !swiper.params.autoHeight) && swiper.update();
+}
+var dummyEventAttached = !1;
+function dummyEventListener() {
+}
+var events = (swiper, method) => {
+  let document2 = getDocument(), {
+    params,
+    el,
+    wrapperEl,
+    device
+  } = swiper, capture = !!params.nested, domMethod = method === "on" ? "addEventListener" : "removeEventListener", swiperMethod = method;
+  el[domMethod]("pointerdown", swiper.onTouchStart, {
+    passive: !1
+  }), document2[domMethod]("pointermove", swiper.onTouchMove, {
+    passive: !1,
+    capture
+  }), document2[domMethod]("pointerup", swiper.onTouchEnd, {
+    passive: !0
+  }), document2[domMethod]("pointercancel", swiper.onTouchEnd, {
+    passive: !0
+  }), document2[domMethod]("pointerout", swiper.onTouchEnd, {
+    passive: !0
+  }), document2[domMethod]("pointerleave", swiper.onTouchEnd, {
+    passive: !0
+  }), document2[domMethod]("contextmenu", swiper.onTouchEnd, {
+    passive: !0
+  }), (params.preventClicks || params.preventClicksPropagation) && el[domMethod]("click", swiper.onClick, !0), params.cssMode && wrapperEl[domMethod]("scroll", swiper.onScroll), params.updateOnWindowResize ? swiper[swiperMethod](device.ios || device.android ? "resize orientationchange observerUpdate" : "resize observerUpdate", onResize, !0) : swiper[swiperMethod]("observerUpdate", onResize, !0), el[domMethod]("load", swiper.onLoad, {
+    capture: !0
+  });
+};
+function attachEvents() {
+  let swiper = this, document2 = getDocument(), {
+    params
+  } = swiper;
+  swiper.onTouchStart = onTouchStart.bind(swiper), swiper.onTouchMove = onTouchMove.bind(swiper), swiper.onTouchEnd = onTouchEnd.bind(swiper), params.cssMode && (swiper.onScroll = onScroll.bind(swiper)), swiper.onClick = onClick.bind(swiper), swiper.onLoad = onLoad.bind(swiper), dummyEventAttached || (document2.addEventListener("touchstart", dummyEventListener), dummyEventAttached = !0), events(swiper, "on");
+}
+function detachEvents() {
+  events(this, "off");
+}
+var events$1 = {
+  attachEvents,
+  detachEvents
+}, isGridEnabled = (swiper, params) => swiper.grid && params.grid && params.grid.rows > 1;
+function setBreakpoint() {
+  let swiper = this, {
+    realIndex,
+    initialized,
+    params,
+    el
+  } = swiper, breakpoints2 = params.breakpoints;
+  if (!breakpoints2 || breakpoints2 && Object.keys(breakpoints2).length === 0)
+    return;
+  let breakpoint = swiper.getBreakpoint(breakpoints2, swiper.params.breakpointsBase, swiper.el);
+  if (!breakpoint || swiper.currentBreakpoint === breakpoint)
+    return;
+  let breakpointParams = (breakpoint in breakpoints2 ? breakpoints2[breakpoint] : void 0) || swiper.originalParams, wasMultiRow = isGridEnabled(swiper, params), isMultiRow = isGridEnabled(swiper, breakpointParams), wasEnabled = params.enabled;
+  wasMultiRow && !isMultiRow ? (el.classList.remove(`${params.containerModifierClass}grid`, `${params.containerModifierClass}grid-column`), swiper.emitContainerClasses()) : !wasMultiRow && isMultiRow && (el.classList.add(`${params.containerModifierClass}grid`), (breakpointParams.grid.fill && breakpointParams.grid.fill === "column" || !breakpointParams.grid.fill && params.grid.fill === "column") && el.classList.add(`${params.containerModifierClass}grid-column`), swiper.emitContainerClasses()), ["navigation", "pagination", "scrollbar"].forEach((prop) => {
+    if (typeof breakpointParams[prop] > "u")
+      return;
+    let wasModuleEnabled = params[prop] && params[prop].enabled, isModuleEnabled = breakpointParams[prop] && breakpointParams[prop].enabled;
+    wasModuleEnabled && !isModuleEnabled && swiper[prop].disable(), !wasModuleEnabled && isModuleEnabled && swiper[prop].enable();
+  });
+  let directionChanged = breakpointParams.direction && breakpointParams.direction !== params.direction, needsReLoop = params.loop && (breakpointParams.slidesPerView !== params.slidesPerView || directionChanged), wasLoop = params.loop;
+  directionChanged && initialized && swiper.changeDirection(), extend2(swiper.params, breakpointParams);
+  let isEnabled = swiper.params.enabled, hasLoop = swiper.params.loop;
+  Object.assign(swiper, {
+    allowTouchMove: swiper.params.allowTouchMove,
+    allowSlideNext: swiper.params.allowSlideNext,
+    allowSlidePrev: swiper.params.allowSlidePrev
+  }), wasEnabled && !isEnabled ? swiper.disable() : !wasEnabled && isEnabled && swiper.enable(), swiper.currentBreakpoint = breakpoint, swiper.emit("_beforeBreakpoint", breakpointParams), initialized && (needsReLoop ? (swiper.loopDestroy(), swiper.loopCreate(realIndex), swiper.updateSlides()) : !wasLoop && hasLoop ? (swiper.loopCreate(realIndex), swiper.updateSlides()) : wasLoop && !hasLoop && swiper.loopDestroy()), swiper.emit("breakpoint", breakpointParams);
+}
+function getBreakpoint(breakpoints2, base, containerEl) {
+  if (base === void 0 && (base = "window"), !breakpoints2 || base === "container" && !containerEl)
+    return;
+  let breakpoint = !1, window2 = getWindow(), currentHeight = base === "window" ? window2.innerHeight : containerEl.clientHeight, points = Object.keys(breakpoints2).map((point) => {
+    if (typeof point == "string" && point.indexOf("@") === 0) {
+      let minRatio = parseFloat(point.substr(1));
+      return {
+        value: currentHeight * minRatio,
+        point
+      };
+    }
+    return {
+      value: point,
+      point
+    };
+  });
+  points.sort((a, b) => parseInt(a.value, 10) - parseInt(b.value, 10));
+  for (let i = 0; i < points.length; i += 1) {
+    let {
+      point,
+      value
+    } = points[i];
+    base === "window" ? window2.matchMedia(`(min-width: ${value}px)`).matches && (breakpoint = point) : value <= containerEl.clientWidth && (breakpoint = point);
+  }
+  return breakpoint || "max";
+}
+var breakpoints = {
+  setBreakpoint,
+  getBreakpoint
+};
+function prepareClasses(entries, prefix) {
+  let resultClasses = [];
+  return entries.forEach((item) => {
+    typeof item == "object" ? Object.keys(item).forEach((classNames) => {
+      item[classNames] && resultClasses.push(prefix + classNames);
+    }) : typeof item == "string" && resultClasses.push(prefix + item);
+  }), resultClasses;
+}
+function addClasses() {
+  let swiper = this, {
+    classNames,
+    params,
+    rtl,
+    el,
+    device
+  } = swiper, suffixes = prepareClasses(["initialized", params.direction, {
+    "free-mode": swiper.params.freeMode && params.freeMode.enabled
+  }, {
+    autoheight: params.autoHeight
+  }, {
+    rtl
+  }, {
+    grid: params.grid && params.grid.rows > 1
+  }, {
+    "grid-column": params.grid && params.grid.rows > 1 && params.grid.fill === "column"
+  }, {
+    android: device.android
+  }, {
+    ios: device.ios
+  }, {
+    "css-mode": params.cssMode
+  }, {
+    centered: params.cssMode && params.centeredSlides
+  }, {
+    "watch-progress": params.watchSlidesProgress
+  }], params.containerModifierClass);
+  classNames.push(...suffixes), el.classList.add(...classNames), swiper.emitContainerClasses();
+}
+function removeClasses() {
+  let swiper = this, {
+    el,
+    classNames
+  } = swiper;
+  el.classList.remove(...classNames), swiper.emitContainerClasses();
+}
+var classes = {
+  addClasses,
+  removeClasses
+};
+function checkOverflow() {
+  let swiper = this, {
+    isLocked: wasLocked,
+    params
+  } = swiper, {
+    slidesOffsetBefore
+  } = params;
+  if (slidesOffsetBefore) {
+    let lastSlideIndex = swiper.slides.length - 1, lastSlideRightEdge = swiper.slidesGrid[lastSlideIndex] + swiper.slidesSizesGrid[lastSlideIndex] + slidesOffsetBefore * 2;
+    swiper.isLocked = swiper.size > lastSlideRightEdge;
+  } else
+    swiper.isLocked = swiper.snapGrid.length === 1;
+  params.allowSlideNext === !0 && (swiper.allowSlideNext = !swiper.isLocked), params.allowSlidePrev === !0 && (swiper.allowSlidePrev = !swiper.isLocked), wasLocked && wasLocked !== swiper.isLocked && (swiper.isEnd = !1), wasLocked !== swiper.isLocked && swiper.emit(swiper.isLocked ? "lock" : "unlock");
+}
+var checkOverflow$1 = {
+  checkOverflow
+}, defaults = {
+  init: !0,
+  direction: "horizontal",
+  oneWayMovement: !1,
+  touchEventsTarget: "wrapper",
+  initialSlide: 0,
+  speed: 300,
+  cssMode: !1,
+  updateOnWindowResize: !0,
+  resizeObserver: !0,
+  nested: !1,
+  createElements: !1,
+  enabled: !0,
+  focusableElements: "input, select, option, textarea, button, video, label",
+  // Overrides
+  width: null,
+  height: null,
+  //
+  preventInteractionOnTransition: !1,
+  // ssr
+  userAgent: null,
+  url: null,
+  // To support iOS's swipe-to-go-back gesture (when being used in-app).
+  edgeSwipeDetection: !1,
+  edgeSwipeThreshold: 20,
+  // Autoheight
+  autoHeight: !1,
+  // Set wrapper width
+  setWrapperSize: !1,
+  // Virtual Translate
+  virtualTranslate: !1,
+  // Effects
+  effect: "slide",
+  // 'slide' or 'fade' or 'cube' or 'coverflow' or 'flip'
+  // Breakpoints
+  breakpoints: void 0,
+  breakpointsBase: "window",
+  // Slides grid
+  spaceBetween: 0,
+  slidesPerView: 1,
+  slidesPerGroup: 1,
+  slidesPerGroupSkip: 0,
+  slidesPerGroupAuto: !1,
+  centeredSlides: !1,
+  centeredSlidesBounds: !1,
+  slidesOffsetBefore: 0,
+  // in px
+  slidesOffsetAfter: 0,
+  // in px
+  normalizeSlideIndex: !0,
+  centerInsufficientSlides: !1,
+  // Disable swiper and hide navigation when container not overflow
+  watchOverflow: !0,
+  // Round length
+  roundLengths: !1,
+  // Touches
+  touchRatio: 1,
+  touchAngle: 45,
+  simulateTouch: !0,
+  shortSwipes: !0,
+  longSwipes: !0,
+  longSwipesRatio: 0.5,
+  longSwipesMs: 300,
+  followFinger: !0,
+  allowTouchMove: !0,
+  threshold: 5,
+  touchMoveStopPropagation: !1,
+  touchStartPreventDefault: !0,
+  touchStartForcePreventDefault: !1,
+  touchReleaseOnEdges: !1,
+  // Unique Navigation Elements
+  uniqueNavElements: !0,
+  // Resistance
+  resistance: !0,
+  resistanceRatio: 0.85,
+  // Progress
+  watchSlidesProgress: !1,
+  // Cursor
+  grabCursor: !1,
+  // Clicks
+  preventClicks: !0,
+  preventClicksPropagation: !0,
+  slideToClickedSlide: !1,
+  // loop
+  loop: !1,
+  loopedSlides: null,
+  loopPreventsSliding: !0,
+  // rewind
+  rewind: !1,
+  // Swiping/no swiping
+  allowSlidePrev: !0,
+  allowSlideNext: !0,
+  swipeHandler: null,
+  // '.swipe-handler',
+  noSwiping: !0,
+  noSwipingClass: "swiper-no-swiping",
+  noSwipingSelector: null,
+  // Passive Listeners
+  passiveListeners: !0,
+  maxBackfaceHiddenSlides: 10,
+  // NS
+  containerModifierClass: "swiper-",
+  // NEW
+  slideClass: "swiper-slide",
+  slideActiveClass: "swiper-slide-active",
+  slideVisibleClass: "swiper-slide-visible",
+  slideNextClass: "swiper-slide-next",
+  slidePrevClass: "swiper-slide-prev",
+  wrapperClass: "swiper-wrapper",
+  lazyPreloaderClass: "swiper-lazy-preloader",
+  lazyPreloadPrevNext: 0,
+  // Callbacks
+  runCallbacksOnInit: !0,
+  // Internals
+  _emitClasses: !1
+};
+function moduleExtendParams(params, allModulesParams) {
+  return function(obj) {
+    obj === void 0 && (obj = {});
+    let moduleParamName = Object.keys(obj)[0], moduleParams = obj[moduleParamName];
+    if (typeof moduleParams != "object" || moduleParams === null) {
+      extend2(allModulesParams, obj);
+      return;
+    }
+    if (params[moduleParamName] === !0 && (params[moduleParamName] = {
+      enabled: !0
+    }), moduleParamName === "navigation" && params[moduleParamName] && params[moduleParamName].enabled && !params[moduleParamName].prevEl && !params[moduleParamName].nextEl && (params[moduleParamName].auto = !0), ["pagination", "scrollbar"].indexOf(moduleParamName) >= 0 && params[moduleParamName] && params[moduleParamName].enabled && !params[moduleParamName].el && (params[moduleParamName].auto = !0), !(moduleParamName in params && "enabled" in moduleParams)) {
+      extend2(allModulesParams, obj);
+      return;
+    }
+    typeof params[moduleParamName] == "object" && !("enabled" in params[moduleParamName]) && (params[moduleParamName].enabled = !0), params[moduleParamName] || (params[moduleParamName] = {
+      enabled: !1
+    }), extend2(allModulesParams, obj);
+  };
+}
+var prototypes = {
+  eventsEmitter,
+  update,
+  translate,
+  transition,
+  slide,
+  loop,
+  grabCursor,
+  events: events$1,
+  breakpoints,
+  checkOverflow: checkOverflow$1,
+  classes
+}, extendedDefaults = {}, Swiper = class {
+  constructor() {
+    let el, params;
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++)
+      args[_key] = arguments[_key];
+    args.length === 1 && args[0].constructor && Object.prototype.toString.call(args[0]).slice(8, -1) === "Object" ? params = args[0] : [el, params] = args, params || (params = {}), params = extend2({}, params), el && !params.el && (params.el = el);
+    let document2 = getDocument();
+    if (params.el && typeof params.el == "string" && document2.querySelectorAll(params.el).length > 1) {
+      let swipers = [];
+      return document2.querySelectorAll(params.el).forEach((containerEl) => {
+        let newParams = extend2({}, params, {
+          el: containerEl
+        });
+        swipers.push(new Swiper(newParams));
+      }), swipers;
+    }
+    let swiper = this;
+    swiper.__swiper__ = !0, swiper.support = getSupport(), swiper.device = getDevice({
+      userAgent: params.userAgent
+    }), swiper.browser = getBrowser(), swiper.eventsListeners = {}, swiper.eventsAnyListeners = [], swiper.modules = [...swiper.__modules__], params.modules && Array.isArray(params.modules) && swiper.modules.push(...params.modules);
+    let allModulesParams = {};
+    swiper.modules.forEach((mod) => {
+      mod({
+        params,
+        swiper,
+        extendParams: moduleExtendParams(params, allModulesParams),
+        on: swiper.on.bind(swiper),
+        once: swiper.once.bind(swiper),
+        off: swiper.off.bind(swiper),
+        emit: swiper.emit.bind(swiper)
+      });
+    });
+    let swiperParams = extend2({}, defaults, allModulesParams);
+    return swiper.params = extend2({}, swiperParams, extendedDefaults, params), swiper.originalParams = extend2({}, swiper.params), swiper.passedParams = extend2({}, params), swiper.params && swiper.params.on && Object.keys(swiper.params.on).forEach((eventName) => {
+      swiper.on(eventName, swiper.params.on[eventName]);
+    }), swiper.params && swiper.params.onAny && swiper.onAny(swiper.params.onAny), Object.assign(swiper, {
+      enabled: swiper.params.enabled,
+      el,
+      // Classes
+      classNames: [],
+      // Slides
+      slides: [],
+      slidesGrid: [],
+      snapGrid: [],
+      slidesSizesGrid: [],
+      // isDirection
+      isHorizontal() {
+        return swiper.params.direction === "horizontal";
+      },
+      isVertical() {
+        return swiper.params.direction === "vertical";
+      },
+      // Indexes
+      activeIndex: 0,
+      realIndex: 0,
+      //
+      isBeginning: !0,
+      isEnd: !1,
+      // Props
+      translate: 0,
+      previousTranslate: 0,
+      progress: 0,
+      velocity: 0,
+      animating: !1,
+      cssOverflowAdjustment() {
+        return Math.trunc(this.translate / 2 ** 23) * 2 ** 23;
+      },
+      // Locks
+      allowSlideNext: swiper.params.allowSlideNext,
+      allowSlidePrev: swiper.params.allowSlidePrev,
+      // Touch Events
+      touchEventsData: {
+        isTouched: void 0,
+        isMoved: void 0,
+        allowTouchCallbacks: void 0,
+        touchStartTime: void 0,
+        isScrolling: void 0,
+        currentTranslate: void 0,
+        startTranslate: void 0,
+        allowThresholdMove: void 0,
+        // Form elements to match
+        focusableElements: swiper.params.focusableElements,
+        // Last click time
+        lastClickTime: 0,
+        clickTimeout: void 0,
+        // Velocities
+        velocities: [],
+        allowMomentumBounce: void 0,
+        startMoving: void 0,
+        evCache: []
+      },
+      // Clicks
+      allowClick: !0,
+      // Touches
+      allowTouchMove: swiper.params.allowTouchMove,
+      touches: {
+        startX: 0,
+        startY: 0,
+        currentX: 0,
+        currentY: 0,
+        diff: 0
+      },
+      // Images
+      imagesToLoad: [],
+      imagesLoaded: 0
+    }), swiper.emit("_swiper"), swiper.params.init && swiper.init(), swiper;
+  }
+  getSlideIndex(slideEl) {
+    let {
+      slidesEl,
+      params
+    } = this, slides = elementChildren(slidesEl, `.${params.slideClass}, swiper-slide`), firstSlideIndex = elementIndex(slides[0]);
+    return elementIndex(slideEl) - firstSlideIndex;
+  }
+  getSlideIndexByData(index) {
+    return this.getSlideIndex(this.slides.filter((slideEl) => slideEl.getAttribute("data-swiper-slide-index") * 1 === index)[0]);
+  }
+  recalcSlides() {
+    let swiper = this, {
+      slidesEl,
+      params
+    } = swiper;
+    swiper.slides = elementChildren(slidesEl, `.${params.slideClass}, swiper-slide`);
+  }
+  enable() {
+    let swiper = this;
+    swiper.enabled || (swiper.enabled = !0, swiper.params.grabCursor && swiper.setGrabCursor(), swiper.emit("enable"));
+  }
+  disable() {
+    let swiper = this;
+    swiper.enabled && (swiper.enabled = !1, swiper.params.grabCursor && swiper.unsetGrabCursor(), swiper.emit("disable"));
+  }
+  setProgress(progress, speed) {
+    let swiper = this;
+    progress = Math.min(Math.max(progress, 0), 1);
+    let min = swiper.minTranslate(), current = (swiper.maxTranslate() - min) * progress + min;
+    swiper.translateTo(current, typeof speed > "u" ? 0 : speed), swiper.updateActiveIndex(), swiper.updateSlidesClasses();
+  }
+  emitContainerClasses() {
+    let swiper = this;
+    if (!swiper.params._emitClasses || !swiper.el)
+      return;
+    let cls = swiper.el.className.split(" ").filter((className) => className.indexOf("swiper") === 0 || className.indexOf(swiper.params.containerModifierClass) === 0);
+    swiper.emit("_containerClasses", cls.join(" "));
+  }
+  getSlideClasses(slideEl) {
+    let swiper = this;
+    return swiper.destroyed ? "" : slideEl.className.split(" ").filter((className) => className.indexOf("swiper-slide") === 0 || className.indexOf(swiper.params.slideClass) === 0).join(" ");
+  }
+  emitSlidesClasses() {
+    let swiper = this;
+    if (!swiper.params._emitClasses || !swiper.el)
+      return;
+    let updates = [];
+    swiper.slides.forEach((slideEl) => {
+      let classNames = swiper.getSlideClasses(slideEl);
+      updates.push({
+        slideEl,
+        classNames
+      }), swiper.emit("_slideClass", slideEl, classNames);
+    }), swiper.emit("_slideClasses", updates);
+  }
+  slidesPerViewDynamic(view, exact) {
+    view === void 0 && (view = "current"), exact === void 0 && (exact = !1);
+    let swiper = this, {
+      params,
+      slides,
+      slidesGrid,
+      slidesSizesGrid,
+      size: swiperSize,
+      activeIndex
+    } = swiper, spv = 1;
+    if (typeof params.slidesPerView == "number")
+      return params.slidesPerView;
+    if (params.centeredSlides) {
+      let slideSize = slides[activeIndex] ? slides[activeIndex].swiperSlideSize : 0, breakLoop;
+      for (let i = activeIndex + 1; i < slides.length; i += 1)
+        slides[i] && !breakLoop && (slideSize += slides[i].swiperSlideSize, spv += 1, slideSize > swiperSize && (breakLoop = !0));
+      for (let i = activeIndex - 1; i >= 0; i -= 1)
+        slides[i] && !breakLoop && (slideSize += slides[i].swiperSlideSize, spv += 1, slideSize > swiperSize && (breakLoop = !0));
+    } else if (view === "current")
+      for (let i = activeIndex + 1; i < slides.length; i += 1)
+        (exact ? slidesGrid[i] + slidesSizesGrid[i] - slidesGrid[activeIndex] < swiperSize : slidesGrid[i] - slidesGrid[activeIndex] < swiperSize) && (spv += 1);
+    else
+      for (let i = activeIndex - 1; i >= 0; i -= 1)
+        slidesGrid[activeIndex] - slidesGrid[i] < swiperSize && (spv += 1);
+    return spv;
+  }
+  update() {
+    let swiper = this;
+    if (!swiper || swiper.destroyed)
+      return;
+    let {
+      snapGrid,
+      params
+    } = swiper;
+    params.breakpoints && swiper.setBreakpoint(), [...swiper.el.querySelectorAll('[loading="lazy"]')].forEach((imageEl) => {
+      imageEl.complete && processLazyPreloader(swiper, imageEl);
+    }), swiper.updateSize(), swiper.updateSlides(), swiper.updateProgress(), swiper.updateSlidesClasses();
+    function setTranslate2() {
+      let translateValue = swiper.rtlTranslate ? swiper.translate * -1 : swiper.translate, newTranslate = Math.min(Math.max(translateValue, swiper.maxTranslate()), swiper.minTranslate());
+      swiper.setTranslate(newTranslate), swiper.updateActiveIndex(), swiper.updateSlidesClasses();
+    }
+    let translated;
+    if (params.freeMode && params.freeMode.enabled && !params.cssMode)
+      setTranslate2(), params.autoHeight && swiper.updateAutoHeight();
+    else {
+      if ((params.slidesPerView === "auto" || params.slidesPerView > 1) && swiper.isEnd && !params.centeredSlides) {
+        let slides = swiper.virtual && params.virtual.enabled ? swiper.virtual.slides : swiper.slides;
+        translated = swiper.slideTo(slides.length - 1, 0, !1, !0);
+      } else
+        translated = swiper.slideTo(swiper.activeIndex, 0, !1, !0);
+      translated || setTranslate2();
+    }
+    params.watchOverflow && snapGrid !== swiper.snapGrid && swiper.checkOverflow(), swiper.emit("update");
+  }
+  changeDirection(newDirection, needUpdate) {
+    needUpdate === void 0 && (needUpdate = !0);
+    let swiper = this, currentDirection = swiper.params.direction;
+    return newDirection || (newDirection = currentDirection === "horizontal" ? "vertical" : "horizontal"), newDirection === currentDirection || newDirection !== "horizontal" && newDirection !== "vertical" || (swiper.el.classList.remove(`${swiper.params.containerModifierClass}${currentDirection}`), swiper.el.classList.add(`${swiper.params.containerModifierClass}${newDirection}`), swiper.emitContainerClasses(), swiper.params.direction = newDirection, swiper.slides.forEach((slideEl) => {
+      newDirection === "vertical" ? slideEl.style.width = "" : slideEl.style.height = "";
+    }), swiper.emit("changeDirection"), needUpdate && swiper.update()), swiper;
+  }
+  changeLanguageDirection(direction) {
+    let swiper = this;
+    swiper.rtl && direction === "rtl" || !swiper.rtl && direction === "ltr" || (swiper.rtl = direction === "rtl", swiper.rtlTranslate = swiper.params.direction === "horizontal" && swiper.rtl, swiper.rtl ? (swiper.el.classList.add(`${swiper.params.containerModifierClass}rtl`), swiper.el.dir = "rtl") : (swiper.el.classList.remove(`${swiper.params.containerModifierClass}rtl`), swiper.el.dir = "ltr"), swiper.update());
+  }
+  mount(element) {
+    let swiper = this;
+    if (swiper.mounted)
+      return !0;
+    let el = element || swiper.params.el;
+    if (typeof el == "string" && (el = document.querySelector(el)), !el)
+      return !1;
+    el.swiper = swiper, el.parentNode && el.parentNode.host && el.parentNode.host.nodeName === "SWIPER-CONTAINER" && (swiper.isElement = !0);
+    let getWrapperSelector = () => `.${(swiper.params.wrapperClass || "").trim().split(" ").join(".")}`, wrapperEl = (() => el && el.shadowRoot && el.shadowRoot.querySelector ? el.shadowRoot.querySelector(getWrapperSelector()) : elementChildren(el, getWrapperSelector())[0])();
+    return !wrapperEl && swiper.params.createElements && (wrapperEl = createElement8("div", swiper.params.wrapperClass), el.append(wrapperEl), elementChildren(el, `.${swiper.params.slideClass}`).forEach((slideEl) => {
+      wrapperEl.append(slideEl);
+    })), Object.assign(swiper, {
+      el,
+      wrapperEl,
+      slidesEl: swiper.isElement && !el.parentNode.host.slideSlots ? el.parentNode.host : wrapperEl,
+      hostEl: swiper.isElement ? el.parentNode.host : el,
+      mounted: !0,
+      // RTL
+      rtl: el.dir.toLowerCase() === "rtl" || elementStyle(el, "direction") === "rtl",
+      rtlTranslate: swiper.params.direction === "horizontal" && (el.dir.toLowerCase() === "rtl" || elementStyle(el, "direction") === "rtl"),
+      wrongRTL: elementStyle(wrapperEl, "display") === "-webkit-box"
+    }), !0;
+  }
+  init(el) {
+    let swiper = this;
+    if (swiper.initialized || swiper.mount(el) === !1)
+      return swiper;
+    swiper.emit("beforeInit"), swiper.params.breakpoints && swiper.setBreakpoint(), swiper.addClasses(), swiper.updateSize(), swiper.updateSlides(), swiper.params.watchOverflow && swiper.checkOverflow(), swiper.params.grabCursor && swiper.enabled && swiper.setGrabCursor(), swiper.params.loop && swiper.virtual && swiper.params.virtual.enabled ? swiper.slideTo(swiper.params.initialSlide + swiper.virtual.slidesBefore, 0, swiper.params.runCallbacksOnInit, !1, !0) : swiper.slideTo(swiper.params.initialSlide, 0, swiper.params.runCallbacksOnInit, !1, !0), swiper.params.loop && swiper.loopCreate(), swiper.attachEvents();
+    let lazyElements = [...swiper.el.querySelectorAll('[loading="lazy"]')];
+    return swiper.isElement && lazyElements.push(...swiper.hostEl.querySelectorAll('[loading="lazy"]')), lazyElements.forEach((imageEl) => {
+      imageEl.complete ? processLazyPreloader(swiper, imageEl) : imageEl.addEventListener("load", (e) => {
+        processLazyPreloader(swiper, e.target);
+      });
+    }), preload(swiper), swiper.initialized = !0, preload(swiper), swiper.emit("init"), swiper.emit("afterInit"), swiper;
+  }
+  destroy(deleteInstance, cleanStyles) {
+    deleteInstance === void 0 && (deleteInstance = !0), cleanStyles === void 0 && (cleanStyles = !0);
+    let swiper = this, {
+      params,
+      el,
+      wrapperEl,
+      slides
+    } = swiper;
+    return typeof swiper.params > "u" || swiper.destroyed || (swiper.emit("beforeDestroy"), swiper.initialized = !1, swiper.detachEvents(), params.loop && swiper.loopDestroy(), cleanStyles && (swiper.removeClasses(), el.removeAttribute("style"), wrapperEl.removeAttribute("style"), slides && slides.length && slides.forEach((slideEl) => {
+      slideEl.classList.remove(params.slideVisibleClass, params.slideActiveClass, params.slideNextClass, params.slidePrevClass), slideEl.removeAttribute("style"), slideEl.removeAttribute("data-swiper-slide-index");
+    })), swiper.emit("destroy"), Object.keys(swiper.eventsListeners).forEach((eventName) => {
+      swiper.off(eventName);
+    }), deleteInstance !== !1 && (swiper.el.swiper = null, deleteProps(swiper)), swiper.destroyed = !0), null;
+  }
+  static extendDefaults(newDefaults) {
+    extend2(extendedDefaults, newDefaults);
+  }
+  static get extendedDefaults() {
+    return extendedDefaults;
+  }
+  static get defaults() {
+    return defaults;
+  }
+  static installModule(mod) {
+    Swiper.prototype.__modules__ || (Swiper.prototype.__modules__ = []);
+    let modules = Swiper.prototype.__modules__;
+    typeof mod == "function" && modules.indexOf(mod) < 0 && modules.push(mod);
+  }
+  static use(module) {
+    return Array.isArray(module) ? (module.forEach((m) => Swiper.installModule(m)), Swiper) : (Swiper.installModule(module), Swiper);
+  }
+};
+Object.keys(prototypes).forEach((prototypeGroup) => {
+  Object.keys(prototypes[prototypeGroup]).forEach((protoMethod) => {
+    Swiper.prototype[protoMethod] = prototypes[prototypeGroup][protoMethod];
+  });
+});
+Swiper.use([Resize, Observer]);
+
+// node_modules/swiper/shared/update-swiper.mjs
+var paramsList = [
+  "eventsPrefix",
+  "injectStyles",
+  "injectStylesUrls",
+  "modules",
+  "init",
+  "_direction",
+  "oneWayMovement",
+  "touchEventsTarget",
+  "initialSlide",
+  "_speed",
+  "cssMode",
+  "updateOnWindowResize",
+  "resizeObserver",
+  "nested",
+  "focusableElements",
+  "_enabled",
+  "_width",
+  "_height",
+  "preventInteractionOnTransition",
+  "userAgent",
+  "url",
+  "_edgeSwipeDetection",
+  "_edgeSwipeThreshold",
+  "_freeMode",
+  "_autoHeight",
+  "setWrapperSize",
+  "virtualTranslate",
+  "_effect",
+  "breakpoints",
+  "breakpointsBase",
+  "_spaceBetween",
+  "_slidesPerView",
+  "maxBackfaceHiddenSlides",
+  "_grid",
+  "_slidesPerGroup",
+  "_slidesPerGroupSkip",
+  "_slidesPerGroupAuto",
+  "_centeredSlides",
+  "_centeredSlidesBounds",
+  "_slidesOffsetBefore",
+  "_slidesOffsetAfter",
+  "normalizeSlideIndex",
+  "_centerInsufficientSlides",
+  "_watchOverflow",
+  "roundLengths",
+  "touchRatio",
+  "touchAngle",
+  "simulateTouch",
+  "_shortSwipes",
+  "_longSwipes",
+  "longSwipesRatio",
+  "longSwipesMs",
+  "_followFinger",
+  "allowTouchMove",
+  "_threshold",
+  "touchMoveStopPropagation",
+  "touchStartPreventDefault",
+  "touchStartForcePreventDefault",
+  "touchReleaseOnEdges",
+  "uniqueNavElements",
+  "_resistance",
+  "_resistanceRatio",
+  "_watchSlidesProgress",
+  "_grabCursor",
+  "preventClicks",
+  "preventClicksPropagation",
+  "_slideToClickedSlide",
+  "_loop",
+  "loopedSlides",
+  "loopPreventsSliding",
+  "_rewind",
+  "_allowSlidePrev",
+  "_allowSlideNext",
+  "_swipeHandler",
+  "_noSwiping",
+  "noSwipingClass",
+  "noSwipingSelector",
+  "passiveListeners",
+  "containerModifierClass",
+  "slideClass",
+  "slideActiveClass",
+  "slideVisibleClass",
+  "slideNextClass",
+  "slidePrevClass",
+  "wrapperClass",
+  "lazyPreloaderClass",
+  "lazyPreloadPrevNext",
+  "runCallbacksOnInit",
+  "observer",
+  "observeParents",
+  "observeSlideChildren",
+  // modules
+  "a11y",
+  "_autoplay",
+  "_controller",
+  "coverflowEffect",
+  "cubeEffect",
+  "fadeEffect",
+  "flipEffect",
+  "creativeEffect",
+  "cardsEffect",
+  "hashNavigation",
+  "history",
+  "keyboard",
+  "mousewheel",
+  "_navigation",
+  "_pagination",
+  "parallax",
+  "_scrollbar",
+  "_thumbs",
+  "virtual",
+  "zoom",
+  "control"
+];
+function isObject3(o) {
+  return typeof o == "object" && o !== null && o.constructor && Object.prototype.toString.call(o).slice(8, -1) === "Object" && !o.__swiper__;
+}
+function extend3(target, src) {
+  let noExtend = ["__proto__", "constructor", "prototype"];
+  Object.keys(src).filter((key) => noExtend.indexOf(key) < 0).forEach((key) => {
+    typeof target[key] > "u" ? target[key] = src[key] : isObject3(src[key]) && isObject3(target[key]) && Object.keys(src[key]).length > 0 ? src[key].__swiper__ ? target[key] = src[key] : extend3(target[key], src[key]) : target[key] = src[key];
+  });
+}
+function needsNavigation(params) {
+  return params === void 0 && (params = {}), params.navigation && typeof params.navigation.nextEl > "u" && typeof params.navigation.prevEl > "u";
+}
+function needsPagination(params) {
+  return params === void 0 && (params = {}), params.pagination && typeof params.pagination.el > "u";
+}
+function needsScrollbar(params) {
+  return params === void 0 && (params = {}), params.scrollbar && typeof params.scrollbar.el > "u";
+}
+function uniqueClasses(classNames) {
+  classNames === void 0 && (classNames = "");
+  let classes2 = classNames.split(" ").map((c) => c.trim()).filter((c) => !!c), unique = [];
+  return classes2.forEach((c) => {
+    unique.indexOf(c) < 0 && unique.push(c);
+  }), unique.join(" ");
+}
+function wrapperClass(className) {
+  return className === void 0 && (className = ""), className ? className.includes("swiper-wrapper") ? className : `swiper-wrapper ${className}` : "swiper-wrapper";
+}
+function updateSwiper(_ref) {
+  let {
+    swiper,
+    slides,
+    passedParams,
+    changedParams,
+    nextEl,
+    prevEl,
+    scrollbarEl,
+    paginationEl
+  } = _ref, updateParams = changedParams.filter((key) => key !== "children" && key !== "direction" && key !== "wrapperClass"), {
+    params: currentParams,
+    pagination,
+    navigation,
+    scrollbar,
+    virtual,
+    thumbs
+  } = swiper, needThumbsInit, needControllerInit, needPaginationInit, needScrollbarInit, needNavigationInit, loopNeedDestroy, loopNeedEnable, loopNeedReloop;
+  changedParams.includes("thumbs") && passedParams.thumbs && passedParams.thumbs.swiper && currentParams.thumbs && !currentParams.thumbs.swiper && (needThumbsInit = !0), changedParams.includes("controller") && passedParams.controller && passedParams.controller.control && currentParams.controller && !currentParams.controller.control && (needControllerInit = !0), changedParams.includes("pagination") && passedParams.pagination && (passedParams.pagination.el || paginationEl) && (currentParams.pagination || currentParams.pagination === !1) && pagination && !pagination.el && (needPaginationInit = !0), changedParams.includes("scrollbar") && passedParams.scrollbar && (passedParams.scrollbar.el || scrollbarEl) && (currentParams.scrollbar || currentParams.scrollbar === !1) && scrollbar && !scrollbar.el && (needScrollbarInit = !0), changedParams.includes("navigation") && passedParams.navigation && (passedParams.navigation.prevEl || prevEl) && (passedParams.navigation.nextEl || nextEl) && (currentParams.navigation || currentParams.navigation === !1) && navigation && !navigation.prevEl && !navigation.nextEl && (needNavigationInit = !0);
+  let destroyModule = (mod) => {
+    swiper[mod] && (swiper[mod].destroy(), mod === "navigation" ? (swiper.isElement && (swiper[mod].prevEl.remove(), swiper[mod].nextEl.remove()), currentParams[mod].prevEl = void 0, currentParams[mod].nextEl = void 0, swiper[mod].prevEl = void 0, swiper[mod].nextEl = void 0) : (swiper.isElement && swiper[mod].el.remove(), currentParams[mod].el = void 0, swiper[mod].el = void 0));
+  };
+  changedParams.includes("loop") && swiper.isElement && (currentParams.loop && !passedParams.loop ? loopNeedDestroy = !0 : !currentParams.loop && passedParams.loop ? loopNeedEnable = !0 : loopNeedReloop = !0), updateParams.forEach((key) => {
+    if (isObject3(currentParams[key]) && isObject3(passedParams[key]))
+      extend3(currentParams[key], passedParams[key]), (key === "navigation" || key === "pagination" || key === "scrollbar") && "enabled" in passedParams[key] && !passedParams[key].enabled && destroyModule(key);
+    else {
+      let newValue = passedParams[key];
+      (newValue === !0 || newValue === !1) && (key === "navigation" || key === "pagination" || key === "scrollbar") ? newValue === !1 && destroyModule(key) : currentParams[key] = passedParams[key];
+    }
+  }), updateParams.includes("controller") && !needControllerInit && swiper.controller && swiper.controller.control && currentParams.controller && currentParams.controller.control && (swiper.controller.control = currentParams.controller.control), changedParams.includes("children") && slides && virtual && currentParams.virtual.enabled && (virtual.slides = slides, virtual.update(!0)), changedParams.includes("children") && slides && currentParams.loop && (loopNeedReloop = !0), needThumbsInit && thumbs.init() && thumbs.update(!0), needControllerInit && (swiper.controller.control = currentParams.controller.control), needPaginationInit && (swiper.isElement && (!paginationEl || typeof paginationEl == "string") && (paginationEl = document.createElement("div"), paginationEl.classList.add("swiper-pagination"), paginationEl.part.add("pagination"), swiper.el.appendChild(paginationEl)), paginationEl && (currentParams.pagination.el = paginationEl), pagination.init(), pagination.render(), pagination.update()), needScrollbarInit && (swiper.isElement && (!scrollbarEl || typeof scrollbarEl == "string") && (scrollbarEl = document.createElement("div"), scrollbarEl.classList.add("swiper-scrollbar"), scrollbarEl.part.add("scrollbar"), swiper.el.appendChild(scrollbarEl)), scrollbarEl && (currentParams.scrollbar.el = scrollbarEl), scrollbar.init(), scrollbar.updateSize(), scrollbar.setTranslate()), needNavigationInit && (swiper.isElement && ((!nextEl || typeof nextEl == "string") && (nextEl = document.createElement("div"), nextEl.classList.add("swiper-button-next"), nextEl.innerHTML = swiper.hostEl.constructor.nextButtonSvg, nextEl.part.add("button-next"), swiper.el.appendChild(nextEl)), (!prevEl || typeof prevEl == "string") && (prevEl = document.createElement("div"), prevEl.classList.add("swiper-button-prev"), prevEl.innerHTML = swiper.hostEl.constructor.prevButtonSvg, prevEl.part.add("button-prev"), swiper.el.appendChild(prevEl))), nextEl && (currentParams.navigation.nextEl = nextEl), prevEl && (currentParams.navigation.prevEl = prevEl), navigation.init(), navigation.update()), changedParams.includes("allowSlideNext") && (swiper.allowSlideNext = passedParams.allowSlideNext), changedParams.includes("allowSlidePrev") && (swiper.allowSlidePrev = passedParams.allowSlidePrev), changedParams.includes("direction") && swiper.changeDirection(passedParams.direction, !1), (loopNeedDestroy || loopNeedReloop) && swiper.loopDestroy(), (loopNeedEnable || loopNeedReloop) && swiper.loopCreate(), swiper.update();
+}
+
+// node_modules/swiper/shared/update-on-virtual-data.mjs
+function getParams(obj, splitEvents) {
+  obj === void 0 && (obj = {}), splitEvents === void 0 && (splitEvents = !0);
+  let params = {
+    on: {}
+  }, events2 = {}, passedParams = {};
+  extend3(params, defaults), params._emitClasses = !0, params.init = !1;
+  let rest = {}, allowedParams = paramsList.map((key) => key.replace(/_/, "")), plainObj = Object.assign({}, obj);
+  return Object.keys(plainObj).forEach((key) => {
+    typeof obj[key] > "u" || (allowedParams.indexOf(key) >= 0 ? isObject3(obj[key]) ? (params[key] = {}, passedParams[key] = {}, extend3(params[key], obj[key]), extend3(passedParams[key], obj[key])) : (params[key] = obj[key], passedParams[key] = obj[key]) : key.search(/on[A-Z]/) === 0 && typeof obj[key] == "function" ? splitEvents ? events2[`${key[2].toLowerCase()}${key.substr(3)}`] = obj[key] : params.on[`${key[2].toLowerCase()}${key.substr(3)}`] = obj[key] : rest[key] = obj[key]);
+  }), ["navigation", "pagination", "scrollbar"].forEach((key) => {
+    params[key] === !0 && (params[key] = {}), params[key] === !1 && delete params[key];
+  }), {
+    params,
+    passedParams,
+    rest,
+    events: events2
+  };
+}
+function mountSwiper(_ref, swiperParams) {
+  let {
+    el,
+    nextEl,
+    prevEl,
+    paginationEl,
+    scrollbarEl,
+    swiper
+  } = _ref;
+  needsNavigation(swiperParams) && nextEl && prevEl && (swiper.params.navigation.nextEl = nextEl, swiper.originalParams.navigation.nextEl = nextEl, swiper.params.navigation.prevEl = prevEl, swiper.originalParams.navigation.prevEl = prevEl), needsPagination(swiperParams) && paginationEl && (swiper.params.pagination.el = paginationEl, swiper.originalParams.pagination.el = paginationEl), needsScrollbar(swiperParams) && scrollbarEl && (swiper.params.scrollbar.el = scrollbarEl, swiper.originalParams.scrollbar.el = scrollbarEl), swiper.init(el);
+}
+function getChangedParams(swiperParams, oldParams, children, oldChildren, getKey) {
+  let keys = [];
+  if (!oldParams)
+    return keys;
+  let addKey = (key) => {
+    keys.indexOf(key) < 0 && keys.push(key);
+  };
+  if (children && oldChildren) {
+    let oldChildrenKeys = oldChildren.map(getKey), childrenKeys = children.map(getKey);
+    oldChildrenKeys.join("") !== childrenKeys.join("") && addKey("children"), oldChildren.length !== children.length && addKey("children");
+  }
+  return paramsList.filter((key) => key[0] === "_").map((key) => key.replace(/_/, "")).forEach((key) => {
+    if (key in swiperParams && key in oldParams)
+      if (isObject3(swiperParams[key]) && isObject3(oldParams[key])) {
+        let newKeys = Object.keys(swiperParams[key]), oldKeys = Object.keys(oldParams[key]);
+        newKeys.length !== oldKeys.length ? addKey(key) : (newKeys.forEach((newKey) => {
+          swiperParams[key][newKey] !== oldParams[key][newKey] && addKey(key);
+        }), oldKeys.forEach((oldKey) => {
+          swiperParams[key][oldKey] !== oldParams[key][oldKey] && addKey(key);
+        }));
+      } else
+        swiperParams[key] !== oldParams[key] && addKey(key);
+  }), keys;
+}
+var updateOnVirtualData = (swiper) => {
+  !swiper || swiper.destroyed || !swiper.params.virtual || swiper.params.virtual && !swiper.params.virtual.enabled || (swiper.updateSlides(), swiper.updateProgress(), swiper.updateSlidesClasses(), swiper.parallax && swiper.params.parallax && swiper.params.parallax.enabled && swiper.parallax.setTranslate());
+};
+
+// node_modules/swiper/swiper-react.mjs
+function _extends5() {
+  return _extends5 = Object.assign ? Object.assign.bind() : function(target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+      for (var key in source)
+        Object.prototype.hasOwnProperty.call(source, key) && (target[key] = source[key]);
+    }
+    return target;
+  }, _extends5.apply(this, arguments);
+}
+function isChildSwiperSlide(child) {
+  return child.type && child.type.displayName && child.type.displayName.includes("SwiperSlide");
+}
+function processChildren(c) {
+  let slides = [];
+  return import_react30.default.Children.toArray(c).forEach((child) => {
+    isChildSwiperSlide(child) ? slides.push(child) : child.props && child.props.children && processChildren(child.props.children).forEach((slide2) => slides.push(slide2));
+  }), slides;
+}
+function getChildren(c) {
+  let slides = [], slots = {
+    "container-start": [],
+    "container-end": [],
+    "wrapper-start": [],
+    "wrapper-end": []
+  };
+  return import_react30.default.Children.toArray(c).forEach((child) => {
+    if (isChildSwiperSlide(child))
+      slides.push(child);
+    else if (child.props && child.props.slot && slots[child.props.slot])
+      slots[child.props.slot].push(child);
+    else if (child.props && child.props.children) {
+      let foundSlides = processChildren(child.props.children);
+      foundSlides.length > 0 ? foundSlides.forEach((slide2) => slides.push(slide2)) : slots["container-end"].push(child);
+    } else
+      slots["container-end"].push(child);
+  }), {
+    slides,
+    slots
+  };
+}
+function renderVirtual(swiper, slides, virtualData) {
+  if (!virtualData)
+    return null;
+  let getSlideIndex = (index) => {
+    let slideIndex = index;
+    return index < 0 ? slideIndex = slides.length + index : slideIndex >= slides.length && (slideIndex = slideIndex - slides.length), slideIndex;
+  }, style = swiper.isHorizontal() ? {
+    [swiper.rtlTranslate ? "right" : "left"]: `${virtualData.offset}px`
+  } : {
+    top: `${virtualData.offset}px`
+  }, {
+    from,
+    to
+  } = virtualData, loopFrom = swiper.params.loop ? -slides.length : 0, loopTo = swiper.params.loop ? slides.length * 2 : slides.length, slidesToRender = [];
+  for (let i = loopFrom; i < loopTo; i += 1)
+    i >= from && i <= to && slidesToRender.push(slides[getSlideIndex(i)]);
+  return slidesToRender.map((child, index) => /* @__PURE__ */ import_react30.default.cloneElement(child, {
+    swiper,
+    style,
+    key: `slide-${index}`
+  }));
+}
+function useIsomorphicLayoutEffect2(callback, deps) {
+  return typeof window > "u" ? (0, import_react30.useEffect)(callback, deps) : (0, import_react30.useLayoutEffect)(callback, deps);
+}
+var SwiperSlideContext = /* @__PURE__ */ (0, import_react30.createContext)(null);
+var SwiperContext = /* @__PURE__ */ (0, import_react30.createContext)(null);
+var Swiper2 = /* @__PURE__ */ (0, import_react30.forwardRef)(function(_temp, externalElRef) {
+  let {
+    className,
+    tag: Tag = "div",
+    wrapperTag: WrapperTag = "div",
+    children,
+    onSwiper,
+    ...rest
+  } = _temp === void 0 ? {} : _temp, eventsAssigned = !1, [containerClasses, setContainerClasses] = (0, import_react30.useState)("swiper"), [virtualData, setVirtualData] = (0, import_react30.useState)(null), [breakpointChanged, setBreakpointChanged] = (0, import_react30.useState)(!1), initializedRef = (0, import_react30.useRef)(!1), swiperElRef = (0, import_react30.useRef)(null), swiperRef = (0, import_react30.useRef)(null), oldPassedParamsRef = (0, import_react30.useRef)(null), oldSlides = (0, import_react30.useRef)(null), nextElRef = (0, import_react30.useRef)(null), prevElRef = (0, import_react30.useRef)(null), paginationElRef = (0, import_react30.useRef)(null), scrollbarElRef = (0, import_react30.useRef)(null), {
+    params: swiperParams,
+    passedParams,
+    rest: restProps,
+    events: events2
+  } = getParams(rest), {
+    slides,
+    slots
+  } = getChildren(children), onBeforeBreakpoint = () => {
+    setBreakpointChanged(!breakpointChanged);
+  };
+  Object.assign(swiperParams.on, {
+    _containerClasses(swiper, classes2) {
+      setContainerClasses(classes2);
+    }
+  });
+  let initSwiper = () => {
+    Object.assign(swiperParams.on, events2), eventsAssigned = !0;
+    let passParams = {
+      ...swiperParams
+    };
+    if (delete passParams.wrapperClass, swiperRef.current = new Swiper(passParams), swiperRef.current.virtual && swiperRef.current.params.virtual.enabled) {
+      swiperRef.current.virtual.slides = slides;
+      let extendWith = {
+        cache: !1,
+        slides,
+        renderExternal: setVirtualData,
+        renderExternalUpdate: !1
+      };
+      extend3(swiperRef.current.params.virtual, extendWith), extend3(swiperRef.current.originalParams.virtual, extendWith);
+    }
+  };
+  swiperElRef.current || initSwiper(), swiperRef.current && swiperRef.current.on("_beforeBreakpoint", onBeforeBreakpoint);
+  let attachEvents2 = () => {
+    eventsAssigned || !events2 || !swiperRef.current || Object.keys(events2).forEach((eventName) => {
+      swiperRef.current.on(eventName, events2[eventName]);
+    });
+  }, detachEvents2 = () => {
+    !events2 || !swiperRef.current || Object.keys(events2).forEach((eventName) => {
+      swiperRef.current.off(eventName, events2[eventName]);
+    });
+  };
+  (0, import_react30.useEffect)(() => () => {
+    swiperRef.current && swiperRef.current.off("_beforeBreakpoint", onBeforeBreakpoint);
+  }), (0, import_react30.useEffect)(() => {
+    !initializedRef.current && swiperRef.current && (swiperRef.current.emitSlidesClasses(), initializedRef.current = !0);
+  }), useIsomorphicLayoutEffect2(() => {
+    if (externalElRef && (externalElRef.current = swiperElRef.current), !!swiperElRef.current)
+      return swiperRef.current.destroyed && initSwiper(), mountSwiper({
+        el: swiperElRef.current,
+        nextEl: nextElRef.current,
+        prevEl: prevElRef.current,
+        paginationEl: paginationElRef.current,
+        scrollbarEl: scrollbarElRef.current,
+        swiper: swiperRef.current
+      }, swiperParams), onSwiper && onSwiper(swiperRef.current), () => {
+        swiperRef.current && !swiperRef.current.destroyed && swiperRef.current.destroy(!0, !1);
+      };
+  }, []), useIsomorphicLayoutEffect2(() => {
+    attachEvents2();
+    let changedParams = getChangedParams(passedParams, oldPassedParamsRef.current, slides, oldSlides.current, (c) => c.key);
+    return oldPassedParamsRef.current = passedParams, oldSlides.current = slides, changedParams.length && swiperRef.current && !swiperRef.current.destroyed && updateSwiper({
+      swiper: swiperRef.current,
+      slides,
+      passedParams,
+      changedParams,
+      nextEl: nextElRef.current,
+      prevEl: prevElRef.current,
+      scrollbarEl: scrollbarElRef.current,
+      paginationEl: paginationElRef.current
+    }), () => {
+      detachEvents2();
+    };
+  }), useIsomorphicLayoutEffect2(() => {
+    updateOnVirtualData(swiperRef.current);
+  }, [virtualData]);
+  function renderSlides() {
+    return swiperParams.virtual ? renderVirtual(swiperRef.current, slides, virtualData) : slides.map((child, index) => /* @__PURE__ */ import_react30.default.cloneElement(child, {
+      swiper: swiperRef.current,
+      swiperSlideIndex: index
+    }));
+  }
+  return /* @__PURE__ */ import_react30.default.createElement(Tag, _extends5({
+    ref: swiperElRef,
+    className: uniqueClasses(`${containerClasses}${className ? ` ${className}` : ""}`)
+  }, restProps), /* @__PURE__ */ import_react30.default.createElement(SwiperContext.Provider, {
+    value: swiperRef.current
+  }, slots["container-start"], /* @__PURE__ */ import_react30.default.createElement(WrapperTag, {
+    className: wrapperClass(swiperParams.wrapperClass)
+  }, slots["wrapper-start"], renderSlides(), slots["wrapper-end"]), needsNavigation(swiperParams) && /* @__PURE__ */ import_react30.default.createElement(import_react30.default.Fragment, null, /* @__PURE__ */ import_react30.default.createElement("div", {
+    ref: prevElRef,
+    className: "swiper-button-prev"
+  }), /* @__PURE__ */ import_react30.default.createElement("div", {
+    ref: nextElRef,
+    className: "swiper-button-next"
+  })), needsScrollbar(swiperParams) && /* @__PURE__ */ import_react30.default.createElement("div", {
+    ref: scrollbarElRef,
+    className: "swiper-scrollbar"
+  }), needsPagination(swiperParams) && /* @__PURE__ */ import_react30.default.createElement("div", {
+    ref: paginationElRef,
+    className: "swiper-pagination"
+  }), slots["container-end"]));
+});
+Swiper2.displayName = "Swiper";
+var SwiperSlide = /* @__PURE__ */ (0, import_react30.forwardRef)(function(_temp, externalRef) {
+  let {
+    tag: Tag = "div",
+    children,
+    className = "",
+    swiper,
+    zoom,
+    lazy: lazy2,
+    virtualIndex,
+    swiperSlideIndex,
+    ...rest
+  } = _temp === void 0 ? {} : _temp, slideElRef = (0, import_react30.useRef)(null), [slideClasses, setSlideClasses] = (0, import_react30.useState)("swiper-slide"), [lazyLoaded, setLazyLoaded] = (0, import_react30.useState)(!1);
+  function updateClasses(_s, el, classNames) {
+    el === slideElRef.current && setSlideClasses(classNames);
+  }
+  useIsomorphicLayoutEffect2(() => {
+    if (typeof swiperSlideIndex < "u" && (slideElRef.current.swiperSlideIndex = swiperSlideIndex), externalRef && (externalRef.current = slideElRef.current), !(!slideElRef.current || !swiper)) {
+      if (swiper.destroyed) {
+        slideClasses !== "swiper-slide" && setSlideClasses("swiper-slide");
+        return;
+      }
+      return swiper.on("_slideClass", updateClasses), () => {
+        swiper && swiper.off("_slideClass", updateClasses);
+      };
+    }
+  }), useIsomorphicLayoutEffect2(() => {
+    swiper && slideElRef.current && !swiper.destroyed && setSlideClasses(swiper.getSlideClasses(slideElRef.current));
+  }, [swiper]);
+  let slideData = {
+    isActive: slideClasses.indexOf("swiper-slide-active") >= 0,
+    isVisible: slideClasses.indexOf("swiper-slide-visible") >= 0,
+    isPrev: slideClasses.indexOf("swiper-slide-prev") >= 0,
+    isNext: slideClasses.indexOf("swiper-slide-next") >= 0
+  }, renderChildren = () => typeof children == "function" ? children(slideData) : children, onLoad2 = () => {
+    setLazyLoaded(!0);
+  };
+  return /* @__PURE__ */ import_react30.default.createElement(Tag, _extends5({
+    ref: slideElRef,
+    className: uniqueClasses(`${slideClasses}${className ? ` ${className}` : ""}`),
+    "data-swiper-slide-index": virtualIndex,
+    onLoad: onLoad2
+  }, rest), zoom && /* @__PURE__ */ import_react30.default.createElement(SwiperSlideContext.Provider, {
+    value: slideData
+  }, /* @__PURE__ */ import_react30.default.createElement("div", {
+    className: "swiper-zoom-container",
+    "data-swiper-zoom": typeof zoom == "number" ? zoom : void 0
+  }, renderChildren(), lazy2 && !lazyLoaded && /* @__PURE__ */ import_react30.default.createElement("div", {
+    className: "swiper-lazy-preloader"
+  }))), !zoom && /* @__PURE__ */ import_react30.default.createElement(SwiperSlideContext.Provider, {
+    value: slideData
+  }, renderChildren(), lazy2 && !lazyLoaded && /* @__PURE__ */ import_react30.default.createElement("div", {
+    className: "swiper-lazy-preloader"
+  })));
+});
+SwiperSlide.displayName = "SwiperSlide";
+
+// app/routes/products.$handle.jsx
 var import_jsx_dev_runtime21 = __toESM(require_jsx_dev_runtime()), meta10 = ({ data }) => [{ title: `Hydrogen | ${data.product.title}` }];
 async function loader13({ params, request, context }) {
   let { handle } = params, { storefront } = context, selectedOptions = getSelectedProductOptions(request).filter(
@@ -23837,8 +26437,8 @@ async function loader13({ params, request, context }) {
     return redirectToFirstVariant({ product, request });
   let variants = storefront.query(VARIANTS_QUERY, {
     variables: { handle }
-  });
-  return defer3({ product, variants });
+  }), recommendedProducts = storefront.query(RECOMMENDED_PRODUCTS_QUERY), productImages_ = await storefront.query(PRODUCT_MEDIA_IMAGES, { variables: { handle } });
+  return defer3({ product, variants, recommendedProducts, productImages_, handle });
 }
 function redirectToFirstVariant({ product, request }) {
   let url = new URL(request.url), firstVariant = product.variants.nodes[0];
@@ -23855,32 +26455,99 @@ function redirectToFirstVariant({ product, request }) {
   );
 }
 function Product() {
-  let { product, variants } = useLoaderData2(), { selectedVariant } = product;
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("div", { className: "product", children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)(ProductImage, { image: selectedVariant == null ? void 0 : selectedVariant.image }, void 0, !1, {
+  let { product, variants } = useLoaderData2(), { handle, productImages_ } = useLoaderData2(), data = useLoaderData2(), { selectedVariant } = product;
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)(import_jsx_dev_runtime21.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("div", { className: "product flex gap-16 mb-8", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("div", { className: "w-1/2", children: [
+        /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)(ProductImage, { image: selectedVariant == null ? void 0 : selectedVariant.image }, void 0, !1, {
+          fileName: "app/routes/products.$handle.jsx",
+          lineNumber: 91,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)(ProductImages, { productImages_, handle }, void 0, !1, {
+          fileName: "app/routes/products.$handle.jsx",
+          lineNumber: 92,
+          columnNumber: 11
+        }, this)
+      ] }, void 0, !0, {
+        fileName: "app/routes/products.$handle.jsx",
+        lineNumber: 90,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)(
+        ProductMain,
+        {
+          selectedVariant,
+          product,
+          variants
+        },
+        void 0,
+        !1,
+        {
+          fileName: "app/routes/products.$handle.jsx",
+          lineNumber: 94,
+          columnNumber: 9
+        },
+        this
+      )
+    ] }, void 0, !0, {
       fileName: "app/routes/products.$handle.jsx",
-      lineNumber: 98,
+      lineNumber: 89,
       columnNumber: 7
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)(
-      ProductMain,
-      {
-        selectedVariant,
-        product,
-        variants
-      },
-      void 0,
-      !1,
-      {
-        fileName: "app/routes/products.$handle.jsx",
-        lineNumber: 99,
-        columnNumber: 7
-      },
-      this
-    )
+    /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)(RecommendedProducts, { products: data.recommendedProducts }, void 0, !1, {
+      fileName: "app/routes/products.$handle.jsx",
+      lineNumber: 100,
+      columnNumber: 7
+    }, this)
   ] }, void 0, !0, {
     fileName: "app/routes/products.$handle.jsx",
-    lineNumber: 97,
+    lineNumber: 88,
+    columnNumber: 5
+  }, this);
+}
+function ProductImages({ productImages_ }) {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)(import_jsx_dev_runtime21.Fragment, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)(
+    Swiper2,
+    {
+      spaceBetween: 3,
+      slidesPerView: 3,
+      onSlideChange: () => console.log("slide change"),
+      onSwiper: (swiper) => console.log(swiper),
+      children: productImages_.product.images.nodes.map((img) => /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)(SwiperSlide, { className: "border !w-28 !h-28 aspect-square m-0", children: /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)(
+        Image,
+        {
+          className: "!w-full !h-full aspect-square object-cover",
+          src: img.url,
+          width: "100",
+          height: "100",
+          sizes: "(min-width: 1024px) 100px, (min-width: 475px) 100px, 100px"
+        },
+        void 0,
+        !1,
+        {
+          fileName: "app/routes/products.$handle.jsx",
+          lineNumber: 117,
+          columnNumber: 15
+        },
+        this
+      ) }, img.id, !1, {
+        fileName: "app/routes/products.$handle.jsx",
+        lineNumber: 116,
+        columnNumber: 13
+      }, this))
+    },
+    void 0,
+    !1,
+    {
+      fileName: "app/routes/products.$handle.jsx",
+      lineNumber: 108,
+      columnNumber: 7
+    },
+    this
+  ) }, void 0, !1, {
+    fileName: "app/routes/products.$handle.jsx",
+    lineNumber: 107,
     columnNumber: 5
   }, this);
 }
@@ -23897,17 +26564,17 @@ function ProductImage({ image }) {
     !1,
     {
       fileName: "app/routes/products.$handle.jsx",
-      lineNumber: 114,
+      lineNumber: 137,
       columnNumber: 7
     },
     this
   ) }, void 0, !1, {
     fileName: "app/routes/products.$handle.jsx",
-    lineNumber: 113,
+    lineNumber: 136,
     columnNumber: 5
   }, this) : /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("div", { className: "product-image" }, void 0, !1, {
     fileName: "app/routes/products.$handle.jsx",
-    lineNumber: 110,
+    lineNumber: 133,
     columnNumber: 12
   }, this);
 }
@@ -23916,21 +26583,21 @@ function ProductMain({ selectedVariant, product, variants }) {
   return /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("div", { className: "product-main", children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("h1", { children: title }, void 0, !1, {
       fileName: "app/routes/products.$handle.jsx",
-      lineNumber: 129,
+      lineNumber: 152,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)(ProductPrice, { selectedVariant }, void 0, !1, {
       fileName: "app/routes/products.$handle.jsx",
-      lineNumber: 130,
+      lineNumber: 153,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("br", {}, void 0, !1, {
       fileName: "app/routes/products.$handle.jsx",
-      lineNumber: 131,
+      lineNumber: 154,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)(
-      import_react30.Suspense,
+      import_react31.Suspense,
       {
         fallback: /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)(
           ProductForm,
@@ -23943,7 +26610,7 @@ function ProductMain({ selectedVariant, product, variants }) {
           !1,
           {
             fileName: "app/routes/products.$handle.jsx",
-            lineNumber: 134,
+            lineNumber: 157,
             columnNumber: 11
           },
           this
@@ -23966,7 +26633,7 @@ function ProductMain({ selectedVariant, product, variants }) {
                 !1,
                 {
                   fileName: "app/routes/products.$handle.jsx",
-                  lineNumber: 146,
+                  lineNumber: 169,
                   columnNumber: 13
                 },
                 this
@@ -23977,7 +26644,7 @@ function ProductMain({ selectedVariant, product, variants }) {
           !1,
           {
             fileName: "app/routes/products.$handle.jsx",
-            lineNumber: 141,
+            lineNumber: 164,
             columnNumber: 9
           },
           this
@@ -23987,48 +26654,48 @@ function ProductMain({ selectedVariant, product, variants }) {
       !1,
       {
         fileName: "app/routes/products.$handle.jsx",
-        lineNumber: 132,
+        lineNumber: 155,
         columnNumber: 7
       },
       this
     ),
     /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("br", {}, void 0, !1, {
       fileName: "app/routes/products.$handle.jsx",
-      lineNumber: 154,
+      lineNumber: 177,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("br", {}, void 0, !1, {
       fileName: "app/routes/products.$handle.jsx",
-      lineNumber: 155,
+      lineNumber: 178,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("p", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("strong", { children: "Description" }, void 0, !1, {
       fileName: "app/routes/products.$handle.jsx",
-      lineNumber: 157,
+      lineNumber: 180,
       columnNumber: 9
     }, this) }, void 0, !1, {
       fileName: "app/routes/products.$handle.jsx",
-      lineNumber: 156,
+      lineNumber: 179,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("br", {}, void 0, !1, {
       fileName: "app/routes/products.$handle.jsx",
-      lineNumber: 159,
+      lineNumber: 182,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("div", { dangerouslySetInnerHTML: { __html: descriptionHtml } }, void 0, !1, {
       fileName: "app/routes/products.$handle.jsx",
-      lineNumber: 160,
+      lineNumber: 183,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("br", {}, void 0, !1, {
       fileName: "app/routes/products.$handle.jsx",
-      lineNumber: 161,
+      lineNumber: 184,
       columnNumber: 7
     }, this)
   ] }, void 0, !0, {
     fileName: "app/routes/products.$handle.jsx",
-    lineNumber: 128,
+    lineNumber: 151,
     columnNumber: 5
   }, this);
 }
@@ -24036,45 +26703,45 @@ function ProductPrice({ selectedVariant }) {
   return /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("div", { className: "product-price", children: selectedVariant != null && selectedVariant.compareAtPrice ? /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)(import_jsx_dev_runtime21.Fragment, { children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("p", { children: "Sale" }, void 0, !1, {
       fileName: "app/routes/products.$handle.jsx",
-      lineNumber: 171,
+      lineNumber: 194,
       columnNumber: 11
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("br", {}, void 0, !1, {
       fileName: "app/routes/products.$handle.jsx",
-      lineNumber: 172,
+      lineNumber: 195,
       columnNumber: 11
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("div", { className: "product-price-on-sale", children: [
       selectedVariant ? /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)(Money, { data: selectedVariant.price }, void 0, !1, {
         fileName: "app/routes/products.$handle.jsx",
-        lineNumber: 174,
+        lineNumber: 197,
         columnNumber: 32
       }, this) : null,
       /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("s", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)(Money, { data: selectedVariant.compareAtPrice }, void 0, !1, {
         fileName: "app/routes/products.$handle.jsx",
-        lineNumber: 176,
+        lineNumber: 199,
         columnNumber: 15
       }, this) }, void 0, !1, {
         fileName: "app/routes/products.$handle.jsx",
-        lineNumber: 175,
+        lineNumber: 198,
         columnNumber: 13
       }, this)
     ] }, void 0, !0, {
       fileName: "app/routes/products.$handle.jsx",
-      lineNumber: 173,
+      lineNumber: 196,
       columnNumber: 11
     }, this)
   ] }, void 0, !0, {
     fileName: "app/routes/products.$handle.jsx",
-    lineNumber: 170,
+    lineNumber: 193,
     columnNumber: 9
   }, this) : (selectedVariant == null ? void 0 : selectedVariant.price) && /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)(Money, { data: selectedVariant == null ? void 0 : selectedVariant.price }, void 0, !1, {
     fileName: "app/routes/products.$handle.jsx",
-    lineNumber: 181,
+    lineNumber: 204,
     columnNumber: 35
   }, this) }, void 0, !1, {
     fileName: "app/routes/products.$handle.jsx",
-    lineNumber: 168,
+    lineNumber: 191,
     columnNumber: 5
   }, this);
 }
@@ -24088,7 +26755,7 @@ function ProductForm({ product, selectedVariant, variants }) {
         variants,
         children: ({ option }) => /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)(ProductOptions, { option }, option.name, !1, {
           fileName: "app/routes/products.$handle.jsx",
-          lineNumber: 195,
+          lineNumber: 218,
           columnNumber: 24
         }, this)
       },
@@ -24096,14 +26763,14 @@ function ProductForm({ product, selectedVariant, variants }) {
       !1,
       {
         fileName: "app/routes/products.$handle.jsx",
-        lineNumber: 190,
+        lineNumber: 213,
         columnNumber: 7
       },
       this
     ),
     /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("br", {}, void 0, !1, {
       fileName: "app/routes/products.$handle.jsx",
-      lineNumber: 197,
+      lineNumber: 220,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)(
@@ -24125,14 +26792,14 @@ function ProductForm({ product, selectedVariant, variants }) {
       !1,
       {
         fileName: "app/routes/products.$handle.jsx",
-        lineNumber: 198,
+        lineNumber: 221,
         columnNumber: 7
       },
       this
     )
   ] }, void 0, !0, {
     fileName: "app/routes/products.$handle.jsx",
-    lineNumber: 189,
+    lineNumber: 212,
     columnNumber: 5
   }, this);
 }
@@ -24140,7 +26807,7 @@ function ProductOptions({ option }) {
   return /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("div", { className: "product-options", children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("h5", { children: option.name }, void 0, !1, {
       fileName: "app/routes/products.$handle.jsx",
-      lineNumber: 223,
+      lineNumber: 246,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("div", { className: "product-options-grid", children: option.values.map(({ value, isAvailable, isActive, to }) => /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)(
@@ -24161,27 +26828,27 @@ function ProductOptions({ option }) {
       !1,
       {
         fileName: "app/routes/products.$handle.jsx",
-        lineNumber: 227,
+        lineNumber: 250,
         columnNumber: 13
       },
       this
     )) }, void 0, !1, {
       fileName: "app/routes/products.$handle.jsx",
-      lineNumber: 224,
+      lineNumber: 247,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("br", {}, void 0, !1, {
       fileName: "app/routes/products.$handle.jsx",
-      lineNumber: 244,
+      lineNumber: 267,
       columnNumber: 7
     }, this)
   ] }, option.name, !0, {
     fileName: "app/routes/products.$handle.jsx",
-    lineNumber: 222,
+    lineNumber: 245,
     columnNumber: 5
   }, this);
 }
-function AddToCartButton({ analytics, children, disabled, lines, onClick }) {
+function AddToCartButton({ analytics, children, disabled, lines, onClick: onClick2 }) {
   return /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)(CartForm, { route: "/cart", inputs: { lines }, action: CartForm.ACTIONS.LinesAdd, children: (fetcher) => /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)(import_jsx_dev_runtime21.Fragment, { children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)(
       "input",
@@ -24194,7 +26861,7 @@ function AddToCartButton({ analytics, children, disabled, lines, onClick }) {
       !1,
       {
         fileName: "app/routes/products.$handle.jsx",
-        lineNumber: 254,
+        lineNumber: 277,
         columnNumber: 11
       },
       this
@@ -24203,7 +26870,7 @@ function AddToCartButton({ analytics, children, disabled, lines, onClick }) {
       "button",
       {
         type: "submit",
-        onClick,
+        onClick: onClick2,
         disabled: disabled ?? fetcher.state !== "idle",
         className: "border border-black rounded-sm w-full px-4 py-2 text-white bg-black uppercase hover:bg-white hover:text-black transition-colors duration-150",
         children
@@ -24212,22 +26879,114 @@ function AddToCartButton({ analytics, children, disabled, lines, onClick }) {
       !1,
       {
         fileName: "app/routes/products.$handle.jsx",
-        lineNumber: 259,
+        lineNumber: 282,
         columnNumber: 11
       },
       this
     )
   ] }, void 0, !0, {
     fileName: "app/routes/products.$handle.jsx",
-    lineNumber: 253,
+    lineNumber: 276,
     columnNumber: 9
   }, this) }, void 0, !1, {
     fileName: "app/routes/products.$handle.jsx",
-    lineNumber: 251,
+    lineNumber: 274,
     columnNumber: 5
   }, this);
 }
-var PRODUCT_VARIANT_FRAGMENT = `#graphql
+function RecommendedProducts({ products }) {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("div", { className: "recommended-products", children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("h2", { children: "You may also like" }, void 0, !1, {
+      fileName: "app/routes/products.$handle.jsx",
+      lineNumber: 299,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)(import_react31.Suspense, { fallback: /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("div", { children: "Loading..." }, void 0, !1, {
+      fileName: "app/routes/products.$handle.jsx",
+      lineNumber: 300,
+      columnNumber: 27
+    }, this), children: /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)(Await2, { resolve: products, children: ({ products: products2 }) => /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("div", { className: "recommended-products-grid", children: products2.nodes.map((product) => /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)(
+      Link2,
+      {
+        className: "recommended-product",
+        to: `/products/${product.handle}`,
+        children: [
+          /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)(
+            Image,
+            {
+              data: product.images.nodes[0],
+              aspectRatio: "1/1",
+              sizes: "(min-width: 45em) 20vw, 50vw"
+            },
+            void 0,
+            !1,
+            {
+              fileName: "app/routes/products.$handle.jsx",
+              lineNumber: 310,
+              columnNumber: 19
+            },
+            this
+          ),
+          /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("h4", { children: product.title }, void 0, !1, {
+            fileName: "app/routes/products.$handle.jsx",
+            lineNumber: 315,
+            columnNumber: 19
+          }, this),
+          /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("small", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)(Money, { data: product.priceRange.minVariantPrice }, void 0, !1, {
+            fileName: "app/routes/products.$handle.jsx",
+            lineNumber: 317,
+            columnNumber: 21
+          }, this) }, void 0, !1, {
+            fileName: "app/routes/products.$handle.jsx",
+            lineNumber: 316,
+            columnNumber: 19
+          }, this)
+        ]
+      },
+      product.id,
+      !0,
+      {
+        fileName: "app/routes/products.$handle.jsx",
+        lineNumber: 305,
+        columnNumber: 17
+      },
+      this
+    )) }, void 0, !1, {
+      fileName: "app/routes/products.$handle.jsx",
+      lineNumber: 303,
+      columnNumber: 13
+    }, this) }, void 0, !1, {
+      fileName: "app/routes/products.$handle.jsx",
+      lineNumber: 301,
+      columnNumber: 9
+    }, this) }, void 0, !1, {
+      fileName: "app/routes/products.$handle.jsx",
+      lineNumber: 300,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("br", {}, void 0, !1, {
+      fileName: "app/routes/products.$handle.jsx",
+      lineNumber: 325,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, !0, {
+    fileName: "app/routes/products.$handle.jsx",
+    lineNumber: 298,
+    columnNumber: 5
+  }, this);
+}
+var PRODUCT_MEDIA_IMAGES = `#graphql
+  query Product($handle: String!) {
+    product(handle: $handle) {
+      images(first: 20) {
+        nodes {
+          url
+          id
+        }
+      }
+    }
+  }
+`, PRODUCT_VARIANT_FRAGMENT = `#graphql
   fragment ProductVariant on ProductVariant {
     availableForSale
     compareAtPrice {
@@ -24318,6 +27077,35 @@ var PRODUCT_VARIANT_FRAGMENT = `#graphql
   ) @inContext(country: $country, language: $language) {
     product(handle: $handle) {
       ...ProductVariants
+    }
+  }
+`, RECOMMENDED_PRODUCTS_QUERY = `#graphql
+  fragment RecommendedProduct on Product {
+    id
+    title
+    handle
+    priceRange {
+      minVariantPrice {
+        amount
+        currencyCode
+      }
+    }
+    images(first: 1) {
+      nodes {
+        id
+        url
+        altText
+        width
+        height
+      }
+    }
+  }
+  query RecommendedProducts ($country: CountryCode, $language: LanguageCode)
+    @inContext(country: $country, language: $language) {
+    products(first: 4, sortKey: UPDATED_AT, reverse: true) {
+      nodes {
+        ...RecommendedProduct
+      }
     }
   }
 `;
@@ -25690,10 +28478,10 @@ __export(index_exports, {
   loader: () => loader26,
   meta: () => meta16
 });
-var import_react40 = __toESM(require_react());
+var import_react42 = __toESM(require_react());
 var import_jsx_dev_runtime29 = __toESM(require_jsx_dev_runtime()), meta16 = () => [{ title: "Clever Device 4U | Home" }];
 async function loader26({ context }) {
-  let { storefront } = context, recommendedProducts = storefront.query(RECOMMENDED_PRODUCTS_QUERY), { collections } = await storefront.query(FEATURED_COLLECTION_QUERY), featuredCollection = collections.nodes[0], allCollections = await storefront.query(ALL_COLLECTIONS_QUERY), productLeftImage = await storefront.query(PRODUCT_LEFT_IMAGE_QUERY);
+  let { storefront } = context, recommendedProducts = storefront.query(RECOMMENDED_PRODUCTS_QUERY2), { collections } = await storefront.query(FEATURED_COLLECTION_QUERY), featuredCollection = collections.nodes[0], allCollections = await storefront.query(ALL_COLLECTIONS_QUERY), productLeftImage = await storefront.query(PRODUCT_LEFT_IMAGE_QUERY);
   return defer3({
     featuredCollection,
     recommendedProducts,
@@ -25719,7 +28507,7 @@ function Homepage() {
       lineNumber: 31,
       columnNumber: 7
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime29.jsxDEV)(RecommendedProducts, { products: data.recommendedProducts }, void 0, !1, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime29.jsxDEV)(RecommendedProducts2, { products: data.recommendedProducts }, void 0, !1, {
       fileName: "app/routes/_index.jsx",
       lineNumber: 32,
       columnNumber: 7
@@ -25732,24 +28520,24 @@ function Homepage() {
 }
 function AllCollections() {
   let { allCollections } = useLoaderData2(), allCollectionsArr = allCollections.collections.nodes;
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime29.jsxDEV)("ul", { class: "flex gap-4", children: allCollectionsArr.map((collection) => /* @__PURE__ */ (0, import_jsx_dev_runtime29.jsxDEV)("li", { children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime29.jsxDEV)("h1", { children: collection.title }, void 0, !1, {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime29.jsxDEV)("ul", { className: "all_collections flex gap-4 mb-8", children: allCollectionsArr.map((collection) => /* @__PURE__ */ (0, import_jsx_dev_runtime29.jsxDEV)("li", { className: "relative border aspect-square h-fit w-1/4 mb-0 group", children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime29.jsxDEV)("h1", { className: "absolute top-1/2 left-1/2 m-0 text-white -translate-y-2/4 -translate-x-2/4 text-base z-[1] group-hover:text-black", children: collection.title }, void 0, !1, {
       fileName: "app/routes/_index.jsx",
-      lineNumber: 44,
+      lineNumber: 45,
       columnNumber: 11
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime29.jsxDEV)(
       Link2,
       {
-        className: "featured-collection",
+        className: "",
         to: `/collections/${collection.handle}`,
-        children: collection.image && /* @__PURE__ */ (0, import_jsx_dev_runtime29.jsxDEV)("div", { className: "featured-collection-image", children: /* @__PURE__ */ (0, import_jsx_dev_runtime29.jsxDEV)(Image, { data: collection.image, sizes: "100vw" }, void 0, !1, {
+        children: collection.image && /* @__PURE__ */ (0, import_jsx_dev_runtime29.jsxDEV)("div", { className: "aspect-square group-hover:opacity-50", children: /* @__PURE__ */ (0, import_jsx_dev_runtime29.jsxDEV)(Image, { data: collection.image, sizes: "100vw", className: "!aspect-square" }, void 0, !1, {
           fileName: "app/routes/_index.jsx",
-          lineNumber: 51,
+          lineNumber: 52,
           columnNumber: 17
         }, this) }, void 0, !1, {
           fileName: "app/routes/_index.jsx",
-          lineNumber: 50,
+          lineNumber: 51,
           columnNumber: 15
         }, this)
       },
@@ -25757,18 +28545,18 @@ function AllCollections() {
       !1,
       {
         fileName: "app/routes/_index.jsx",
-        lineNumber: 45,
+        lineNumber: 46,
         columnNumber: 11
       },
       this
     )
-  ] }, void 0, !0, {
+  ] }, collection.id, !0, {
     fileName: "app/routes/_index.jsx",
-    lineNumber: 43,
+    lineNumber: 44,
     columnNumber: 9
   }, this)) }, void 0, !1, {
     fileName: "app/routes/_index.jsx",
-    lineNumber: 41,
+    lineNumber: 42,
     columnNumber: 5
   }, this);
 }
@@ -25782,16 +28570,16 @@ function FeaturedCollection({ collection }) {
       children: [
         image && /* @__PURE__ */ (0, import_jsx_dev_runtime29.jsxDEV)("div", { className: "featured-collection-image", children: /* @__PURE__ */ (0, import_jsx_dev_runtime29.jsxDEV)(Image, { data: image, sizes: "100vw" }, void 0, !1, {
           fileName: "app/routes/_index.jsx",
-          lineNumber: 70,
+          lineNumber: 71,
           columnNumber: 11
         }, this) }, void 0, !1, {
           fileName: "app/routes/_index.jsx",
-          lineNumber: 69,
+          lineNumber: 70,
           columnNumber: 9
         }, this),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime29.jsxDEV)("h1", { children: collection.title }, void 0, !1, {
+        /* @__PURE__ */ (0, import_jsx_dev_runtime29.jsxDEV)("h1", { className: "absolute top-1/2 left-1/2 m-0 text-white -translate-y-2/4 -translate-x-2/4 text-4xl", children: collection.title }, void 0, !1, {
           fileName: "app/routes/_index.jsx",
-          lineNumber: 73,
+          lineNumber: 74,
           columnNumber: 7
         }, this)
       ]
@@ -25800,22 +28588,22 @@ function FeaturedCollection({ collection }) {
     !0,
     {
       fileName: "app/routes/_index.jsx",
-      lineNumber: 64,
+      lineNumber: 65,
       columnNumber: 5
     },
     this
   );
 }
-function RecommendedProducts({ products }) {
+function RecommendedProducts2({ products }) {
   return /* @__PURE__ */ (0, import_jsx_dev_runtime29.jsxDEV)("div", { className: "recommended-products", children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime29.jsxDEV)("h2", { children: "Recommended Products" }, void 0, !1, {
       fileName: "app/routes/_index.jsx",
-      lineNumber: 81,
+      lineNumber: 82,
       columnNumber: 7
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime29.jsxDEV)(import_react40.Suspense, { fallback: /* @__PURE__ */ (0, import_jsx_dev_runtime29.jsxDEV)("div", { children: "Loading..." }, void 0, !1, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime29.jsxDEV)(import_react42.Suspense, { fallback: /* @__PURE__ */ (0, import_jsx_dev_runtime29.jsxDEV)("div", { children: "Loading..." }, void 0, !1, {
       fileName: "app/routes/_index.jsx",
-      lineNumber: 82,
+      lineNumber: 83,
       columnNumber: 27
     }, this), children: /* @__PURE__ */ (0, import_jsx_dev_runtime29.jsxDEV)(Await2, { resolve: products, children: ({ products: products2 }) => /* @__PURE__ */ (0, import_jsx_dev_runtime29.jsxDEV)("div", { className: "recommended-products-grid", children: products2.nodes.map((product) => /* @__PURE__ */ (0, import_jsx_dev_runtime29.jsxDEV)(
       Link2,
@@ -25834,23 +28622,23 @@ function RecommendedProducts({ products }) {
             !1,
             {
               fileName: "app/routes/_index.jsx",
-              lineNumber: 92,
+              lineNumber: 93,
               columnNumber: 19
             },
             this
           ),
           /* @__PURE__ */ (0, import_jsx_dev_runtime29.jsxDEV)("h4", { children: product.title }, void 0, !1, {
             fileName: "app/routes/_index.jsx",
-            lineNumber: 97,
+            lineNumber: 98,
             columnNumber: 19
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime29.jsxDEV)("small", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime29.jsxDEV)(Money, { data: product.priceRange.minVariantPrice }, void 0, !1, {
             fileName: "app/routes/_index.jsx",
-            lineNumber: 99,
+            lineNumber: 100,
             columnNumber: 21
           }, this) }, void 0, !1, {
             fileName: "app/routes/_index.jsx",
-            lineNumber: 98,
+            lineNumber: 99,
             columnNumber: 19
           }, this)
         ]
@@ -25859,44 +28647,44 @@ function RecommendedProducts({ products }) {
       !0,
       {
         fileName: "app/routes/_index.jsx",
-        lineNumber: 87,
+        lineNumber: 88,
         columnNumber: 17
       },
       this
     )) }, void 0, !1, {
       fileName: "app/routes/_index.jsx",
-      lineNumber: 85,
+      lineNumber: 86,
       columnNumber: 13
     }, this) }, void 0, !1, {
       fileName: "app/routes/_index.jsx",
-      lineNumber: 83,
+      lineNumber: 84,
       columnNumber: 9
     }, this) }, void 0, !1, {
       fileName: "app/routes/_index.jsx",
-      lineNumber: 82,
+      lineNumber: 83,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime29.jsxDEV)("br", {}, void 0, !1, {
       fileName: "app/routes/_index.jsx",
-      lineNumber: 107,
+      lineNumber: 108,
       columnNumber: 7
     }, this)
   ] }, void 0, !0, {
     fileName: "app/routes/_index.jsx",
-    lineNumber: 80,
+    lineNumber: 81,
     columnNumber: 5
   }, this);
 }
 function ProductLeftRightImage({ products }) {
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime29.jsxDEV)("div", { children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime29.jsxDEV)(import_react40.Suspense, { fallback: /* @__PURE__ */ (0, import_jsx_dev_runtime29.jsxDEV)("div", { children: "Loading..." }, void 0, !1, {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime29.jsxDEV)("div", { className: "mb-12", children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime29.jsxDEV)(import_react42.Suspense, { fallback: /* @__PURE__ */ (0, import_jsx_dev_runtime29.jsxDEV)("div", { children: "Loading..." }, void 0, !1, {
       fileName: "app/routes/_index.jsx",
-      lineNumber: 115,
+      lineNumber: 116,
       columnNumber: 27
     }, this), children: /* @__PURE__ */ (0, import_jsx_dev_runtime29.jsxDEV)(Await2, { resolve: products, children: ({ products: products2 }) => /* @__PURE__ */ (0, import_jsx_dev_runtime29.jsxDEV)("div", { children: products2.nodes.map((product) => /* @__PURE__ */ (0, import_jsx_dev_runtime29.jsxDEV)(
       Link2,
       {
-        className: "flex w-2/4 mx-auto last:flex-row-reverse",
+        className: "flex w-2/3 mx-auto last:flex-row-reverse border first:mb-8 hover:drop-shadow-xl",
         to: `/products/${product.handle}`,
         children: [
           /* @__PURE__ */ (0, import_jsx_dev_runtime29.jsxDEV)(
@@ -25904,20 +28692,21 @@ function ProductLeftRightImage({ products }) {
             {
               data: product.images.nodes[0],
               aspectRatio: "1/1",
-              sizes: "(min-width: 45em) 20vw, 50vw"
+              sizes: "(min-width: 45em) 20vw, 50vw",
+              className: "!w-1/2"
             },
             void 0,
             !1,
             {
               fileName: "app/routes/_index.jsx",
-              lineNumber: 125,
+              lineNumber: 126,
               columnNumber: 19
             },
             this
           ),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime29.jsxDEV)("h4", { children: product.description }, void 0, !1, {
+          /* @__PURE__ */ (0, import_jsx_dev_runtime29.jsxDEV)("h4", { className: "!w-1/2 bg-black text-white flex items-center p-5 m-0", children: product.description }, void 0, !1, {
             fileName: "app/routes/_index.jsx",
-            lineNumber: 130,
+            lineNumber: 132,
             columnNumber: 19
           }, this)
         ]
@@ -25926,31 +28715,31 @@ function ProductLeftRightImage({ products }) {
       !0,
       {
         fileName: "app/routes/_index.jsx",
-        lineNumber: 120,
+        lineNumber: 121,
         columnNumber: 17
       },
       this
     )) }, void 0, !1, {
       fileName: "app/routes/_index.jsx",
-      lineNumber: 118,
+      lineNumber: 119,
       columnNumber: 13
     }, this) }, void 0, !1, {
       fileName: "app/routes/_index.jsx",
-      lineNumber: 116,
+      lineNumber: 117,
       columnNumber: 9
     }, this) }, void 0, !1, {
       fileName: "app/routes/_index.jsx",
-      lineNumber: 115,
+      lineNumber: 116,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime29.jsxDEV)("br", {}, void 0, !1, {
       fileName: "app/routes/_index.jsx",
-      lineNumber: 137,
+      lineNumber: 139,
       columnNumber: 7
     }, this)
   ] }, void 0, !0, {
     fileName: "app/routes/_index.jsx",
-    lineNumber: 114,
+    lineNumber: 115,
     columnNumber: 5
   }, this);
 }
@@ -25975,7 +28764,7 @@ var FEATURED_COLLECTION_QUERY = `#graphql
       }
     }
   }
-`, RECOMMENDED_PRODUCTS_QUERY = `#graphql
+`, RECOMMENDED_PRODUCTS_QUERY2 = `#graphql
   fragment RecommendedProduct on Product {
     id
     title
@@ -26224,7 +29013,7 @@ __export(cart_exports, {
   default: () => Cart,
   meta: () => meta18
 });
-var import_react43 = __toESM(require_react());
+var import_react45 = __toESM(require_react());
 var import_jsx_dev_runtime31 = __toESM(require_jsx_dev_runtime()), meta18 = () => [{ title: "Hydrogen | Cart" }];
 async function action10({ request, context }) {
   let { session, cart } = context, [formData, customerAccessToken] = await Promise.all([
@@ -26280,7 +29069,7 @@ function Cart() {
       lineNumber: 89,
       columnNumber: 7
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime31.jsxDEV)(import_react43.Suspense, { fallback: /* @__PURE__ */ (0, import_jsx_dev_runtime31.jsxDEV)("p", { children: "Loading cart ..." }, void 0, !1, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime31.jsxDEV)(import_react45.Suspense, { fallback: /* @__PURE__ */ (0, import_jsx_dev_runtime31.jsxDEV)("p", { children: "Loading cart ..." }, void 0, !1, {
       fileName: "app/routes/cart.jsx",
       lineNumber: 90,
       columnNumber: 27
@@ -26328,21 +29117,21 @@ var debug_network_exports = {};
 __export(debug_network_exports, {
   default: () => DebugNetwork
 });
-var import_jsx_runtime6 = __toESM(require_jsx_runtime(), 1), import_react46 = __toESM(require_react(), 1);
+var import_jsx_runtime6 = __toESM(require_jsx_runtime(), 1), import_react48 = __toESM(require_react(), 1);
 
 // node_modules/@shopify/cli-hydrogen/dist/virtual-routes/components/FlameChartWrapper.jsx
-var import_jsx_runtime5 = __toESM(require_jsx_runtime(), 1), import_react45 = __toESM(require_react(), 1);
+var import_jsx_runtime5 = __toESM(require_jsx_runtime(), 1), import_react47 = __toESM(require_react(), 1);
 
 // node_modules/use-resize-observer/dist/bundle.esm.js
-var import_react44 = __toESM(require_react());
+var import_react46 = __toESM(require_react());
 function useResolvedElement(subscriber, refOrElement) {
-  var lastReportRef = (0, import_react44.useRef)(null), refOrElementRef = (0, import_react44.useRef)(null);
+  var lastReportRef = (0, import_react46.useRef)(null), refOrElementRef = (0, import_react46.useRef)(null);
   refOrElementRef.current = refOrElement;
-  var cbElementRef = (0, import_react44.useRef)(null);
-  (0, import_react44.useEffect)(function() {
+  var cbElementRef = (0, import_react46.useRef)(null);
+  (0, import_react46.useEffect)(function() {
     evaluateSubscription();
   });
-  var evaluateSubscription = (0, import_react44.useCallback)(function() {
+  var evaluateSubscription = (0, import_react46.useCallback)(function() {
     var cbElement = cbElementRef.current, refOrElement2 = refOrElementRef.current, element = cbElement || (refOrElement2 ? refOrElement2 instanceof Element ? refOrElement2 : refOrElement2.current : null);
     lastReportRef.current && lastReportRef.current.element === element && lastReportRef.current.subscriber === subscriber || (lastReportRef.current && lastReportRef.current.cleanup && lastReportRef.current.cleanup(), lastReportRef.current = {
       element,
@@ -26352,11 +29141,11 @@ function useResolvedElement(subscriber, refOrElement) {
       cleanup: element ? subscriber(element) : void 0
     });
   }, [subscriber]);
-  return (0, import_react44.useEffect)(function() {
+  return (0, import_react46.useEffect)(function() {
     return function() {
       lastReportRef.current && lastReportRef.current.cleanup && (lastReportRef.current.cleanup(), lastReportRef.current = null);
     };
-  }, []), (0, import_react44.useCallback)(function(element) {
+  }, []), (0, import_react46.useCallback)(function(element) {
     cbElementRef.current = element, evaluateSubscription();
   }, [evaluateSubscription]);
 }
@@ -26370,21 +29159,21 @@ function extractSize(entry2, boxProp, sizeType) {
 }
 function useResizeObserver(opts) {
   opts === void 0 && (opts = {});
-  var onResize = opts.onResize, onResizeRef = (0, import_react44.useRef)(void 0);
-  onResizeRef.current = onResize;
-  var round = opts.round || Math.round, resizeObserverRef = (0, import_react44.useRef)(), _useState = (0, import_react44.useState)({
+  var onResize2 = opts.onResize, onResizeRef = (0, import_react46.useRef)(void 0);
+  onResizeRef.current = onResize2;
+  var round = opts.round || Math.round, resizeObserverRef = (0, import_react46.useRef)(), _useState = (0, import_react46.useState)({
     width: void 0,
     height: void 0
-  }), size = _useState[0], setSize = _useState[1], didUnmount = (0, import_react44.useRef)(!1);
-  (0, import_react44.useEffect)(function() {
+  }), size = _useState[0], setSize = _useState[1], didUnmount = (0, import_react46.useRef)(!1);
+  (0, import_react46.useEffect)(function() {
     return didUnmount.current = !1, function() {
       didUnmount.current = !0;
     };
   }, []);
-  var previous = (0, import_react44.useRef)({
+  var previous = (0, import_react46.useRef)({
     width: void 0,
     height: void 0
-  }), refCallback = useResolvedElement((0, import_react44.useCallback)(function(element) {
+  }), refCallback = useResolvedElement((0, import_react46.useCallback)(function(element) {
     return (!resizeObserverRef.current || resizeObserverRef.current.box !== opts.box || resizeObserverRef.current.round !== round) && (resizeObserverRef.current = {
       box: opts.box,
       round,
@@ -26404,7 +29193,7 @@ function useResizeObserver(opts) {
       resizeObserverRef.current && resizeObserverRef.current.instance.unobserve(element);
     };
   }, [opts.box, round]), opts.ref);
-  return (0, import_react44.useMemo)(function() {
+  return (0, import_react46.useMemo)(function() {
     return {
       ref: refCallback,
       width: size.width,
@@ -26415,7 +29204,7 @@ function useResizeObserver(opts) {
 
 // node_modules/@shopify/cli-hydrogen/dist/virtual-routes/components/FlameChartWrapper.jsx
 var useResizeObserver2 = useResizeObserver, FlameChartWrapper = (props) => {
-  let boxRef = (0, import_react45.useRef)(null), canvasRef = (0, import_react45.useRef)(null), flameChart = (0, import_react45.useRef)(null);
+  let boxRef = (0, import_react47.useRef)(null), canvasRef = (0, import_react47.useRef)(null), flameChart = (0, import_react47.useRef)(null);
   useResizeObserver2({
     ref: boxRef,
     onResize: ({ width = 0, height = 0 }) => {
@@ -26423,7 +29212,7 @@ var useResizeObserver2 = useResizeObserver, FlameChartWrapper = (props) => {
       return (_a2 = flameChart.current) == null ? void 0 : _a2.resize(width, height - 3);
     }
   });
-  let initialize = (0, import_react45.useCallback)(() => {
+  let initialize = (0, import_react47.useCallback)(() => {
     let {
       data,
       marks,
@@ -26448,43 +29237,43 @@ var useResizeObserver2 = useResizeObserver, FlameChartWrapper = (props) => {
         plugins
       });
     }
-  }, [props]), setBoxRef = (0, import_react45.useCallback)(
+  }, [props]), setBoxRef = (0, import_react47.useCallback)(
     (ref) => {
       let isNewRef = ref !== boxRef.current;
       boxRef.current = ref, isNewRef && initialize();
     },
     [initialize]
-  ), setCanvasRef = (0, import_react45.useCallback)(
+  ), setCanvasRef = (0, import_react47.useCallback)(
     (ref) => {
       let isNewRef = ref !== canvasRef.current;
       canvasRef.current = ref, isNewRef && initialize();
     },
     [initialize]
   );
-  return (0, import_react45.useEffect)(() => {
+  return (0, import_react47.useEffect)(() => {
     var _a2;
     props.data && ((_a2 = flameChart.current) == null || _a2.setNodes(props.data));
-  }, [props.data]), (0, import_react45.useEffect)(() => {
+  }, [props.data]), (0, import_react47.useEffect)(() => {
     var _a2;
     props.marks && ((_a2 = flameChart.current) == null || _a2.setMarks(props.marks));
-  }, [props.marks]), (0, import_react45.useEffect)(() => {
+  }, [props.marks]), (0, import_react47.useEffect)(() => {
     var _a2;
     props.waterfall && ((_a2 = flameChart.current) == null || _a2.setWaterfall(props.waterfall));
-  }, [props.waterfall]), (0, import_react45.useEffect)(() => {
+  }, [props.waterfall]), (0, import_react47.useEffect)(() => {
     var _a2;
     props.timeseries && ((_a2 = flameChart.current) == null || _a2.setTimeseries(props.timeseries));
-  }, [props.timeseries]), (0, import_react45.useEffect)(() => {
+  }, [props.timeseries]), (0, import_react47.useEffect)(() => {
     var _a2;
     props.timeframeTimeseries && ((_a2 = flameChart.current) == null || _a2.setTimeframeTimeseries(props.timeframeTimeseries));
-  }, [props.timeframeTimeseries]), (0, import_react45.useEffect)(() => {
+  }, [props.timeframeTimeseries]), (0, import_react47.useEffect)(() => {
     props.settings && flameChart.current && (flameChart.current.setSettings(props.settings), flameChart.current.renderEngine.recalcChildrenSizes(), flameChart.current.render());
-  }, [props.settings]), (0, import_react45.useEffect)(() => {
+  }, [props.settings]), (0, import_react47.useEffect)(() => {
     var _a2;
     props.position && ((_a2 = flameChart.current) == null || _a2.setFlameChartPosition(props.position));
-  }, [props.position]), (0, import_react45.useEffect)(() => {
+  }, [props.position]), (0, import_react47.useEffect)(() => {
     var _a2;
     props.zoom && ((_a2 = flameChart.current) == null || _a2.setZoom(props.zoom.start, props.zoom.end));
-  }, [props.zoom]), (0, import_react45.useEffect)(() => {
+  }, [props.zoom]), (0, import_react47.useEffect)(() => {
     var _a2;
     return props.onSelect && ((_a2 = flameChart.current) == null || _a2.on("select", props.onSelect)), () => {
       var _a3;
@@ -26503,12 +29292,12 @@ var useResizeObserver2 = useResizeObserver, FlameChartWrapper = (props) => {
 
 // node_modules/@shopify/cli-hydrogen/dist/virtual-routes/routes/debug-network.jsx
 function DebugNetwork() {
-  let serverEvents = (0, import_react46.useRef)({
+  let serverEvents = (0, import_react48.useRef)({
     smallestStartTime: 0,
     mainRequests: [],
     subRequests: {},
     showPutRequests: !1
-  }), [timestamp, setTimestamp] = (0, import_react46.useState)();
+  }), [timestamp, setTimestamp] = (0, import_react48.useState)();
   function serverEventHandler(onEvent) {
     return (event) => {
       let data = JSON.parse(event.data);
@@ -26520,7 +29309,7 @@ function DebugNetwork() {
       }, 0);
     };
   }
-  return (0, import_react46.useEffect)(() => {
+  return (0, import_react48.useEffect)(() => {
     let evtSource = new EventSource("/debug-network-server", {
       withCredentials: !0
     }), mainRequestHandler = serverEventHandler((data) => {
@@ -26855,7 +29644,7 @@ __export(graphiql_exports, {
 var loader29 = graphiqlLoader;
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-YDWX5XYW.js", imports: ["/build/_shared/chunk-776LNBDF.js", "/build/_shared/chunk-IEDAELJY.js", "/build/_shared/chunk-UHAUI7PR.js", "/build/_shared/chunk-5MVWHDS2.js", "/build/_shared/chunk-BVWHYGSQ.js", "/build/_shared/chunk-ZR5F4FRS.js", "/build/_shared/chunk-LSHG36UU.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-T6QHQSP6.js", imports: ["/build/_shared/chunk-JJHRYXEG.js", "/build/_shared/chunk-MA5EVO37.js", "/build/_shared/chunk-X35CUW5Y.js", "/build/_shared/chunk-6ERETTGJ.js", "/build/_shared/chunk-YOSDW4RD.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !0 }, "routes/$": { id: "routes/$", parentId: "root", path: "*", index: void 0, caseSensitive: void 0, module: "/build/routes/$-WMGSEGUW.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/[robots.txt]": { id: "routes/[robots.txt]", parentId: "root", path: "robots.txt", index: void 0, caseSensitive: void 0, module: "/build/routes/[robots.txt]-BN4O2WLB.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !0 }, "routes/[sitemap.xml]": { id: "routes/[sitemap.xml]", parentId: "root", path: "sitemap.xml", index: void 0, caseSensitive: void 0, module: "/build/routes/[sitemap.xml]-OGW6B5QK.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-P267G4QA.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/account": { id: "routes/account", parentId: "root", path: "account", index: void 0, caseSensitive: void 0, module: "/build/routes/account-BGHJOHO5.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/account.$": { id: "routes/account.$", parentId: "routes/account", path: "*", index: void 0, caseSensitive: void 0, module: "/build/routes/account.$-GU6CE4OH.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/account.addresses": { id: "routes/account.addresses", parentId: "routes/account", path: "addresses", index: void 0, caseSensitive: void 0, module: "/build/routes/account.addresses-OGL3Q375.js", imports: void 0, hasAction: !0, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/account.orders.$id": { id: "routes/account.orders.$id", parentId: "routes/account", path: "orders/:id", index: void 0, caseSensitive: void 0, module: "/build/routes/account.orders.$id-V57BW2CY.js", imports: ["/build/_shared/chunk-6ERETTGJ.js", "/build/_shared/chunk-YOSDW4RD.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/account.orders._index": { id: "routes/account.orders._index", parentId: "routes/account", path: "orders", index: !0, caseSensitive: void 0, module: "/build/routes/account.orders._index-QDLTUSI4.js", imports: ["/build/_shared/chunk-6ERETTGJ.js", "/build/_shared/chunk-YOSDW4RD.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/account.profile": { id: "routes/account.profile", parentId: "routes/account", path: "profile", index: void 0, caseSensitive: void 0, module: "/build/routes/account.profile-ASEMPRNF.js", imports: void 0, hasAction: !0, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/account_.activate.$id.$activationToken": { id: "routes/account_.activate.$id.$activationToken", parentId: "root", path: "account/activate/:id/:activationToken", index: void 0, caseSensitive: void 0, module: "/build/routes/account_.activate.$id.$activationToken-PZLZV2LQ.js", imports: void 0, hasAction: !0, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/account_.login": { id: "routes/account_.login", parentId: "root", path: "account/login", index: void 0, caseSensitive: void 0, module: "/build/routes/account_.login-YGZKZ43Y.js", imports: void 0, hasAction: !0, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/account_.logout": { id: "routes/account_.logout", parentId: "root", path: "account/logout", index: void 0, caseSensitive: void 0, module: "/build/routes/account_.logout-RKDKGIQR.js", imports: void 0, hasAction: !0, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/account_.recover": { id: "routes/account_.recover", parentId: "root", path: "account/recover", index: void 0, caseSensitive: void 0, module: "/build/routes/account_.recover-U3VT7JEW.js", imports: void 0, hasAction: !0, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/account_.register": { id: "routes/account_.register", parentId: "root", path: "account/register", index: void 0, caseSensitive: void 0, module: "/build/routes/account_.register-BE3OWWOL.js", imports: void 0, hasAction: !0, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/account_.reset.$id.$resetToken": { id: "routes/account_.reset.$id.$resetToken", parentId: "root", path: "account/reset/:id/:resetToken", index: void 0, caseSensitive: void 0, module: "/build/routes/account_.reset.$id.$resetToken-Z64TKTXK.js", imports: void 0, hasAction: !0, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/api.predictive-search": { id: "routes/api.predictive-search", parentId: "root", path: "api/predictive-search", index: void 0, caseSensitive: void 0, module: "/build/routes/api.predictive-search-UKLOZCLL.js", imports: void 0, hasAction: !0, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/blogs.$blogHandle.$articleHandle": { id: "routes/blogs.$blogHandle.$articleHandle", parentId: "root", path: "blogs/:blogHandle/:articleHandle", index: void 0, caseSensitive: void 0, module: "/build/routes/blogs.$blogHandle.$articleHandle-ENYEJTUR.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/blogs.$blogHandle._index": { id: "routes/blogs.$blogHandle._index", parentId: "root", path: "blogs/:blogHandle", index: !0, caseSensitive: void 0, module: "/build/routes/blogs.$blogHandle._index-RZILMEPF.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/blogs._index": { id: "routes/blogs._index", parentId: "root", path: "blogs", index: !0, caseSensitive: void 0, module: "/build/routes/blogs._index-MQY2COZR.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/cart": { id: "routes/cart", parentId: "root", path: "cart", index: void 0, caseSensitive: void 0, module: "/build/routes/cart-XTOT23MT.js", imports: void 0, hasAction: !0, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/cart.$lines": { id: "routes/cart.$lines", parentId: "routes/cart", path: ":lines", index: void 0, caseSensitive: void 0, module: "/build/routes/cart.$lines-WOSNW3UV.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/collections.$handle": { id: "routes/collections.$handle", parentId: "root", path: "collections/:handle", index: void 0, caseSensitive: void 0, module: "/build/routes/collections.$handle-HMW4FG5Z.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/collections._index": { id: "routes/collections._index", parentId: "root", path: "collections", index: !0, caseSensitive: void 0, module: "/build/routes/collections._index-45DXRJIS.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/discount.$code": { id: "routes/discount.$code", parentId: "root", path: "discount/:code", index: void 0, caseSensitive: void 0, module: "/build/routes/discount.$code-XGIGDZ7Q.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/pages.$handle": { id: "routes/pages.$handle", parentId: "root", path: "pages/:handle", index: void 0, caseSensitive: void 0, module: "/build/routes/pages.$handle-ZZKCQQLR.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/policies.$handle": { id: "routes/policies.$handle", parentId: "root", path: "policies/:handle", index: void 0, caseSensitive: void 0, module: "/build/routes/policies.$handle-W3PWUPO7.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/policies._index": { id: "routes/policies._index", parentId: "root", path: "policies", index: !0, caseSensitive: void 0, module: "/build/routes/policies._index-EV4CCWOJ.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/products.$handle": { id: "routes/products.$handle", parentId: "root", path: "products/:handle", index: void 0, caseSensitive: void 0, module: "/build/routes/products.$handle-O74GAOVG.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/search": { id: "routes/search", parentId: "root", path: "search", index: void 0, caseSensitive: void 0, module: "/build/routes/search-MOOMP2P2.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "virtual-routes/routes/debug-network": { id: "virtual-routes/routes/debug-network", parentId: "virtual-routes/virtual-root", path: "debug-network", index: void 0, caseSensitive: void 0, module: "/build/virtual-routes/routes/debug-network-QAXCDD34.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "virtual-routes/routes/graphiql": { id: "virtual-routes/routes/graphiql", parentId: "virtual-routes/virtual-root", path: "graphiql", index: void 0, caseSensitive: void 0, module: "/build/virtual-routes/routes/graphiql-IUV5DDHT.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "virtual-routes/virtual-root": { id: "virtual-routes/virtual-root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/virtual-routes/virtual-root-OTRGUD5T.js", imports: ["/build/_shared/chunk-6ERETTGJ.js", "/build/_shared/chunk-YOSDW4RD.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !0 } }, version: "dbc004ee", hmr: { runtime: "/build/_shared/chunk-ZR5F4FRS.js", timestamp: 1697188163611 }, url: "/build/manifest-DBC004EE.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-YDWX5XYW.js", imports: ["/build/_shared/chunk-776LNBDF.js", "/build/_shared/chunk-IEDAELJY.js", "/build/_shared/chunk-UHAUI7PR.js", "/build/_shared/chunk-5MVWHDS2.js", "/build/_shared/chunk-BVWHYGSQ.js", "/build/_shared/chunk-ZR5F4FRS.js", "/build/_shared/chunk-LSHG36UU.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-3T4KRVXF.js", imports: ["/build/_shared/chunk-JJHRYXEG.js", "/build/_shared/chunk-MA5EVO37.js", "/build/_shared/chunk-X35CUW5Y.js", "/build/_shared/chunk-6ERETTGJ.js", "/build/_shared/chunk-YOSDW4RD.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !0 }, "routes/$": { id: "routes/$", parentId: "root", path: "*", index: void 0, caseSensitive: void 0, module: "/build/routes/$-WMGSEGUW.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/[robots.txt]": { id: "routes/[robots.txt]", parentId: "root", path: "robots.txt", index: void 0, caseSensitive: void 0, module: "/build/routes/[robots.txt]-BN4O2WLB.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !0 }, "routes/[sitemap.xml]": { id: "routes/[sitemap.xml]", parentId: "root", path: "sitemap.xml", index: void 0, caseSensitive: void 0, module: "/build/routes/[sitemap.xml]-OGW6B5QK.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-MCWNZNWV.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/account": { id: "routes/account", parentId: "root", path: "account", index: void 0, caseSensitive: void 0, module: "/build/routes/account-BGHJOHO5.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/account.$": { id: "routes/account.$", parentId: "routes/account", path: "*", index: void 0, caseSensitive: void 0, module: "/build/routes/account.$-GU6CE4OH.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/account.addresses": { id: "routes/account.addresses", parentId: "routes/account", path: "addresses", index: void 0, caseSensitive: void 0, module: "/build/routes/account.addresses-OGL3Q375.js", imports: void 0, hasAction: !0, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/account.orders.$id": { id: "routes/account.orders.$id", parentId: "routes/account", path: "orders/:id", index: void 0, caseSensitive: void 0, module: "/build/routes/account.orders.$id-V57BW2CY.js", imports: ["/build/_shared/chunk-6ERETTGJ.js", "/build/_shared/chunk-YOSDW4RD.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/account.orders._index": { id: "routes/account.orders._index", parentId: "routes/account", path: "orders", index: !0, caseSensitive: void 0, module: "/build/routes/account.orders._index-QDLTUSI4.js", imports: ["/build/_shared/chunk-6ERETTGJ.js", "/build/_shared/chunk-YOSDW4RD.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/account.profile": { id: "routes/account.profile", parentId: "routes/account", path: "profile", index: void 0, caseSensitive: void 0, module: "/build/routes/account.profile-ASEMPRNF.js", imports: void 0, hasAction: !0, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/account_.activate.$id.$activationToken": { id: "routes/account_.activate.$id.$activationToken", parentId: "root", path: "account/activate/:id/:activationToken", index: void 0, caseSensitive: void 0, module: "/build/routes/account_.activate.$id.$activationToken-PZLZV2LQ.js", imports: void 0, hasAction: !0, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/account_.login": { id: "routes/account_.login", parentId: "root", path: "account/login", index: void 0, caseSensitive: void 0, module: "/build/routes/account_.login-YGZKZ43Y.js", imports: void 0, hasAction: !0, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/account_.logout": { id: "routes/account_.logout", parentId: "root", path: "account/logout", index: void 0, caseSensitive: void 0, module: "/build/routes/account_.logout-RKDKGIQR.js", imports: void 0, hasAction: !0, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/account_.recover": { id: "routes/account_.recover", parentId: "root", path: "account/recover", index: void 0, caseSensitive: void 0, module: "/build/routes/account_.recover-U3VT7JEW.js", imports: void 0, hasAction: !0, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/account_.register": { id: "routes/account_.register", parentId: "root", path: "account/register", index: void 0, caseSensitive: void 0, module: "/build/routes/account_.register-BE3OWWOL.js", imports: void 0, hasAction: !0, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/account_.reset.$id.$resetToken": { id: "routes/account_.reset.$id.$resetToken", parentId: "root", path: "account/reset/:id/:resetToken", index: void 0, caseSensitive: void 0, module: "/build/routes/account_.reset.$id.$resetToken-Z64TKTXK.js", imports: void 0, hasAction: !0, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/api.predictive-search": { id: "routes/api.predictive-search", parentId: "root", path: "api/predictive-search", index: void 0, caseSensitive: void 0, module: "/build/routes/api.predictive-search-UKLOZCLL.js", imports: void 0, hasAction: !0, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/blogs.$blogHandle.$articleHandle": { id: "routes/blogs.$blogHandle.$articleHandle", parentId: "root", path: "blogs/:blogHandle/:articleHandle", index: void 0, caseSensitive: void 0, module: "/build/routes/blogs.$blogHandle.$articleHandle-ENYEJTUR.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/blogs.$blogHandle._index": { id: "routes/blogs.$blogHandle._index", parentId: "root", path: "blogs/:blogHandle", index: !0, caseSensitive: void 0, module: "/build/routes/blogs.$blogHandle._index-RZILMEPF.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/blogs._index": { id: "routes/blogs._index", parentId: "root", path: "blogs", index: !0, caseSensitive: void 0, module: "/build/routes/blogs._index-MQY2COZR.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/cart": { id: "routes/cart", parentId: "root", path: "cart", index: void 0, caseSensitive: void 0, module: "/build/routes/cart-XTOT23MT.js", imports: void 0, hasAction: !0, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/cart.$lines": { id: "routes/cart.$lines", parentId: "routes/cart", path: ":lines", index: void 0, caseSensitive: void 0, module: "/build/routes/cart.$lines-WOSNW3UV.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/collections.$handle": { id: "routes/collections.$handle", parentId: "root", path: "collections/:handle", index: void 0, caseSensitive: void 0, module: "/build/routes/collections.$handle-AZGEUC7J.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/collections._index": { id: "routes/collections._index", parentId: "root", path: "collections", index: !0, caseSensitive: void 0, module: "/build/routes/collections._index-RY6TBNGD.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/discount.$code": { id: "routes/discount.$code", parentId: "root", path: "discount/:code", index: void 0, caseSensitive: void 0, module: "/build/routes/discount.$code-XGIGDZ7Q.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/pages.$handle": { id: "routes/pages.$handle", parentId: "root", path: "pages/:handle", index: void 0, caseSensitive: void 0, module: "/build/routes/pages.$handle-ZZKCQQLR.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/policies.$handle": { id: "routes/policies.$handle", parentId: "root", path: "policies/:handle", index: void 0, caseSensitive: void 0, module: "/build/routes/policies.$handle-W3PWUPO7.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/policies._index": { id: "routes/policies._index", parentId: "root", path: "policies", index: !0, caseSensitive: void 0, module: "/build/routes/policies._index-EV4CCWOJ.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/products.$handle": { id: "routes/products.$handle", parentId: "root", path: "products/:handle", index: void 0, caseSensitive: void 0, module: "/build/routes/products.$handle-J3D2WZZ6.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/search": { id: "routes/search", parentId: "root", path: "search", index: void 0, caseSensitive: void 0, module: "/build/routes/search-MOOMP2P2.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "virtual-routes/routes/debug-network": { id: "virtual-routes/routes/debug-network", parentId: "virtual-routes/virtual-root", path: "debug-network", index: void 0, caseSensitive: void 0, module: "/build/virtual-routes/routes/debug-network-QAXCDD34.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "virtual-routes/routes/graphiql": { id: "virtual-routes/routes/graphiql", parentId: "virtual-routes/virtual-root", path: "graphiql", index: void 0, caseSensitive: void 0, module: "/build/virtual-routes/routes/graphiql-IUV5DDHT.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "virtual-routes/virtual-root": { id: "virtual-routes/virtual-root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/virtual-routes/virtual-root-OTRGUD5T.js", imports: ["/build/_shared/chunk-6ERETTGJ.js", "/build/_shared/chunk-YOSDW4RD.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !0 } }, version: "1f29e7de", hmr: { runtime: "/build/_shared/chunk-ZR5F4FRS.js", timestamp: 1697731708605 }, url: "/build/manifest-1F29E7DE.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "dist/client/build", future = { v2_dev: !0, unstable_postcss: !1, unstable_tailwind: !1, v2_errorBoundary: !0, v2_headers: !0, v2_meta: !0, v2_normalizeFormMethod: !0, v2_routeConvention: !0 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
